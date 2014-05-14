@@ -1,0 +1,22 @@
+language: ruby
+rvm:
+  - 1.9.3
+  - 2.0.0
+  - 2.1.0
+  - 2.1.1
+env:
+  - DB=sqlite
+  - DB=mysql
+  - DB=postgresql
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rspec spec/
+before_script:
+  - mysql -e 'create database RubyJobsBrazil_test'
+  - psql -c 'create database  RubyJobsBrazil_test' -U postgres
+branches:
+  only: master
+notifications:
+  email:
+    on_failure: change
+    on_failure: always
