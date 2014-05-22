@@ -1,0 +1,10 @@
+<%
+options  = {
+  class: "login #{provider}",
+  title: t("system.messages.login_with.#{provider}")
+}
+%>
+
+<%= link_to user_omniauth_authorize_path(provider), options do %>
+  <%= t("system.links.login.#{provider}") %>
+<% end %>

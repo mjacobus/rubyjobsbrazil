@@ -3,8 +3,8 @@ Rails.application.configure do
 
   ENV['FACEBOOK_KEY']    = 'fake'
   ENV['FACEBOOK_SECRET'] = 'fake'
-  ENV['GOOGLE_KEY']      = 'fake'
-  ENV['GOOGLE_SECRET']   = 'fake'
+  ENV['GOOGLE_KEY']      = '909701487377-k6kp24c9a0414aba9bmmp5jev64b4kr9.apps.googleusercontent.com'
+  ENV['GOOGLE_SECRET']   = '0Aaznl7tOtzaWuyQxHh9zr2P'
   ENV['GITHUB_KEY']      = 'cf5569da9e7aab3d4b6'
   ENV['GITHUB_SECRET']   = '906be7adc9e30c4252e9e8fa9c6ae222c71998a6'
 

@@ -1,0 +1,27 @@
+"pt-BR":
+  system:
+    links:
+      login:
+        google_oauth2: Google
+        github: Github
+        facebook: Facebook
+    messages:
+      login_with:
+        google_oauth2: Entre com com sua conta do Google
+        github: Entre com sua conta do Github
+        facebook: Entre com sua conta do Facebook
+      welcome: Bem vindo!
+      login_succeed: Login efetuado com sucesso.
+      account_created: Sua conta foi criada com sucesso!
+      confirm_destroy: Tem certeza de que deseja excluir?
+      crud:
+        create:
+          success: Registro criado com sucesso
+          error: Um ou mais errors ocorreram ao criar o registro
+        update:
+          success: Registro atualizado com sucesso
+          error: Um ou mais errors ocorreram ao atualizar o registro
+        destroy:
+          success: Registro excluído com sucesso
+          error: O Registro não pode ser excluído
+          confirm: Tem certeza de que deseja excluir este registro?
