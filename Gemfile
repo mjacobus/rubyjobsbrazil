@@ -20,6 +20,7 @@ gem 'spring',        group: :development
 
 # Rails non default
 
+gem 'devise'
 gem 'email_validator'
 gem 'high_voltage'
 gem 'mysql2'
