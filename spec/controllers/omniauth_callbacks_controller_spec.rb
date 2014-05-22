@@ -34,6 +34,37 @@ describe OmniauthCallbacksController do
     end
   end
 
+  describe "#github" do
+    let(:env) { OauthHelper.providers[:github]  }
+    let(:user) { User.make  }
+
+    before do
+      expect(Oauth::Github).to receive(:find_or_build_user).with(env).and_return(user)
+      stub_omniauth_with(env)
+      expect(controller).to receive(:redirect_url_for).with(user, root_url).and_return(root_url)
+    end
+
+    it "saves user" do
+      expect(user).to receive(:save!).with(validate: false)
+      get :github
+    end
+
+    it "logs user in" do
+      get :github
+      expect(controller.current_user).to eq(User.last)
+    end
+
+    it "redirects to the 'redirect_url'" do
+      get :github
+      expect(response).to redirect_to(root_url)
+    end
+
+    it "presents 'login_message'" do
+      get :github
+      expect(flash[:notice]).to eq(I18n.t('system.messages.account_created'))
+    end
+  end
+
   describe "#google_oauth2" do
     let(:env) { OauthHelper.providers[:google_oauth2]  }
     let(:user) { User.make  }

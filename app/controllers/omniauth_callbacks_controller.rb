@@ -8,6 +8,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     login_with(Oauth::Google)
   end
 
+  def github
+    login_with(Oauth::Github)
+  end
+
   def login_with(klass)
     env          = request.env["omniauth.auth"]
     origin       = request.env["omniauth.origin"]

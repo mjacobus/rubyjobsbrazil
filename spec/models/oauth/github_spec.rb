@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe Oauth::Github do
-  pending "add some examples to (or delete) #{__FILE__}"
   let(:params) { OauthHelper.providers[:github]  }
 
   let(:existing_user) do

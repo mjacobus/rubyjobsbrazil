@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe Oauth::Google do
-  pending "add some examples to (or delete) #{__FILE__}"
   let(:params) { OauthHelper.providers[:google_oauth2]  }
 
   let(:existing_user) do
