@@ -20,7 +20,12 @@ gem 'spring',        group: :development
 
 # Rails non default
 
+# Login
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-google_oauth2'
+
 gem 'email_validator'
 gem 'high_voltage'
 gem 'mysql2'
