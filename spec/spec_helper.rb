@@ -24,8 +24,13 @@ RSpec.configure do |config|
 
   config.include Features, type: :feature
   config.infer_base_class_for_anonymous_controllers = false
-  config.order = 'random'
-  config.use_transactional_fixtures = false
+  config.order = "random"
+  config.include Records
+  config.filter_run focus: true
+  config.run_all_when_everything_filtered = true
+  config.include Devise::TestHelpers, type: :controller
+  # config.include Formulaic::Dsl, type: :feature
+  config.include CapybaraHelper, type: :feature
 end
 
 # Capybara.javascript_driver = :webkit

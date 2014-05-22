@@ -25,6 +25,7 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google_oauth2'
+gem 'omniauth-github'
 
 gem 'email_validator'
 gem 'high_voltage'

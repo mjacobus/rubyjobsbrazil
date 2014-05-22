@@ -1,5 +1,13 @@
 Rails.application.configure do
   ENV['SECRET_KEY_BASE'] = 'U24L6TJ5U3qpuxFGTH5O80FgrcKEVz6CfxFuTBRvxVFi_pYVtVRY_-dWiqf92cZMeWr_VQEYsAYlKYTbwpokxQ'
+
+  ENV['FACEBOOK_KEY']    = 'fake'
+  ENV['FACEBOOK_SECRET'] = 'fake'
+  ENV['GOOGLE_KEY']      = 'fake'
+  ENV['GOOGLE_SECRET']   = 'fake'
+  ENV['GITHUB_KEY']      = 'fake'
+  ENV['GITHUB_SECRET']   = 'fake'
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # The test environment is used exclusively to run your application's
