@@ -1,10 +1,9 @@
 require "spec_helper"
 
-feature "Login" do
-  scenario "the user clicks the github login button" do
-    visit root_path
-    click_link t('system.links.login.github')
+feature "User Session" do
+  include Features::Login
 
-    expect(page).to have_text(t('system.messages.account_created'))
-  end
+  user_logs_in_and_out_with(Oauth::Github)
+  user_logs_in_and_out_with(Oauth::Facebook)
+  user_logs_in_and_out_with(Oauth::Google)
 end

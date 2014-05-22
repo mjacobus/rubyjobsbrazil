@@ -13,6 +13,7 @@
 
   <body>
     <%= render 'login_links' unless current_user -%>
+    <%= render 'login_status' if current_user -%>
     <%= render 'flashes' -%>
     <div class="row">
       <%= yield %>

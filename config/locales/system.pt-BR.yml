@@ -1,6 +1,7 @@
 "pt-BR":
   system:
     links:
+      logout: Sair
       login:
         google_oauth2: Google
         github: Github
@@ -11,6 +12,7 @@
         github: Entre com sua conta do Github
         facebook: Entre com sua conta do Facebook
       welcome: Bem vindo!
+      logout_succeed: Login efetuado com sucesso.
       login_succeed: Login efetuado com sucesso.
       account_created: Sua conta foi criada com sucesso!
       confirm_destroy: Tem certeza de que deseja excluir?
