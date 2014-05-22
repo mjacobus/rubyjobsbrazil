@@ -1,5 +1,13 @@
 Rails.application.configure do
   ENV['SECRET_KEY_BASE'] = 'mgKHhDJD-5DNUzx6QZqhBHtlyvAP2oYgutHHySVTX3yddyzVaPo8vSmEpSuNXW1UapnY99Z-nKveDDEWgREiFQ'
+
+  ENV['FACEBOOK_KEY']    = 'fake'
+  ENV['FACEBOOK_SECRET'] = 'fake'
+  ENV['GOOGLE_KEY']      = 'fake'
+  ENV['GOOGLE_SECRET']   = 'fake'
+  ENV['GITHUB_KEY']      = 'cf5569da9e7aab3d4b6'
+  ENV['GITHUB_SECRET']   = '906be7adc9e30c4252e9e8fa9c6ae222c71998a6'
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
