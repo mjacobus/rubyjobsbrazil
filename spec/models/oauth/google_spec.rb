@@ -23,7 +23,7 @@ describe Oauth::Google do
       it "assigns correct data to users" do
         user = Oauth::Google.find_or_build_user(params)
         expect(user.uid).to eq(params[:uid])
-        expect(user.provider).to eq('google_oauth2')
+        expect(user.provider.to_s).to eq('google_oauth2')
         expect(user.email).to eq(params[:info][:email])
         expect(user.name).to eq(params[:info][:name])
       end

@@ -21,7 +21,7 @@ describe Oauth::Facebook do
       it "assigns correct data to users" do
         user = Oauth::Facebook.find_or_build_user(params)
         expect(user.uid).to eq(params[:uid])
-        expect(user.provider).to eq('facebook')
+        expect(user.provider.to_s).to eq('facebook')
         expect(user.email).to eq(params[:info][:email])
         expect(user.name).to eq(params[:info][:name])
       end
