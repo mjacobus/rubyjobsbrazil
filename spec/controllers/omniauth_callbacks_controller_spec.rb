@@ -44,7 +44,7 @@ describe OmniauthCallbacksController do
       expect(controller).to receive(:redirect_url_for).with(user, root_url).and_return(root_url)
     end
 
-    it "saves user", :focus do
+    it "saves user" do
       expect(user).to receive(:save!).with(validate: false)
       get :google_oauth2
     end
