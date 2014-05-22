@@ -1,5 +1,24 @@
 require 'spec_helper'
 
-describe User do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe User, "#name" do
+  it { should validate_presence_of(:name)  }
+end
+
+describe User, "#email" do
+  it { should validate_presence_of(:email)  }
+  it { should validate_uniqueness_of(:email).case_insensitive  }
+  it_validates_email_format_of :email
+end
+
+describe User, "#uid" do
+  it { should validate_uniqueness_of(:uid).case_insensitive.scoped_to(:provider)  }
+end
+
+describe User, "#provider_data" do
+  it "stores json serialized data" do
+    data = { 'some' => 'data'  }
+    user = User.make!(provider_data: data)
+    user.reload
+    expect(user.provider_data).to eq(data)
+  end
 end

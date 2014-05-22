@@ -9,7 +9,8 @@ require 'machinist/active_record'
 #   end
 
 User.blueprint do
-  email    { "email#{s}@example.com" }
+  name     { "The Name #{sn}" }
+  email    { "email#{sn}@example.com" }
   provider { 'github' }
-  uid      { "#{s}" }
+  uid      { sn }
 end
