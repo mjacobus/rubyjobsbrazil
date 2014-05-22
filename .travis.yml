@@ -14,9 +14,9 @@ script:
 before_script:
   - mysql -e 'create database RubyJobsBrazil_test'
   - psql -c 'create database  RubyJobsBrazil_test' -U postgres
-branches:
-  only: master
+# branches:
+#   only: master
 notifications:
   email:
-    on_failure: change
+    on_success: change
     on_failure: always

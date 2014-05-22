@@ -1,9 +1,11 @@
 Rubyjobsbrazil
 ==============
 
-[![Build Status](https://travis-ci.org/mjacobus/RubyJobsBrazil.png?branch=master)](https://travis-ci.org/mjacobus/RubyJobsBrazil)
-[![Coverage Status](https://coveralls.io/repos/mjacobus/RubyJobsBrazil/badge.png)](https://coveralls.io/r/mjacobus/RubyJobsBrazil)
-[![Code Climate](https://codeclimate.com/github/mjacobus/RubyJobsBrazil.png)](https://codeclimate.com/github/mjacobus/RubyJobsBrazil)
+[![Build Status](https://travis-ci.org/mjacobus/rubyjobsbrazil.png?branch=master)](https://travis-ci.org/mjacobus/rubyjobsbrazil)
+[![Coverage Status](https://coveralls.io/repos/mjacobus/rubyjobsbrazil/badge.png)](https://coveralls.io/r/mjacobus/rubyjobsbrazil)
+[![Code Climate](https://codeclimate.com/github/mjacobus/rubyjobsbrazil.png)](https://codeclimate.com/github/mjacobus/rubyjobsbrazil)
+[![Dependency Status](https://gemnasium.com/mjacobus/rubyjobsbrazil.png)](https://gemnasium.com/mjacobus/rubyjobsbrazil)
+
 
 Getting Started
 ---------------
