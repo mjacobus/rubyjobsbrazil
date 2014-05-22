@@ -10,7 +10,7 @@ OmniAuth.config.mock_auth[:twitter] = {
       :name => 'Example Name'
     }
   }
-  
+
 ################################################################################
 # google
 ################################################################################
@@ -43,8 +43,19 @@ OmniAuth.config.mock_auth[:facebook] = {
     :verified => true
   }
 }
-  
-  
+################################################################################
+# Github
+################################################################################
+OmniAuth.config.mock_auth[:github] = {
+    :provider => 'github',
+    :uid => '123458',
+    :info => {
+      :name => 'Example Name',
+      :email => "email@google.com",
+    }
+  }
+
+
 class OauthHelper
   def self.providers
     OmniAuth.config.mock_auth

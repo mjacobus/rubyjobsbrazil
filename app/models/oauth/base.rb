@@ -1,7 +1,7 @@
 module Oauth
   class Base
     def self.provider_key
-      raise "Must be implemented"
+      to_s.underscore.split('/').last.to_sym
     end
 
     def self.find_or_build_user(params)
