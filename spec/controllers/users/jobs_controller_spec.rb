@@ -1,7 +1,11 @@
 require 'spec_helper'
 
 describe Users::JobsController do
+  include ControllersSpecHelpers
+
   let(:user) { User.make! }
+
+  it_requires_authentication_for :get, :index
 
   context "when user is logged in" do
     before do

@@ -1,6 +1,5 @@
 module Users
-  class JobsController < ApplicationController
-    respond_to :html, :json
+  class JobsController < UserController
 
     def index
       @jobs = scope
