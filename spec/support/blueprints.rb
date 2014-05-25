@@ -14,3 +14,10 @@ User.blueprint do
   provider { 'github' }
   uid      { sn }
 end
+
+Job.blueprint do
+  user
+  title { "ruby job #{sn}" }
+  description { "the requirements" }
+  how_to_apply { "how to apply" }
+end

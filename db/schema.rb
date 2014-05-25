@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140522142949) do
+ActiveRecord::Schema.define(version: 20140525174712) do
+
+  create_table "jobs", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.text     "how_to_apply"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "jobs", ["user_id"], name: "index_jobs_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",               default: "", null: false
