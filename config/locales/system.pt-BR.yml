@@ -32,5 +32,5 @@
           error: O Registro não pode ser excluído
           confirm: Tem certeza de que deseja excluir este registro?
       posts:
-        published_at: Atualizado em %{time}
-        updated_at: Atualizado em %{time}
+        published_at: Publicado há %{time}
+        updated_at: Atualizado há %{time}

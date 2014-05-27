@@ -40,6 +40,8 @@ gem 'vattributes'
 gem 'draper', '~> 1.3'
 gem 'foundation-rails'
 gem 'foundation-icons-sass-rails'
+# gem 'github-markup'
+gem 'redcarpet'
 
 group :development, :test do
   gem 'awesome_print'
