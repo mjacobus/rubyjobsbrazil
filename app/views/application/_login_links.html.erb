@@ -1,11 +1,15 @@
-<% if ENV['FACEBOOK_KEY'] %>
-  <%= render 'login_button', provider: :facebook %>
-<% end %>
+<li class="has-dropdown"><a href="#">Login</a>
+  <ul class="dropdown">
+    <% if ENV['FACEBOOK_KEY'] %>
+      <li><%= render 'login_button', provider: :facebook %></li>
+    <% end %>
 
-<% if ENV['GOOGLE_KEY'] %>
-  <%= render 'login_button', provider: :google_oauth2 %>
-<% end %>
+    <% if ENV['GOOGLE_KEY'] %>
+      <li><%= render 'login_button', provider: :google_oauth2 %></li>
+    <% end %>
 
-<% if ENV['GITHUB_KEY'] %>
-  <%= render 'login_button', provider: :github %>
-<% end %>
+    <% if ENV['GITHUB_KEY'] %>
+      <li><%= render 'login_button', provider: :github %></li>
+    <% end %>
+  </ul>
+</li>

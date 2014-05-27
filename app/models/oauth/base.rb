@@ -13,8 +13,9 @@ module Oauth
         user.provider = provider_key
       end
 
-      user.email = params[:info][:email]
-      user.name  = params[:info][:name]
+      user.provider_data = params
+      user.email         = params[:info][:email]
+      user.name          = params[:info][:name]
       user
     end
   end

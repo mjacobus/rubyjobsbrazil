@@ -1,0 +1,18 @@
+<div class="sticky">
+  <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name"><h1><a href="/">Ruby Jobs Brazil</a></h1> </li>
+      <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+    </ul>
+
+
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li> <%= link_to(t('system.links.jobs.new'), :new_job) %> </li>
+        <%= render 'login_links' unless current_user -%>
+        <%= render 'login_status' if current_user -%>
+      </ul>
+    </section>
+  </nav>
+</div>
