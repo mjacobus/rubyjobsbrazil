@@ -3,6 +3,26 @@ require 'spec_helper'
 describe Users::JobsController do
   include ControllersSpecHelpers
 
+  def valid_attributes
+    {
+      job: {
+        description: 'description',
+        title: 'title',
+        how_to_apply: 'how to'
+      }
+    }
+  end
+
+  def invalid_attributes
+    {
+      job: {
+        description: '',
+        title: '',
+        how_to_apply: ''
+      }
+    }
+  end
+
   it_requires_authentication do
     get :index
   end
@@ -76,5 +96,35 @@ describe Users::JobsController do
         get :edit, id: job.id
       end
     end
+
+    describe "#create" do
+      describe "with valid attribbutes" do
+
+        it "creates a new record" do
+          expect do
+            post :create, valid_attributes
+          end.to change { user.jobs.count }.by(1)
+        end
+
+        it "redirects to #index" do
+          post :create, valid_attributes
+          expect(response).to redirect_to(Job.last)
+        end
+
+      end
+
+      describe "with invalid attributes" do
+
+        it_responds_with_success do
+          post :create, invalid_attributes
+        end
+
+        it_renders_template :new do
+          post :create, invalid_attributes
+        end
+
+      end
+    end
+
   end
 end

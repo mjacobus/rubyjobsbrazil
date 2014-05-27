@@ -20,6 +20,11 @@ module Users
       respond_with(@job)
     end
 
+    def create
+      @job = scope.create(job_params)
+      respond_with(@job)
+    end
+
     private
 
     def scope
@@ -28,6 +33,10 @@ module Users
 
     def set_job
       @job = scope.find(params[:id])
+    end
+
+    def job_params
+      params.require(:job).permit(:title, :description, :how_to_apply)
     end
   end
 end
