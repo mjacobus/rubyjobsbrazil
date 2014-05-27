@@ -1,6 +1,6 @@
 module Users
   class JobsController < UserController
-    before_action :set_job, only: [:show, :edit]
+    before_action :set_job, only: [:show, :edit, :update, :destroy]
 
     def index
       @jobs = scope
@@ -21,7 +21,18 @@ module Users
     end
 
     def create
-      @job = scope.create(job_params)
+      @job = scope.build(job_params)
+      crud_flash @job.save
+      respond_with(@job)
+    end
+
+    def update
+      crud_flash @job.update(job_params)
+      respond_with(@job)
+    end
+
+    def destroy
+      crud_flash @job.destroy
       respond_with(@job)
     end
 

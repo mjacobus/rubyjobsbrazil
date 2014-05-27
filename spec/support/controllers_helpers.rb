@@ -22,5 +22,21 @@ module ControllersSpecHelpers
         expect(response).to render_template(template)
       end
     end
+
+    def it_sets_flash_message(key, now = false, &block)
+      if now
+        it "sets the flash.now[#{key}] message" do
+          instance_eval(&block)
+          expect(flash.now[key]).not_to be_nil
+          expect(flash.now[key].empty?).to eq(false)
+        end
+      else
+        it "sets the flash[#{key}] message" do
+          instance_eval(&block)
+          expect(flash[key]).not_to be_nil
+          expect(flash[key].empty?).to eq(false)
+        end
+      end
+    end
   end
 end

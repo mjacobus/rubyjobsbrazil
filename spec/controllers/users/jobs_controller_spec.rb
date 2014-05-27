@@ -5,21 +5,17 @@ describe Users::JobsController do
 
   def valid_attributes
     {
-      job: {
-        description: 'description',
-        title: 'title',
-        how_to_apply: 'how to'
-      }
+      description: 'description',
+      title: 'title',
+      how_to_apply: 'how to'
     }
   end
 
   def invalid_attributes
     {
-      job: {
-        description: '',
-        title: '',
-        how_to_apply: ''
-      }
+      description: '',
+      title: '',
+      how_to_apply: ''
     }
   end
 
@@ -102,13 +98,17 @@ describe Users::JobsController do
 
         it "creates a new record" do
           expect do
-            post :create, valid_attributes
+            post :create, job: valid_attributes
           end.to change { user.jobs.count }.by(1)
         end
 
-        it "redirects to #index" do
-          post :create, valid_attributes
+        it "redirects to #show" do
+          post :create, job: valid_attributes
           expect(response).to redirect_to(Job.last)
+        end
+
+        it_sets_flash_message :notice do
+          post :create, job: valid_attributes
         end
 
       end
@@ -116,13 +116,83 @@ describe Users::JobsController do
       describe "with invalid attributes" do
 
         it_responds_with_success do
-          post :create, invalid_attributes
+          post :create, job: invalid_attributes
         end
 
         it_renders_template :new do
-          post :create, invalid_attributes
+          post :create, job: invalid_attributes
         end
 
+        it_sets_flash_message :alert, true do
+          post :create, job: invalid_attributes
+        end
+
+      end
+    end
+
+    describe "#update" do
+      describe "with valid attributes" do
+
+        it "updates record" do
+          job = Job.make!(user: user)
+
+          expect do
+            patch :update, id: job.id, job: valid_attributes.merge(description: 'new_description')
+            job.reload
+          end.to change { job.description }.to('new_description')
+        end
+
+        it "redirects to #show" do
+          job = Job.make!(user: user)
+          patch :update, id: job.id, job: valid_attributes.merge(description: 'new_description')
+          expect(response).to redirect_to(Job.last)
+        end
+
+        it_sets_flash_message :notice do
+          job = Job.make!(user: user)
+          patch :update, id: job.id, job: valid_attributes.merge(description: 'new_description')
+        end
+
+      end
+
+      describe "with invalid attributes" do
+        it_responds_with_success do
+          job = Job.make!(user: user)
+          patch :update, id: job.id, job: invalid_attributes
+        end
+
+        it_renders_template :edit do
+          job = Job.make!(user: user)
+          patch :update, id: job.id, job: invalid_attributes
+        end
+
+        it_sets_flash_message :alert, true do
+          job = Job.make!(user: user)
+          patch :update, id: job.id, job: invalid_attributes
+          post :create, job: invalid_attributes
+        end
+      end
+    end
+
+    describe "#destroy" do
+
+      it "destroys a record" do
+        job = Job.make!(user: user)
+
+        expect do
+          delete :destroy, id: job.id
+        end.to change { user.jobs.count }.by(-1)
+      end
+
+      it "redirects to #index" do
+        job = Job.make!(user: user)
+        delete :destroy, id: job.id
+        expect(response).to redirect_to(:jobs)
+      end
+
+      it_sets_flash_message :notice do
+        job = Job.make!(user: user)
+        delete :destroy, id: job.id
       end
     end
 
