@@ -38,5 +38,12 @@ module ControllersSpecHelpers
         end
       end
     end
+
+    def with_valid_user(&block)
+      context "when user is logged in" do
+        before { sign_in(user) }
+        class_eval(&block)
+      end
+    end
   end
 end
