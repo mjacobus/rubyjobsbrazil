@@ -1,6 +1,6 @@
 module Users
   class JobsController < UserController
-    before_action :set_job, only: [:show]
+    before_action :set_job, only: [:show, :edit]
 
     def index
       @jobs = scope
@@ -8,6 +8,15 @@ module Users
     end
 
     def show
+      respond_with(@job)
+    end
+
+    def edit
+      respond_with(@job)
+    end
+
+    def new
+      @job = scope.new
       respond_with(@job)
     end
 

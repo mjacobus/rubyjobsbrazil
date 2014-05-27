@@ -43,5 +43,38 @@ describe Users::JobsController do
         get :show, id: job.id
       end
     end
+
+    describe "#new" do
+      it "assigns a new record to @job" do
+        get :new
+        expect(assigns(:job)).to be_a_new(Job)
+        expect(assigns(:job).user).to eq(user)
+      end
+
+      it_responds_with_success do
+        get :new
+      end
+
+      it_renders_template :new do
+        get :new
+      end
+    end
+
+    describe "#edit" do
+      let(:job) { Job.make!(user: user) }
+
+      it "assigns job to @job" do
+        get :edit, id: job.id
+        expect(assigns(:job)).to eq(job)
+      end
+
+      it_responds_with_success do
+        get :edit, id: job.id
+      end
+
+      it_renders_template :edit do
+        get :edit, id: job.id
+      end
+    end
   end
 end
