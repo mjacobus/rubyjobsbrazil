@@ -20,9 +20,7 @@ describe Users::JobsController do
   end
 
   describe "#index" do
-    it_requires_authentication do
-      get :index
-    end
+    it_requires_authentication { get :index }
 
     with_valid_user do
       it "lists the posts that the user posted" do
@@ -32,9 +30,7 @@ describe Users::JobsController do
         expect(assigns(:jobs)).to eq([job])
       end
 
-      it_responds_with_success do
-        get :index
-      end
+      it_responds_with_success { get :index }
 
       it_renders_template :index do
         get :index
@@ -43,9 +39,7 @@ describe Users::JobsController do
   end
 
   describe "#edit" do
-    it_requires_authentication do
-      get :edit, id: 1
-    end
+    it_requires_authentication { get :edit, id: 1 }
 
     with_valid_user do
       let(:job) { Job.make!(user: user) }
@@ -55,9 +49,7 @@ describe Users::JobsController do
         expect(assigns(:job)).to eq(job)
       end
 
-      it_responds_with_success do
-        get :edit, id: job.id
-      end
+      it_responds_with_success { get :edit, id: job.id }
 
       it_renders_template :edit do
         get :edit, id: job.id
@@ -66,9 +58,7 @@ describe Users::JobsController do
   end
 
   describe "#show" do
-    it_requires_authentication do
-      get :show, id: 1
-    end
+    it_requires_authentication { get :show, id: 1 }
 
     with_valid_user do
       let(:job) { Job.make!(user: user) }
@@ -78,9 +68,7 @@ describe Users::JobsController do
         expect(assigns(:job)).to eq(job)
       end
 
-      it_responds_with_success do
-        get :show, id: job.id
-      end
+      it_responds_with_success { get :show, id: job.id }
 
       it_renders_template :show do
         get :show, id: job.id
@@ -89,9 +77,7 @@ describe Users::JobsController do
   end
 
   describe "#new" do
-    it_requires_authentication do
-      get :new
-    end
+    it_requires_authentication { get :new }
 
     with_valid_user do
       it "assigns a new record to @job" do
@@ -100,9 +86,7 @@ describe Users::JobsController do
         expect(assigns(:job).user).to eq(user)
       end
 
-      it_responds_with_success do
-        get :new
-      end
+      it_responds_with_success { get :new }
 
       it_renders_template :new do
         get :new
@@ -111,9 +95,7 @@ describe Users::JobsController do
   end
 
   describe "#create" do
-    it_requires_authentication do
-      post :create
-    end
+    it_requires_authentication { post :create }
 
     with_valid_user do
       describe "with valid attribbutes" do
@@ -134,9 +116,7 @@ describe Users::JobsController do
       end
 
       describe "with invalid attributes" do
-        it_responds_with_success do
-          post :create, job: invalid_attributes
-        end
+        it_responds_with_success { post :create, job: invalid_attributes }
 
         it_renders_template :new do
           post :create, job: invalid_attributes
@@ -151,9 +131,7 @@ describe Users::JobsController do
 
 
   describe "#update" do
-    it_requires_authentication do
-      patch :update, id: 1
-    end
+    it_requires_authentication { patch :update, id: 1 }
 
     with_valid_user do
       describe "with valid attributes" do
@@ -176,7 +154,6 @@ describe Users::JobsController do
           job = Job.make!(user: user)
           patch :update, id: job.id, job: valid_attributes.merge(description: 'new_description')
         end
-
       end
 
       describe "with invalid attributes" do
@@ -201,9 +178,7 @@ describe Users::JobsController do
   end
 
   describe "#destroy" do
-    it_requires_authentication do
-      delete :destroy, id: 1
-    end
+    it_requires_authentication { delete :destroy, id: 1 }
 
     with_valid_user do
       it "destroys a record" do
