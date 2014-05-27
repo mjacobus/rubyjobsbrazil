@@ -6,6 +6,10 @@
         google_oauth2: Google
         github: Github
         facebook: Facebook
+      jobs:
+        new: Publicar Vaga
+      forms:
+        save: Publicar
     messages:
       login_with:
         google_oauth2: Entre com com sua conta do Google
@@ -27,3 +31,6 @@
           success: Registro excluído com sucesso
           error: O Registro não pode ser excluído
           confirm: Tem certeza de que deseja excluir este registro?
+      posts:
+        published_at: Atualizado em %{time}
+        updated_at: Atualizado em %{time}
