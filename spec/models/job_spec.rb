@@ -14,12 +14,12 @@ describe Job do
     end
   end
 
-  describe ".enabled" do
+  describe ".open" do
     it "returns only the enabled records" do
-      enabled  = Job.make! enabled: true
-      disabled = Job.make! enabled: false
+      open   = Job.make! open: true
+      closed = Job.make! open: false
 
-      expect(Job.enabled).to eq([enabled])
+      expect(Job.open).to eq([open])
     end
   end
 end
