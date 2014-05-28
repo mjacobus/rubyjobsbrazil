@@ -270,3 +270,11 @@ pt-BR:
         title: Visualização de Vaga
       edit:
         title: Edição de Vaga
+  application:
+    filters:
+      title: Filtros
+  jobs:
+    index:
+      title: Vagas em aberto
+    job:
+      view: Visualizar

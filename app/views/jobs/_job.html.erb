@@ -1,0 +1,12 @@
+<article class="row job">
+  <div class="small-10 large-10 columns">
+    <h2><%= job.decorate.title %></h2>
+    <div><%= job.decorate.published_at %></div>
+  </div>
+
+  <div class="small-2 large-2 columns">
+    <%= button_link offer_path(job) do %>
+      <%= t('.view') %>
+    <% end %>
+  </div>
+</article>

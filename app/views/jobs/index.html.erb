@@ -1,2 +1,16 @@
-<h1>Jobs#index</h1>
-<p>Find me in app/views/jobs/index.html.erb</p>
+
+<div class="row">
+  <div class="small-12 large-4 columns">
+    <%= render 'filters' %>
+  </div>
+  <div id="jobs" class="small-12 large-8 columns">
+    <div class="row">
+      <div class="small-12 columns">
+        <h1><%= t('.title') %></h1>
+      </div>
+    </div>
+    <%= render @jobs %>
+  </div>
+</div>
+
+<%= paginate @jobs %>

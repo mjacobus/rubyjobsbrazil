@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+require 'machinist'
+require Rails.root.join('spec/support/blueprints')
+
+10.times do
+  Job.make!
+end
