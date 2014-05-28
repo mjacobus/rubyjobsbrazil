@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  root to: 'high_voltage/pages#show', id: 'home'
+
+  root to: 'jobs#index'
+
+  resources :jobs, only: [:show], as: :offer
 
   devise_for :users, controllers: {
     omniauth_callbacks: "omniauth_callbacks"
