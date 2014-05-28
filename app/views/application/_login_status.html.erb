@@ -1,1 +1,7 @@
+<li>
+  <%= link_to "#" do %>
+    <%= gravatar(current_user.email, 30, 30) %>
+    <%= t('system.messages.logged_as', username: current_user.name) %>
+  <% end %>
+</li>
 <li> <%= link_to t('system.links.logout'), :destroy_user_session %> </li>

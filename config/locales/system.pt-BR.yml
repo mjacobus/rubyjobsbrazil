@@ -11,6 +11,7 @@
       forms:
         save: Publicar
     messages:
+      logged_as: "%{username}"
       login_with:
         google_oauth2: Entre com com sua conta do Google
         github: Entre com sua conta do Github
