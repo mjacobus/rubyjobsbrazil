@@ -19,6 +19,7 @@ feature "Jobs Management" do
       within("#main_content") do
         login_with_strategy(Oauth::Github)
       end
+      expect(page).not_to have_text(t('devise.failure.already_authenticated'))
       post_job
     end
   end

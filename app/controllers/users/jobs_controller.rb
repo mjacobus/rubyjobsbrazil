@@ -16,6 +16,8 @@ module Users
     end
 
     def new
+      # TODO: This fixes issue #10. Not a beautiful think to do here
+      flash.delete(:alert)
       @job = scope.new
       respond_with(@job)
     end
