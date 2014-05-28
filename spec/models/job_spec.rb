@@ -13,4 +13,13 @@ describe Job do
       expect(job.to_param).to eq('12-some-title')
     end
   end
+
+  describe ".enabled" do
+    it "returns only the enabled records" do
+      enabled  = Job.make! enabled: true
+      disabled = Job.make! enabled: false
+
+      expect(Job.enabled).to eq([enabled])
+    end
+  end
 end

@@ -7,6 +7,7 @@ class Job < ActiveRecord::Base
   validates :how_to_apply, presence: true
 
   default_scope ->{ order('created_at DESC') }
+  scope :enabled, ->{ where(enabled: true) }
 
   def to_param
     "#{id}-#{title.parameterize}"
