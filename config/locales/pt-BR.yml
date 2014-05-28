@@ -255,6 +255,11 @@ pt-BR:
       next: "Próxima &rsaquo;"
       truncate: "&hellip;"
 
+  devise:
+    sessions:
+      new:
+        title: Autenticação necessária
+        message: Para continuar, por favor logue com uma de suas contas
   users:
     jobs:
       new:

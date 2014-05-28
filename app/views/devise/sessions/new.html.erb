@@ -1,7 +1,8 @@
 <h2><%= t('.title') %></h2>
-<ul>
-  <% available_oauth_providers.each do |name, provider| %>
-    <li><%= render 'login_button', provider: provider %></li>
-  <% end %>
-</ul>
+
+<p class="alert-box"><%= t('.message') %></p>
+
+<% available_oauth_providers.each do |name, provider| %>
+  <%= render 'login_button', provider: provider, options: { class: "#{provider} button large secondary" } %>
+<% end %>
 
