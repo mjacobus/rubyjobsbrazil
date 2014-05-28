@@ -11,10 +11,10 @@ module LinksHelper
   end
 
   def edit_link(url, options = {}, &block)
-    options.reverse_merge!({
-        title: t('system.links.edit')
-    })
-    link_to(url, options, &block)
+    options.reverse_merge!({ title: t('system.links.edit') })
+    button_link(url, 'warning tiny', options) do
+      edit_icon
+    end
   end
 
   def destroy_link(url, options = { }, &block)
@@ -23,11 +23,16 @@ module LinksHelper
       data: { confirm: t('system.messages.confirm_destroy')},
       title: t('system.links.destroy'),
     })
-    link_to(url, options, &block)
+    button_link(url, 'alert tiny', options) do
+      destroy_icon
+    end
   end
 
-  def show_link
-    button_link(url, 'warning tiny', options, &block)
+  def show_link(url, options = {}, &block)
+    options.reverse_merge!({ title: t('system.links.show') })
+    button_link(url, 'secondary tiny', options) do
+      show_icon
+    end
   end
 
   def back_link(url = { action: :index }, options = {}, &block)

@@ -42,6 +42,7 @@ gem 'foundation-rails'
 gem 'foundation-icons-sass-rails'
 # gem 'github-markup'
 gem 'redcarpet'
+gem 'table_cloth'
 
 group :development, :test do
   gem 'awesome_print'

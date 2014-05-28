@@ -215,6 +215,9 @@ pt-BR:
       user:
         name: Nome
         username: Nome
+      job:
+        title: Título
+        published_at: Publicação
       order:
         email: Email
         phone: Telefone
@@ -242,3 +245,10 @@ pt-BR:
         enabled: Ativo?
         email: Email
         token: Token
+  views:
+    pagination:
+      first: "&laquo; Primeira"
+      last: "Última &raquo;"
+      previous: "&lsaquo; Anterior"
+      next: "Próxima &rsaquo;"
+      truncate: "&hellip;"

@@ -1,5 +1,6 @@
-module IconsHelper
+# http://zurb.com/playground/foundation-icon-fonts-3
 
+module IconsHelper
   def icon(name, klass = nil)
     content_tag(:i, nil, class: "fi-#{name} #{klass}")
   end
@@ -20,4 +21,7 @@ module IconsHelper
     icon(:trash, klass)
   end
 
+  def show_icon(klass = nil)
+    icon(:eye, klass)
+  end
 end

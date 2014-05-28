@@ -3,7 +3,7 @@ module Users
     before_action :set_job, only: [:show, :edit, :update, :destroy]
 
     def index
-      @jobs = scope
+      @jobs = scope.page(page).per(per_page)
       respond_with(@jobs)
     end
 

@@ -1,7 +1,10 @@
 "pt-BR":
   system:
     links:
+      destroy: Excluir
+      edit: Editar
       logout: Sair
+      show: Visualizar
       login:
         google_oauth2: Google
         github: Github
