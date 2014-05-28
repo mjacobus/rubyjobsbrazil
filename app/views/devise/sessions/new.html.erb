@@ -1,0 +1,7 @@
+<h2><%= t('.title') %></h2>
+<ul>
+  <% available_oauth_providers.each do |name, provider| %>
+    <li><%= render 'login_button', provider: provider %></li>
+  <% end %>
+</ul>
+

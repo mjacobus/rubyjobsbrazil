@@ -29,7 +29,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def redirect_url_for(user, origin = nil)
-    root_path
+    origin || root_url
   end
 
   def relative_path(url)

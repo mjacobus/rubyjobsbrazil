@@ -3,11 +3,27 @@ require "spec_helper"
 feature "Jobs Management" do
   include Features::Login
 
-  scenario "creationg jobs" do
-    visit root_path
-    login_with_strategy(Oauth::Github)
-    click_link t('system.links.jobs.new')
+  context "when user is not logged" do
+    scenario "he publishes a job" do
+      visit root_path
+      login_with_strategy(Oauth::Github)
+      click_link t('system.links.jobs.new')
+      post_job
+    end
+  end
 
+  context "when user is not logged" do
+    scenario "he publishes a job" do
+      visit root_path
+      click_link t('system.links.jobs.new')
+      within("#main_content") do
+        login_with_strategy(Oauth::Github)
+      end
+      post_job
+    end
+  end
+
+  def post_job
     within('#new_job') do
       fill_in 'job[title]', with: 'Job Position'
       fill_in 'job[description]', with: 'Job Description'
