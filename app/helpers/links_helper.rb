@@ -6,8 +6,11 @@ module LinksHelper
     link_to url, options, &block
   end
 
-  def new_link(url, options = {}, &block)
-    button_link(url, 'success', options, &block)
+  def new_link(url, options = {})
+    options.reverse_merge!({ title: t('system.links.new') })
+    button_link(url, 'success', options) do
+      new_icon
+    end
   end
 
   def edit_link(url, options = {}, &block)

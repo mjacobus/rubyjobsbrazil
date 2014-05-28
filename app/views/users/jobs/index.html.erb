@@ -1,5 +1,6 @@
 <h1><%= t('.title') %></h1>
 
+<%= new_link(:new_job) %>
 <%= simple_table_for @jobs, with: JobTable %>
 
 <%= paginate @jobs %>

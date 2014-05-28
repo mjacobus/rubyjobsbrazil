@@ -252,3 +252,14 @@ pt-BR:
       previous: "&lsaquo; Anterior"
       next: "Próxima &rsaquo;"
       truncate: "&hellip;"
+
+  users:
+    jobs:
+      new:
+        title: Nova Vaga
+      index:
+        title: Vagas
+      show:
+        title: Visualização de Vaga
+      edit:
+        title: Edição de Vaga

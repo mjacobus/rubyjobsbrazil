@@ -1,6 +1,7 @@
 "pt-BR":
   system:
     links:
+      new: Adicionar
       destroy: Excluir
       edit: Editar
       logout: Sair
