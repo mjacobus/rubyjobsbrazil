@@ -4,6 +4,7 @@
       new: Adicionar
       edit: Atualizar
     links:
+      published_jobs: Vagas que eu publiquei
       back: Cancelar
       new: Adicionar
       destroy: Excluir
