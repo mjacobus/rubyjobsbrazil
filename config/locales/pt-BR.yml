@@ -218,6 +218,8 @@ pt-BR:
       job:
         title: Título
         published_at: Publicação
+        description: Descrição
+        how_to_apply: Como se candidatar
       order:
         email: Email
         phone: Telefone

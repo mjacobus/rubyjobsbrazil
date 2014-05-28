@@ -30,7 +30,7 @@ feature "Jobs Management" do
       fill_in 'job[description]', with: 'Job Description'
       fill_in 'job[how_to_apply]', with: 'How to Apply'
 
-      click_button t('system.links.forms.save')
+      click_button t('system.submit.new')
     end
 
     expect(page).to have_text(t('system.messages.crud.create.success'))

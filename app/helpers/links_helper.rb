@@ -8,8 +8,9 @@ module LinksHelper
 
   def new_link(url, options = {})
     options.reverse_merge!({ title: t('system.links.new') })
-    button_link(url, 'success', options) do
-      new_icon
+
+    link_to(url, options) do
+      [new_icon, t('system.links.new')].join(" ").html_safe
     end
   end
 
@@ -45,9 +46,14 @@ module LinksHelper
   end
 
   def cancel_link(url = { action: :index }, options = {}, &block)
-    button_link(url, 'warning', options) do
+    button_link(url, 'alert', options) do
       t('system.links.cancel')
     end
+  end
+
+  def submit_button
+    action = params[:action]
+    content_tag(:button, t("system.submit.#{action}"), class: 'success')
   end
 
 end

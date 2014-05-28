@@ -1,6 +1,10 @@
 "pt-BR":
   system:
+    submit:
+      new: Adicionar
+      edit: Atualizar
     links:
+      back: Cancelar
       new: Adicionar
       destroy: Excluir
       edit: Editar
