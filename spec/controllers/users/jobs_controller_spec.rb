@@ -31,10 +31,7 @@ describe Users::JobsController do
       end
 
       it_responds_with_success { get :index }
-
-      it_renders_template :index do
-        get :index
-      end
+      it_renders_template(:index) { get :index }
     end
   end
 
@@ -50,10 +47,7 @@ describe Users::JobsController do
       end
 
       it_responds_with_success { get :edit, id: job.id }
-
-      it_renders_template :edit do
-        get :edit, id: job.id
-      end
+      it_renders_template(:edit) { get :edit, id: job.id }
     end
   end
 
@@ -69,10 +63,7 @@ describe Users::JobsController do
       end
 
       it_responds_with_success { get :show, id: job.id }
-
-      it_renders_template :show do
-        get :show, id: job.id
-      end
+      it_renders_template(:show) { get :show, id: job.id }
     end
   end
 
@@ -87,10 +78,7 @@ describe Users::JobsController do
       end
 
       it_responds_with_success { get :new }
-
-      it_renders_template :new do
-        get :new
-      end
+      it_renders_template(:new) { get :new }
     end
   end
 
@@ -110,21 +98,13 @@ describe Users::JobsController do
           expect(response).to redirect_to(Job.last)
         end
 
-        it_sets_flash_message :notice do
-          post :create, job: valid_attributes
-        end
+        it_sets_flash_message(:notice) { post :create, job: valid_attributes }
       end
 
       describe "with invalid attributes" do
         it_responds_with_success { post :create, job: invalid_attributes }
-
-        it_renders_template :new do
-          post :create, job: invalid_attributes
-        end
-
-        it_sets_flash_message :alert, true do
-          post :create, job: invalid_attributes
-        end
+        it_renders_template(:new) { post :create, job: invalid_attributes }
+        it_sets_flash_message(:alert, true) { post :create, job: invalid_attributes }
       end
     end
   end
