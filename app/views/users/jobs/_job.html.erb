@@ -1,16 +1,19 @@
-<article>
-  <header>
-    <h1><%= job.title %></h1>
-  </header>
+<div class="row">
+  <div class="small-12 columns">
+    <article>
+      <header>
+        <h1><%= job.title %></h1>
+      </header>
 
-  <div class="description"><%= to_markdown(job.description) %></div>
-  <div class="how-to-apply"><%= to_markdown(job.how_to_apply) %></div>
+      <div class="description"><%= to_markdown(job.description) %></div>
+      <div class="how-to-apply"><%= to_markdown(job.how_to_apply) %></div>
 
-  <footer>
-    <div class="published"><%= job.decorate.published_at %></div>
-    <% if job.decorate.updated? %>
-      <div class="updated"><%= job.decorate.updated_at %></div>
-    <% end %>
-  </footer>
-</article>
-
+      <footer>
+        <div class="published"><%= job.decorate.published_at %></div>
+        <% if job.decorate.updated? %>
+          <div class="updated"><%= job.decorate.updated_at %></div>
+      <% end %>
+      </footer>
+    </article>
+  </div>
+</div>
