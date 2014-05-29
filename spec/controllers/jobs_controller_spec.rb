@@ -8,7 +8,8 @@ describe JobsController do
 
     before do
       chain = double(:query)
-      expect(chain).to receive(:page).and_return([job])
+      expect(chain).to receive(:per).and_return([job])
+      expect(chain).to receive(:page).and_return(chain)
       expect(Job).to receive(:open).and_return(chain)
     end
 
