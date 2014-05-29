@@ -1,3 +1,6 @@
+@import 'variables'
+
+
 table.wide
   width: 100%
 
@@ -9,14 +12,20 @@ table.wide
 .wrapper
   margin: 10px
 
+#after_menu
+  background: $red
+  margin-bottom: 20px
+
 #jobs
   .job
     margin: 15px 0
   a
     color: inherit
   .job
-    background: #eee
-    margin-bottom: 5px
+    color: $dark-gray
+    margin: 5px
+    border-bottom: 1px solid #ccc
   .published_date
-    color: gray
     font-size: 10pt
+  h2
+    color: $dark-red

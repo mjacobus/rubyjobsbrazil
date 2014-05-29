@@ -5,6 +5,10 @@ class JobDecorator < Draper::Decorator
     h.time_ago_in_words(object.created_at)
   end
 
+  def title
+    object.title.titleize
+  end
+
   def updated_at_ago
     h.time_ago_in_words(object.created_at)
   end

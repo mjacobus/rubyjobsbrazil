@@ -1,3 +1,4 @@
+@import 'variables';
 // Foundation by ZURB
 // foundation.zurb.com
 // Licensed under MIT Open Source
@@ -41,7 +42,7 @@
 
 // We use these to control various global styles
 // $body-bg: #fff;
-// $body-font-color: #222;
+// $body-font-color: #333;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
@@ -120,18 +121,18 @@
 // $header-font-family: $body-font-family;
 $header-font-weight: bold;
 // $header-font-style: normal;
-// $header-font-color: #222;
+$header-font-color: #333;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
 // $header-bottom-margin: .5rem;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-$h1-font-size: rem-calc(30);
-$h2-font-size: rem-calc(25);
-$h3-font-size: rem-calc(22);
-$h4-font-size: rem-calc(18);
-$h5-font-size: rem-calc(13);
+$h1-font-size: rem-calc(25);
+$h2-font-size: rem-calc(22);
+$h3-font-size: rem-calc(18);
+$h4-font-size: rem-calc(13);
+$h5-font-size: rem-calc(12);
 // $h6-font-size: 1rem;
 
 // These control how subheaders are styled.
@@ -758,11 +759,11 @@ $h5-font-size: rem-calc(13);
 // $pagination-link-unavailable-bg-active: transparent;
 
 // We use these for currently selected anchor links
-// $pagination-link-current-background: $primary-color;
+$pagination-link-current-background: $red;
 // $pagination-link-current-font-color: #fff;
 // $pagination-link-current-font-weight: bold;
 // $pagination-link-current-cursor: default;
-// $pagination-link-current-active-bg: $primary-color;
+$pagination-link-current-active-bg: $dark-red;
 
 // Panels
 
@@ -1130,7 +1131,7 @@ $h5-font-size: rem-calc(13);
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: #333;
+// $topbar-bg-color: #C52F24;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
