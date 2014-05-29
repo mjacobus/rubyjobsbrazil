@@ -1,8 +1,12 @@
-<%= link_to offer_path(job) do %>
-  <article class="row job">
-    <div class="small-12 medium-8 large-8 columns">
-      <h2><%= job.decorate.title %></h2>
-      <div><%= job.decorate.published_at %></div>
-    </div>
-  </article>
-<% end %>
+<div class="job">
+  <%= link_to offer_path(job) do %>
+    <article class="row">
+      <div class="small-12 medium-8 large-8 columns">
+        <div class="wrapper">
+          <h2><%= job.decorate.title %></h2>
+          <div class="published_date"><%= job.decorate.published_at %></div>
+        </div>
+      </div>
+    </article>
+  <% end %>
+</div>
