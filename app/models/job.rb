@@ -1,5 +1,6 @@
 class Job < ActiveRecord::Base
   belongs_to :user
+  belongs_to :city
 
   validates :user, presence: true
   validates :title, presence: true

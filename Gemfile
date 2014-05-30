@@ -62,6 +62,7 @@ group :test do
   gem 'timecop'
   gem 'webmock'
   gem "spring-commands-rspec"
+  gem 'faker'
 end
 
 group :staging, :production do

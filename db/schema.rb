@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140528180103) do
+ActiveRecord::Schema.define(version: 20140530191708) do
+
+  create_table "cities", force: true do |t|
+    t.string   "name"
+    t.string   "short"
+    t.integer  "state_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "cities", ["state_id"], name: "index_cities_on_state_id", using: :btree
 
   create_table "jobs", force: true do |t|
     t.string   "title"
@@ -21,9 +31,20 @@ ActiveRecord::Schema.define(version: 20140528180103) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "open",         default: true
+    t.integer  "city_id"
   end
 
+  add_index "jobs", ["city_id"], name: "index_jobs_on_city_id", using: :btree
   add_index "jobs", ["user_id"], name: "index_jobs_on_user_id", using: :btree
+
+  create_table "states", force: true do |t|
+    t.string   "name"
+    t.string   "short"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "states", ["name"], name: "index_states_on_name", unique: true, using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",               default: "", null: false
