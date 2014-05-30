@@ -1,6 +1,9 @@
 require 'simplecov'
 SimpleCov.start 'rails'
 
+require 'coveralls'
+Coveralls.wear!
+
 ENV['RAILS_ENV'] = 'test'
 
 # TODO remvoe when warning is fixed
