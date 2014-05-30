@@ -59,6 +59,7 @@ group :test do
   # gem 'launchy'
   gem 'shoulda-matchers', require: false
   gem 'simplecov', require: false
+  gem 'coveralls', require: false
   gem 'timecop'
   gem 'webmock'
   gem "spring-commands-rspec"
