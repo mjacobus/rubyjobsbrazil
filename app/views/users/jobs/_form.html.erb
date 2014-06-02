@@ -1,5 +1,11 @@
 <%= simple_form_for(job) do |f| %>
   <%= f.input :title %>
+  <%= f.input :state_id, as: :select, collection: options_for_states,
+    input_html: {
+      'data-filter-select' => '{"target": "#store_city_id", "filterParam":"state_id", "filter": "city"}'
+    }
+  %>
+  <%= f.association :city, collection: options_for_cities(@job.state_id) %>
   <%= f.input :description, as: :text, input_html: { rows: 5 } %>
   <%= f.input :how_to_apply, as: :text, input_html: { rows: 5 } %>
   <%= render 'form_actions' %>

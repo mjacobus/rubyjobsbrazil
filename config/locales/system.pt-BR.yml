@@ -3,11 +3,14 @@
     submit:
       new: Adicionar
       edit: Atualizar
+      create: Adicionar
+      cancel: Cancelar
     links:
       published_jobs: Vagas que eu publiquei
       back: Voltar
       new: Adicionar
       destroy: Excluir
+      cancel: Cancelar
       edit: Editar
       logout: Sair
       show: Visualizar

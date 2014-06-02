@@ -3,6 +3,7 @@ class Job < ActiveRecord::Base
   belongs_to :city
 
   validates :user, presence: true
+  validates :city, presence: true
   validates :title, presence: true
   validates :description, presence: true
   validates :how_to_apply, presence: true
@@ -12,5 +13,19 @@ class Job < ActiveRecord::Base
 
   def to_param
     "#{id}-#{title.parameterize}"
+  end
+
+  # form helper
+  def state_id=(value)
+    @state_id = value
+  end
+
+  # form helper
+  def state_id
+    if @state_id.present?
+      @state_id.to_i
+    elsif city.present?
+      city.state_id
+    end
   end
 end

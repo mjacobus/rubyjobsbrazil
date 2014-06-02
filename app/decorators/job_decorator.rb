@@ -24,4 +24,20 @@ class JobDecorator < Draper::Decorator
   def updated_at
     h.t('system.messages.posts.updated_at', time: updated_at_ago)
   end
+
+  def city
+    object.city.name
+  end
+
+  def state
+    object.city.state.name
+  end
+
+  def location
+    "#{city}/#{short_state}"
+  end
+
+  def short_state
+    object.city.state.short
+  end
 end

@@ -5,6 +5,7 @@ feature "Jobs Management" do
 
   context "when user is not logged" do
     scenario "he publishes a job" do
+      city
       visit root_path
       login_with_strategy(Oauth::Github)
       click_link t('system.links.jobs.new')
@@ -14,6 +15,7 @@ feature "Jobs Management" do
 
   context "when user is not logged" do
     scenario "he publishes a job" do
+      city
       visit root_path
       click_link t('system.links.jobs.new')
       within("#main_content") do
@@ -29,7 +31,12 @@ feature "Jobs Management" do
       fill_in 'job[title]', with: 'Job Position'
       fill_in 'job[description]', with: 'Job Description'
       fill_in 'job[how_to_apply]', with: 'How to Apply'
+      select state.name, from: 'job[state_id]'
+      click_button t('system.submit.new')
+    end
 
+    within('#new_job') do
+      select city.name, from: 'job[city_id]'
       click_button t('system.submit.new')
     end
 

@@ -49,7 +49,9 @@ module Users
     end
 
     def job_params
-      params.require(:job).permit(:title, :description, :how_to_apply)
+      params.require(:job).permit(
+        :title, :description, :how_to_apply, :city_id, :state_id
+      )
     end
   end
 end

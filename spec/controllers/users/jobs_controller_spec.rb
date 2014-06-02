@@ -7,7 +7,8 @@ describe Users::JobsController do
     {
       description: 'description',
       title: 'title',
-      how_to_apply: 'how to'
+      how_to_apply: 'how to',
+      city_id: City.make!.id
     }
   end
 

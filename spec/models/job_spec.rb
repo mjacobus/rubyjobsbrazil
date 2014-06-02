@@ -7,6 +7,7 @@ describe Job do
   it { should validate_presence_of(:description) }
   it { should validate_presence_of(:how_to_apply) }
   it { should validate_presence_of(:user) }
+  it { should validate_presence_of(:city) }
 
   describe "#to_param" do
     it "returns the parameterized title" do
@@ -21,6 +22,20 @@ describe Job do
       closed = Job.make! open: false
 
       expect(Job.open).to eq([open])
+    end
+  end
+
+  describe "#state_id" do
+    it "returns the state id" do
+      city = mock_model(City, state_id: 1)
+
+      expect do
+        subject.city = city
+      end.to change { subject.state_id }.from(nil).to(1)
+
+      expect do
+        subject.state_id = '2'
+      end.to change { subject.state_id }.to(2)
     end
   end
 end
