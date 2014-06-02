@@ -2,7 +2,7 @@
   <%= f.input :title %>
   <%= f.input :state_id, as: :select, collection: options_for_states,
     input_html: {
-      'data-filter-select' => '{"target": "#store_city_id", "filterParam":"state_id", "filter": "city"}'
+      'data-filter-select' => '{"target": "#job_city_id", "filterParam":"state_id", "filter": "city"}'
     }
   %>
   <%= f.association :city, collection: options_for_cities(@job.state_id) %>

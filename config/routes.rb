@@ -16,4 +16,6 @@ Rails.application.routes.draw do
   scope :profile, module: :users do
     resources :jobs
   end
+
+  get 'filters' => 'filters#index', as: :filters
 end

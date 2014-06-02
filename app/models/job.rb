@@ -8,7 +8,7 @@ class Job < ActiveRecord::Base
   validates :description, presence: true
   validates :how_to_apply, presence: true
 
-  default_scope ->{ order('created_at DESC') }
+  default_scope ->{ order('jobs.created_at DESC') }
   scope :open, ->{ where(open: true) }
 
   def to_param
