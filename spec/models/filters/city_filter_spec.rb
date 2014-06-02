@@ -1,7 +1,7 @@
 require "spec_helper"
 
 describe Filters::CityFilter, ".filter" do
-  let!(:sl) { City.make!(name: 'São Leopoldo') }
+  let!(:sl) { City.make!(name: 'Sao Leopoldo') }
   let!(:nh) { City.make!(name: 'Novo Hamburgo') }
 
   it "returns cities ids and names" do
