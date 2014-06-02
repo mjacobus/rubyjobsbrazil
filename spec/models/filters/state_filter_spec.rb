@@ -1,7 +1,7 @@
 require "spec_helper"
 
 describe Filters::StateFilter, ".filter" do
-  let!(:sp) { State.make!(name: 'São Paulo') }
+  let!(:sp) { State.make!(name: 'Sao Paulo') }
   let!(:rs) { State.make!(name: 'Rio Grande do Sul') }
 
   it "returns states ids and names" do
