@@ -8,6 +8,12 @@ describe Filters::CityFilter, ".filter" do
     expect(described_class.filter).to eq([nh, sl])
   end
 
+  it "returns only the ones with open jobs" do
+    Job.make! city: nh, open: true
+    Job.make! city: sl, open: false
+    expect(described_class.filter(open_jobs: true)).to eq([nh])
+  end
+
   it "returns only the ones with job" do
     Job.make! city: nh
     Job.make! city: nh

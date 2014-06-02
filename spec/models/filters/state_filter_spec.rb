@@ -8,6 +8,13 @@ describe Filters::StateFilter, ".filter" do
     expect(described_class.filter).to eq([rs, sp])
   end
 
+  it "returns only the ones with open jobs" do
+    city = City.make! state: sp
+    Job.make! city: city, open: true
+    Job.make! open: false
+    expect(described_class.filter(open_jobs: true)).to eq([sp])
+  end
+
   it "returns only the ones with jobs" do
     city = City.make! state: sp
     Job.make! city: city
