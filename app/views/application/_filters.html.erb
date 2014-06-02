@@ -1,5 +1,17 @@
+<%-
+  state_options = options_for_select(options_for_available_states, params[:state_id])
+  city_options  = options_for_select(options_for_available_cities(params[:state_id]), params[:city_id])
+-%>
 <section>
   <header>
     <h1><%= t('.title') %></h1>
+    <%= form_tag(root_path, method: :get) do %>
+      <label for="state_id"><%= t('.state') %></label>
+      <%= select_tag :state_id, state_options, include_blank: true, data: { 'filter-select' => '{"target": "#city_id", "filterParam":"state_id", "filter": "city", "data": {  "open_jobs": "1"} }' } %>
+
+      <label for="city_id"><%= t('.city') %></label>
+      <%= select_tag :city_id, city_options, prompt: t('.select_state') %>
+      <button class="expand"> <%= icon('page-search') %> <%= t('.submit') %> </button>
+    <% end %>
   </header>
 </section>

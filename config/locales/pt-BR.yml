@@ -273,6 +273,10 @@ pt-BR:
   application:
     filters:
       title: Filtros
+      state: Estado
+      city: Cidade
+      select_state: Selecione um Estado
+      submit: Procurar
   jobs:
     index:
       title: Vagas em aberto

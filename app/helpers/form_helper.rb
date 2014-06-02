@@ -7,8 +7,8 @@ module FormHelper
     options_for(State.with_open_jobs)
   end
 
-  def options_for_available_cities
-    options_for City.with_open_jobs
+  def options_for_available_cities(state_id)
+    options_for City.with_open_jobs.where(state_id: state_id)
   end
 
   def options_for_cities(state_id = nil)
