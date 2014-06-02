@@ -33,8 +33,10 @@ module Filters
       query
     end
 
-    def merge(scope)
-      @query = query.merge(scope)
+    def merge(scope = nil, &block)
+      @query = query.merge(yield) if block_given?
+      @query = query.merge(scope) if scope
+      self
     end
   end
 end
