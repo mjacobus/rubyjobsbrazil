@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
   def index
-    @jobs = Job.open.page(page).per(per_page)
+    @jobs = ::Filters::JobFilter.filter(params).open.page(page).per(per_page)
   end
 
   def show
