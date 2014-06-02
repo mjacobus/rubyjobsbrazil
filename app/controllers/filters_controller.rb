@@ -1,5 +1,4 @@
 class FiltersController < ApplicationController
-
   def index
     @records = ::Filters.filter(type, params).map do |record|
       { id: record.id, name: record.name }
@@ -10,5 +9,4 @@ class FiltersController < ApplicationController
   def type
     params.require(:filter)
   end
-
 end
