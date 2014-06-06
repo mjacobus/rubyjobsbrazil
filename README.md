@@ -38,7 +38,7 @@ Ruby Jobs Brazil é um site que anuncia oportunidades de trabalho relacionados c
 Como Contribuir
 ---------------
 
-Nota: Ao contribuir, você concorda que não vai receber nenhuma remuneração ou compensação pelo seu trabalho. Você deve contribuir apenas se sente [motivado](#motivação) e acredita na idéia. Para fazer o projeto rodar em sua máquina, veja o tópico [instalação](#instalacao)
+Nota: Ao contribuir, você concorda que não vai receber nenhuma remuneração ou compensação pelo seu trabalho. Você deve contribuir apenas se sente [motivado](#motivação) e acredita na idéia. Para fazer o projeto rodar em sua máquina, veja o tópico [instalação](#instalação)
 
 ### Desenvolvedores
 
