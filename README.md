@@ -93,7 +93,7 @@ Funcionalidades desejadas
 
 Licença
 --------------
-- Este projeto é distribuido debaixo da licensa [MIT](https://github.com/mjacobus/rubyjobsbrazil/blob/master/MIT-LICENSE.md)
+- Este projeto é distribuido debaixo da licensa [MIT](https://github.com/mjacobus/rubyjobsbrazil/blob/master/MIT-LICENSE)
 
 Contribuidores
 --------------
