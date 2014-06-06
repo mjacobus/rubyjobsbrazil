@@ -44,6 +44,8 @@ gem 'foundation-icons-sass-rails'
 gem 'redcarpet'
 gem 'table_cloth'
 gem 'capistrano'
+gem 'capistrano-rails'
+gem 'capistrano-bundler'
 
 group :development, :test do
   gem 'awesome_print'
