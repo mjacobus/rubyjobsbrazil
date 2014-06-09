@@ -12,3 +12,6 @@
 /tags
 /tmp/*
 config/smtp.yml
+
+# Ignore application configuration
+/config/application.yml

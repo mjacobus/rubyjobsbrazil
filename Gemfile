@@ -45,6 +45,7 @@ gem 'table_cloth'
 gem 'capistrano'
 gem 'capistrano-rails'
 gem 'capistrano-bundler'
+gem 'figaro'
 
 group :development, :test do
   gem 'awesome_print'
