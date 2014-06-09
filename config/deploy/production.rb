@@ -1,11 +1,11 @@
 set :stage, :production
 set :application, 'rubyjobsbrazil.com.br'
-set :deploy_to, "/webapps/#{fetch(:application)}"
+set :deploy_to, "/home/rubyjobsbrazil/sites/#{fetch(:application)}"
 
-set :user, ask('Username', 'root')
+set :user, ask('Username', 'rubyjobsbrazil')
 set :password, ask('Password', nil)
 
-server 'www.achouveiculos.com.br',
+server 'rubyjobsbrazil.com.br',
   user: fetch(:user),
   password: fetch(:password),
   roles: %w{web app db}
