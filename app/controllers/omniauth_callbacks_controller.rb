@@ -1,4 +1,8 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
+  # For handling errors
+  def new_session_path(scope)
+    root_path
+  end
 
   def facebook
     login_with(Oauth::Facebook)
@@ -29,7 +33,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def redirect_url_for(user, origin = nil)
-    origin || root_path
+    origin || root_url
   end
 
   def relative_path(url)
