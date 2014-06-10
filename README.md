@@ -1,7 +1,7 @@
 Ruby Jobs Brazil
 ==============
 
-Código fonte do site [RubyJobsBrazil.com](http://rubyjobsbrazil.com)
+Código fonte do site [RubyJobsBrazil.com.br](http://rubyjobsbrazil.com.br)
 
 [![Build Status](https://travis-ci.org/mjacobus/rubyjobsbrazil.png?branch=master)](https://travis-ci.org/mjacobus/rubyjobsbrazil)
 [![Coverage Status](https://coveralls.io/repos/mjacobus/rubyjobsbrazil/badge.png)](https://coveralls.io/r/mjacobus/rubyjobsbrazil)
