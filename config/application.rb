@@ -17,7 +17,7 @@ module RubyJobsBrazil
   class Application < Rails::Application
     # TODO: Change to true once the following issue has been fixed
     # https://github.com/rails/rails/issues/13164
-    config.i18n.enforce_available_locales = true
+    config.i18n.enforce_available_locales = !true
 
     config.i18n.default_locale = 'pt-BR'
 
