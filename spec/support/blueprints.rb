@@ -33,3 +33,7 @@ State.blueprint do
   name  { Faker::Address.city }
   short { "#{sn}" }
 end
+
+Tag.blueprint do
+  # Attributes here
+end
