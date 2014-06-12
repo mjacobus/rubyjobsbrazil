@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140530191708) do
+ActiveRecord::Schema.define(version: 20140612124923) do
 
   create_table "cities", force: true do |t|
     t.string   "name"
@@ -47,9 +47,9 @@ ActiveRecord::Schema.define(version: 20140530191708) do
   add_index "states", ["name"], name: "index_states_on_name", unique: true, using: :btree
 
   create_table "users", force: true do |t|
-    t.string   "email",               default: "", null: false
+    t.string   "email"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",       default: 0,  null: false
+    t.integer  "sign_in_count",       default: 0, null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
@@ -60,10 +60,8 @@ ActiveRecord::Schema.define(version: 20140530191708) do
     t.string   "uid"
     t.text     "provider_data"
     t.string   "name"
-    t.integer  "city_id"
   end
 
-  add_index "users", ["city_id"], name: "index_users_on_city_id", using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["provider", "uid"], name: "index_users_on_provider_and_uid", unique: true, using: :btree
 

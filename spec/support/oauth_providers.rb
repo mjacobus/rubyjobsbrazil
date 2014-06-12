@@ -47,11 +47,17 @@ OmniAuth.config.mock_auth[:facebook] = {
 # Github
 ################################################################################
 OmniAuth.config.mock_auth[:github] = {
-    :provider => 'github',
-    :uid => '123458',
-    :info => {
-      :name => 'Example Name',
-      :email => "email@google.com",
+    provider: 'github',
+    uid: '123458',
+    info: {
+      nickname: "Nick Name",
+      email: nil,
+      name: "Marcelo",
+      image: "https://avatars.githubusercontent.com/u/226834?",
+      urls: {
+        GitHub: "https://github.com/mjacobus",
+        Blog: "jw.org"
+      }
     }
   }
 
