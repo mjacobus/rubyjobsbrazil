@@ -79,8 +79,10 @@ ActiveRecord::Schema.define(version: 20140612174052) do
     t.string   "uid"
     t.text     "provider_data"
     t.string   "name"
+    t.integer  "city_id"
   end
 
+  add_index "users", ["city_id"], name: "index_users_on_city_id", using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["provider", "uid"], name: "index_users_on_provider_and_uid", unique: true, using: :btree
 

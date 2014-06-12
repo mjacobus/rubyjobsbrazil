@@ -14,6 +14,12 @@ end
 ActiveRecord::Base.send(:include, RandomRecords)
 
 30.times do
-  Job.make!(city: City.random)
+  job = Job.make!(city: City.random)
+
+  begin
+    job.tags << Tag.random
+    job.tags << Tag.random
+  rescue ActiveRecord::RecordNotUnique => e
+  end
 end
 
