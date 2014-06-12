@@ -6,6 +6,7 @@
   <div class="description"><%= to_markdown(job.description) %></div>
   <div class="locaiton"><%= job.decorate.location %></div>
   <div class="how-to-apply"><%= to_markdown(job.how_to_apply) %></div>
+  <div class="tags"><%= job.decorate.tag_names.join(', ') %></div>
 
   <footer>
     <div class="published"><%= job.decorate.published_at %></div>

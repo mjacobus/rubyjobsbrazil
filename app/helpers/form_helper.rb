@@ -20,4 +20,8 @@ module FormHelper
       [row.name, row.id]
     end
   end
+
+  def tags
+    Tag.order(:sequence)
+  end
 end

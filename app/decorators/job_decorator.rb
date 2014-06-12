@@ -40,4 +40,8 @@ class JobDecorator < Draper::Decorator
   def short_state
     object.city.state.short
   end
+
+  def tag_names
+    tags.map(&:name)
+  end
 end

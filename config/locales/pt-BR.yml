@@ -270,6 +270,8 @@ pt-BR:
         title: Visualização de Vaga
       edit:
         title: Edição de Vaga
+      form:
+        tags: Tags
   application:
     filters:
       title: Filtros

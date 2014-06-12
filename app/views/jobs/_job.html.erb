@@ -5,6 +5,7 @@
         <div class="wrapper">
           <h2><%= job.decorate.title %></h2>
           <div class="location"><%= job.decorate.location %></div>
+          <div class="tags"><%= job.decorate.tag_names.join(', ') %></div>
           <div class="published_date"><%= job.decorate.published_at %></div>
         </div>
       </div>

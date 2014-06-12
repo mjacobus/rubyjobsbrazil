@@ -51,7 +51,7 @@ module Users
     def job_params
       params.require(:job).permit(
         :title, :description, :how_to_apply, :city_id, :state_id, tag_ids: []
-      )
+      ).to_hash.reverse_merge(tag_ids: [])
     end
   end
 end
