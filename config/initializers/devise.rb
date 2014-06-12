@@ -230,7 +230,7 @@ Devise.setup do |config|
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
 
   if ENV['GITHUB_KEY']
-    config.omniauth :github, ENV['GITHUB_KEY'], ENV['FACEBOOK_SECRET'],
+    config.omniauth :github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET'],
       scope: 'email,public_repo'
   end
 
