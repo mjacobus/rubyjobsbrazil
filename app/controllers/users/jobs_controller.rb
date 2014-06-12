@@ -50,7 +50,7 @@ module Users
 
     def job_params
       params.require(:job).permit(
-        :title, :description, :how_to_apply, :city_id, :state_id
+        :title, :description, :how_to_apply, :city_id, :state_id, tag_ids: []
       )
     end
   end

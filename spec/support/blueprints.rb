@@ -35,5 +35,5 @@ State.blueprint do
 end
 
 Tag.blueprint do
-  # Attributes here
+  name { "tag #{sn}" }
 end

@@ -1,7 +1,8 @@
 module CrudFlashMessagerHelper
-  def crud_flash(result)
+  def crud_flash(result, &block)
     unless request.xhr?
       result ? set_crud_success_flash : set_crud_error_flash
+      yield if result && block_given?
     end
     result
   end

@@ -3,12 +3,15 @@ require 'spec_helper'
 describe Users::JobsController do
   include ControllersSpecHelpers
 
-  def valid_attributes
+  let(:tag) { Tag.make! }
+
+  let(:valid_attributes) do
     {
       description: 'description',
       title: 'title',
       how_to_apply: 'how to',
-      city_id: City.make!.id
+      city_id: City.make!.id,
+      tag_ids: [ tag.id ]
     }
   end
 
@@ -92,6 +95,12 @@ describe Users::JobsController do
           expect do
             post :create, job: valid_attributes
           end.to change { user.jobs.count }.by(1)
+        end
+
+        it "creates tags associations" do
+          expect do
+            post :create, job: valid_attributes
+          end.to change { tag.jobs.count }.by(1)
         end
 
         it "redirects to #show" do
