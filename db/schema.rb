@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(version: 20140612174052) do
 
   add_index "cities", ["state_id"], name: "index_cities_on_state_id", using: :btree
 
+  create_table "comments", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.text     "message"
+    t.integer  "parent_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "jobs", force: true do |t|
     t.string   "title"
     t.text     "description"
@@ -79,10 +88,8 @@ ActiveRecord::Schema.define(version: 20140612174052) do
     t.string   "uid"
     t.text     "provider_data"
     t.string   "name"
-    t.integer  "city_id"
   end
 
-  add_index "users", ["city_id"], name: "index_users_on_city_id", using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["provider", "uid"], name: "index_users_on_provider_and_uid", unique: true, using: :btree
 

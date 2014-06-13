@@ -1,5 +1,4 @@
 require_relative 'seeds/brazilian_states_and_cities'
-require_relative "seeds/development" if Rails.env.development?
 
 Tag.find_or_create_by!({
   name: 'Home Office'
@@ -28,3 +27,5 @@ Tag.find_or_create_by!({
 Tag.find_or_create_by!({
   name: 'Freela'
 })
+
+require_relative "seeds/development" if Rails.env.development?
