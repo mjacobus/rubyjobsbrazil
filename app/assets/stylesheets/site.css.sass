@@ -1,5 +1,7 @@
 @import 'variables'
 @import 'foundation_and_overrides'
+body
+  background: $soft-gray
 
 .list.no-buttons
   list-style: none
@@ -15,8 +17,11 @@ table.wide
 .wrapper
   margin: 10px 0
 
+#middle
+  padding: 20px 0
+  background: white
+
 #main_content
-  margin-top: 20px
 #after_menu
   background: $red
   h1
@@ -25,15 +30,17 @@ table.wide
     width: 10%
 
 #jobs
+  article
+    background: $soft-gray
   .job
     margin: 5px
-    border-bottom: 1px solid #ccc
+    // border-bottom: 1px solid #ccc
     .wrapper
       margin: 10px 0 15px 0
   .published_date
     font-size: 0.75em
   h2
-    color: $dark-red
+    color: $dark-gray
 
 .black
   color: black
@@ -62,7 +69,7 @@ body > footer
     margin-right: 5px
 
   .tag
-    background: $dark-gray
+    background: $red
     width: none
     padding: 5px
     color: white

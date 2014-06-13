@@ -15,9 +15,11 @@
   <body>
     <%= render 'top_menu' -%>
     <%= render 'flashes' -%>
-    <div id="main_content" class="row">
-      <div class="small-12 columns">
-        <%= yield %>
+    <div id="middle">
+      <div id="main_content" class="row">
+        <div class="small-12 columns">
+          <%= yield %>
+        </div>
       </div>
     </div>
     <%= render 'footer' %>
