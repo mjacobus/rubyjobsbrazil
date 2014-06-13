@@ -1,5 +1,7 @@
 @import 'variables'
 
+.list.no-buttons
+  list-style: none
 
 table.wide
   width: 100%
@@ -23,14 +25,26 @@ table.wide
 
 #jobs
   .job
-    margin: 15px 0
-  a
-    color: inherit
-  .job
-    color: $dark-gray
     margin: 5px
     border-bottom: 1px solid #ccc
+    .wrapper
+      margin: 10px 0 15px 0
   .published_date
-    font-size: 10pt
+    font-size: 0.75em
   h2
     color: $dark-red
+
+.black
+  color: black
+
+.fi-social-github
+  &.medium
+    font-size: 30px
+  &.large
+    font-size: 50px
+body > footer
+  background: $soft-gray
+
+.line
+  padding: 5px 0
+  font-size: 1em

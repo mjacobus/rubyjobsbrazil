@@ -4,9 +4,9 @@
       <div class="small-12 medium-8 large-8 columns">
         <div class="wrapper">
           <h2><%= job.decorate.title %></h2>
-          <div class="location"><%= job.decorate.location %></div>
-          <div class="tags"><%= job.decorate.tag_names.join(', ') %></div>
-          <div class="published_date"><%= job.decorate.published_at %></div>
+          <div class="tags line"><%= job.decorate.tag_names.join(', ') %></div>
+          <div class="location line"><%= job.decorate.location %></div>
+          <div class="published_date line"><%= job.decorate.published_at %></div>
         </div>
       </div>
     </article>
