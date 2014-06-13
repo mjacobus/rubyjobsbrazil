@@ -1,4 +1,5 @@
 @import 'variables'
+@import 'foundation_and_overrides'
 
 .list.no-buttons
   list-style: none
@@ -42,9 +43,31 @@ table.wide
     font-size: 30px
   &.large
     font-size: 50px
+
 body > footer
   background: $soft-gray
+  margin-top: 20px
 
 .line
   padding: 5px 0
-  font-size: 1em
+  font-size: 0.8em
+
+  @media #{$medium-up}
+    font-size: 1em
+
+.tags
+  margin-bottom: 5px
+
+  i
+    margin-right: 5px
+
+  .tag
+    background: $dark-gray
+    width: none
+    padding: 5px
+    color: white
+    font-size: 0.75em
+
+    @media #{$medium-up}
+      font-size: 0.8em
+
