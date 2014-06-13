@@ -1,4 +1,4 @@
 require 'spec_helper'
 
-describe MarkdownHelper do
+describe HeaderHelper do
 end
