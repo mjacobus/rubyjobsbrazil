@@ -274,7 +274,7 @@ pt-BR:
         tags: Tags
   layouts:
     application:
-      meta_description: Vagas para desenvolvedores Rails. Vagas para desenvolvedores Ruby. Encontre desenvolvedores Ruby on Rails aqui no RubyJobsBrazil.com.
+      meta_description: Vagas para desenvolvedores Rails. Vagas para desenvolvedores Ruby. Encontre desenvolvedores Ruby on Rails aqui no RubyJobsBrazil.com.br.
   application:
     filters:
       title: Filtros
