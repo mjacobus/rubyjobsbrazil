@@ -4,6 +4,7 @@ module MarkdownHelper
   end
 
   def renderer
-    @renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+    @renderer    ||= Redcarpet::Render::HTML.new(filter_html: true)
+    @md_renderer ||= Redcarpet::Markdown.new(@renderer)
   end
 end
