@@ -5,15 +5,31 @@
     <h1><%= job.decorate.title %></h1>
   </header>
 
-  <div class="line"><%= render 'tags', tags: job.tags %></div>
-  <div class="description"><%= to_markdown(job.description) %></div>
-  <div class="locaiton"><%= job.decorate.location %></div>
-  <div class="how-to-apply"><%= to_markdown(job.how_to_apply) %></div>
+  <div class="row">
+    <span class="small-4 columns">
+      <%= job.decorate.location %>
+    </span>
+    <span class="small-8 columns">
+      <div class="right">
+        <%= render 'tags', tags: job.tags %>
+      </div>
+    </span>
+  </div>
+
+  <div class="main">
+    <div class="description"><%= to_markdown(job.description) %></div>
+  </div>
+  <div class="how-to-apply">
+    <h2><%= Job.human_attribute_name(:how_to_apply) %></h2>
+    <%= to_markdown(job.how_to_apply) %>
+  </div>
 
   <footer>
-    <div class="published"><%= job.decorate.published_at %></div>
-    <% if job.decorate.updated? %>
-      <div class="updated"><%= job.decorate.updated_at %></div>
-  <% end %>
+    <p>
+      <%= job.decorate.published_at %>
+      <% if job.decorate.updated? %>
+        | <%= job.decorate.updated_at %>
+      <% end %>
+    </p>
   </footer>
 </article>
