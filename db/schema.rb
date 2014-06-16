@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140612174052) do
+ActiveRecord::Schema.define(version: 20140616223351) do
 
   create_table "cities", force: true do |t|
     t.string   "name"
@@ -22,15 +22,6 @@ ActiveRecord::Schema.define(version: 20140612174052) do
   end
 
   add_index "cities", ["state_id"], name: "index_cities_on_state_id", using: :btree
-
-  create_table "comments", force: true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.text     "message"
-    t.integer  "parent_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "jobs", force: true do |t|
     t.string   "title"
@@ -90,7 +81,6 @@ ActiveRecord::Schema.define(version: 20140612174052) do
     t.string   "name"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["provider", "uid"], name: "index_users_on_provider_and_uid", unique: true, using: :btree
 
 end
