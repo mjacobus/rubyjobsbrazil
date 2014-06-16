@@ -220,6 +220,8 @@ pt-BR:
         published_at: Publicação
         description: Descrição
         how_to_apply: Como se candidatar
+        city: Cidade
+        state_id: Estado
       order:
         email: Email
         phone: Telefone
@@ -272,6 +274,7 @@ pt-BR:
         title: Edição de Vaga
       form:
         tags: Tags
+        markdown_hint: Você pode usar <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#html">markdown</a> para formatar sua mensagem.
   layouts:
     application:
       meta_description: Vagas para programadores Ruby e Ruby on Rails no Brasil.
