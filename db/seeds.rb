@@ -1,3 +1,4 @@
+# encoding: UTF-8
 require_relative 'seeds/brazilian_states_and_cities'
 
 Tag.find_or_create_by!({
