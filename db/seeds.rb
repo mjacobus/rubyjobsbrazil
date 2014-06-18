@@ -28,4 +28,8 @@ Tag.find_or_create_by!({
   name: 'Freela'
 })
 
+Tag.find_or_create_by!({
+  name: 'Estágio'
+})
+
 require_relative "seeds/development" if Rails.env.development?
