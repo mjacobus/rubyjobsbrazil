@@ -212,43 +212,16 @@ pt-BR:
       models:
         store:
     attributes:
-      user:
+      recruiter/user:
         name: Nome
         username: Nome
-      job:
+      recruiter/job:
         title: Título
         published_at: Publicação
         description: Descrição
         how_to_apply: Como se candidatar
         city: Cidade
         state_id: Estado
-      order:
-        email: Email
-        phone: Telefone
-        address_street: Rua
-        address_number: Número
-        address_complement: Complemento
-        address_district: Bairro
-        address_city: Cidade
-        address_state: Estado
-        address: Endereço
-        status: Situação
-      store:
-        name: Nome
-        slug: Url
-        city: Cidade
-        type: Tipo
-        address: Endereço
-        phone: Telefone
-        email: Email
-        state_id: Estado
-        category: Categoria
-        category_id: Categoria
-      payment_gateway_configuration:
-        name: Nome
-        enabled: Ativo?
-        email: Email
-        token: Token
   views:
     pagination:
       first: "&laquo; Primeira"
@@ -262,31 +235,3 @@ pt-BR:
       new:
         title: Autenticação necessária
         message: Para continuar, por favor logue com uma de suas contas
-  users:
-    jobs:
-      new:
-        title: Nova Vaga
-      index:
-        title: Vagas
-      show:
-        title: Visualização de Vaga
-      edit:
-        title: Edição de Vaga
-      form:
-        tags: Tags
-        markdown_hint: Você pode usar <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#html">markdown</a> para formatar sua mensagem.
-  layouts:
-    application:
-      meta_description: Vagas para programadores Ruby e Ruby on Rails no Brasil.
-  application:
-    filters:
-      title: Filtros
-      state: Estado
-      city: Cidade
-      select_state: Selecione um Estado
-      submit: Procurar
-  jobs:
-    index:
-      title: Vagas em aberto
-    job:
-      view: Visualizar
