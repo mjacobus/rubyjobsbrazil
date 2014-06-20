@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140616223351) do
+ActiveRecord::Schema.define(version: 20140620201444) do
 
-  create_table "cities", force: true do |t|
+  create_table "recruiter_cities", force: true do |t|
     t.string   "name"
     t.string   "short"
     t.integer  "state_id"
@@ -21,9 +21,9 @@ ActiveRecord::Schema.define(version: 20140616223351) do
     t.datetime "updated_at"
   end
 
-  add_index "cities", ["state_id"], name: "index_cities_on_state_id", using: :btree
+  add_index "recruiter_cities", ["state_id"], name: "index_recruiter_cities_on_state_id", using: :btree
 
-  create_table "jobs", force: true do |t|
+  create_table "recruiter_jobs", force: true do |t|
     t.string   "title"
     t.text     "description"
     t.text     "how_to_apply"
@@ -34,28 +34,28 @@ ActiveRecord::Schema.define(version: 20140616223351) do
     t.integer  "city_id"
   end
 
-  add_index "jobs", ["city_id"], name: "index_jobs_on_city_id", using: :btree
-  add_index "jobs", ["user_id"], name: "index_jobs_on_user_id", using: :btree
+  add_index "recruiter_jobs", ["city_id"], name: "index_recruiter_jobs_on_city_id", using: :btree
+  add_index "recruiter_jobs", ["user_id"], name: "index_recruiter_jobs_on_user_id", using: :btree
 
-  create_table "jobs_tags", force: true do |t|
+  create_table "recruiter_jobs_tags", force: true do |t|
     t.integer "job_id"
     t.integer "tag_id"
   end
 
-  add_index "jobs_tags", ["job_id", "tag_id"], name: "index_jobs_tags_on_job_id_and_tag_id", unique: true, using: :btree
-  add_index "jobs_tags", ["job_id"], name: "index_jobs_tags_on_job_id", using: :btree
-  add_index "jobs_tags", ["tag_id"], name: "index_jobs_tags_on_tag_id", using: :btree
+  add_index "recruiter_jobs_tags", ["job_id", "tag_id"], name: "index_recruiter_jobs_tags_on_job_id_and_tag_id", unique: true, using: :btree
+  add_index "recruiter_jobs_tags", ["job_id"], name: "index_recruiter_jobs_tags_on_job_id", using: :btree
+  add_index "recruiter_jobs_tags", ["tag_id"], name: "index_recruiter_jobs_tags_on_tag_id", using: :btree
 
-  create_table "states", force: true do |t|
+  create_table "recruiter_states", force: true do |t|
     t.string   "name"
     t.string   "short"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "states", ["name"], name: "index_states_on_name", unique: true, using: :btree
+  add_index "recruiter_states", ["name"], name: "index_recruiter_states_on_name", unique: true, using: :btree
 
-  create_table "tags", force: true do |t|
+  create_table "recruiter_tags", force: true do |t|
     t.string   "name"
     t.text     "description"
     t.integer  "sequence",    default: 10, null: false
@@ -63,9 +63,9 @@ ActiveRecord::Schema.define(version: 20140616223351) do
     t.datetime "updated_at"
   end
 
-  add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
+  add_index "recruiter_tags", ["name"], name: "index_recruiter_tags_on_name", unique: true, using: :btree
 
-  create_table "users", force: true do |t|
+  create_table "recruiter_users", force: true do |t|
     t.string   "email"
     t.datetime "remember_created_at"
     t.integer  "sign_in_count",       default: 0, null: false
@@ -79,8 +79,11 @@ ActiveRecord::Schema.define(version: 20140616223351) do
     t.string   "uid"
     t.text     "provider_data"
     t.string   "name"
+    t.integer  "city_id"
   end
 
-  add_index "users", ["provider", "uid"], name: "index_users_on_provider_and_uid", unique: true, using: :btree
+  add_index "recruiter_users", ["city_id"], name: "index_recruiter_users_on_city_id", using: :btree
+  add_index "recruiter_users", ["email"], name: "index_recruiter_users_on_email", unique: true, using: :btree
+  add_index "recruiter_users", ["provider", "uid"], name: "index_recruiter_users_on_provider_and_uid", unique: true, using: :btree
 
 end
