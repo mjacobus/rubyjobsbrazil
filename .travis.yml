@@ -6,13 +6,13 @@ rvm:
   - 2.1.1
 env:
   - DB=sqlite
-  - DB=mysql
+  # - DB=mysql
   - DB=postgresql
 script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rspec spec/
 before_script:
-  - mysql -e 'create database RubyJobsBrazil_test'
+  # - mysql -e 'create database RubyJobsBrazil_test'
   - psql -c 'create database  RubyJobsBrazil_test' -U postgres
 # branches:
 #   only: master
