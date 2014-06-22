@@ -79,10 +79,8 @@ ActiveRecord::Schema.define(version: 20140620201444) do
     t.string   "uid"
     t.text     "provider_data"
     t.string   "name"
-    t.integer  "city_id"
   end
 
-  add_index "recruiter_users", ["city_id"], name: "index_recruiter_users_on_city_id", using: :btree
   add_index "recruiter_users", ["email"], name: "index_recruiter_users_on_email", unique: true, using: :btree
   add_index "recruiter_users", ["provider", "uid"], name: "index_recruiter_users_on_provider_and_uid", unique: true, using: :btree
 
