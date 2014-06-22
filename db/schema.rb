@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140620201444) do
+ActiveRecord::Schema.define(version: 20140622184124) do
 
   create_table "recruiter_cities", force: true do |t|
     t.string   "name"
@@ -81,7 +81,6 @@ ActiveRecord::Schema.define(version: 20140620201444) do
     t.string   "name"
   end
 
-  add_index "recruiter_users", ["email"], name: "index_recruiter_users_on_email", unique: true, using: :btree
   add_index "recruiter_users", ["provider", "uid"], name: "index_recruiter_users_on_provider_and_uid", unique: true, using: :btree
 
 end
