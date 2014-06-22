@@ -2,7 +2,7 @@ module OmniauthControllerSpecs
   extend ActiveSupport::Concern
 
   def stub_omniauth_with(params, origin = root_url)
-    @request.env["devise.mapping"]  = Devise.mappings[:user]
+    @request.env["devise.mapping"]  = ::Devise.mappings[:user]
     @request.env["omniauth.auth"]   = params
     @request.env["omniauth.origin"] = origin
   end
@@ -13,7 +13,7 @@ module OmniauthControllerSpecs
 
       describe "#{provider_key}" do
         let(:env) { OauthHelper.providers[provider_key]  }
-        let(:user) { User.make  }
+        let(:user) { Recruiter::User.make  }
 
         before do
           expect(strategy_class).to receive(:find_or_build_user).with(env).and_return(user)
@@ -28,7 +28,7 @@ module OmniauthControllerSpecs
 
         it "logs user in" do
           get provider_key
-          expect(controller.current_user).to eq(User.last)
+          expect(controller.current_user).to eq(Recruiter::User.last)
         end
 
         it "redirects to the 'redirect_url'" do
@@ -38,7 +38,7 @@ module OmniauthControllerSpecs
 
         it "presents 'login_message'" do
           get provider_key
-          expect(flash[:notice]).to eq(I18n.t('system.messages.account_created'))
+          expect(flash[:notice]).to eq(I18n.t('recruiter.messages.account_created'))
         end
       end
     end

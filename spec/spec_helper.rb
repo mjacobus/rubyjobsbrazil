@@ -6,6 +6,8 @@ Coveralls.wear!
 
 ENV['RAILS_ENV'] = 'test'
 
+require 'recruiter'
+
 # TODO remvoe when warning is fixed
 require 'minitest/autorun'
 

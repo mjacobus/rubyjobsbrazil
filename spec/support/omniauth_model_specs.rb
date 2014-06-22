@@ -15,7 +15,7 @@ module OmniauthModelSpecs
         context "when user does not exist" do
           it "builds a new user" do
             user = model_class.find_or_build_user(params)
-            expect(user).to be_a(User)
+            expect(user).to be_a(Recruiter::User)
             expect(user).not_to be_persisted
             expect(user).to be_new_record
           end
