@@ -188,7 +188,7 @@ GEM
       json (~> 1.4)
     recipient_interceptor (0.1.2)
       mail
-    recruiter (0.0.4)
+    recruiter (0.0.5)
       devise
       draper
       foundation-icons-sass-rails
@@ -199,12 +199,12 @@ GEM
       omniauth-facebook
       omniauth-github
       omniauth-google_oauth2
-      redcarpet
+      redcarpet (~> 3.2.0)
       simple_form
-    redcarpet (3.1.2)
+    redcarpet (3.2.0)
     ref (1.0.5)
     request_store (1.0.6)
-    responders (1.1.1)
+    responders (1.1.2)
       railties (>= 3.2, < 4.2)
     rest-client (1.6.7)
       mime-types (>= 1.16)
@@ -327,8 +327,7 @@ DEPENDENCIES
   rack-timeout
   rails (~> 4.1.1)
   recipient_interceptor
-  recruiter (= 0.0.4)
-  redcarpet
+  recruiter (= 0.0.5)
   rspec-rails (= 3.0.0.beta2)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

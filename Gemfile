@@ -16,7 +16,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
-gem 'recruiter', '0.0.4'
+gem 'recruiter', '0.0.5'
 
 # Rails non default
 
@@ -33,7 +33,6 @@ gem 'draper', '~> 1.3'
 gem 'foundation-rails'
 gem 'foundation-icons-sass-rails'
 # gem 'github-markup'
-gem 'redcarpet'
 gem 'table_cloth'
 gem 'capistrano'
 gem 'capistrano-rails'
