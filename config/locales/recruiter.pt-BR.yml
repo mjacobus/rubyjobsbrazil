@@ -13,8 +13,9 @@
     filters:
       title: Filtros
       state: Estado
-      city: Cidade
       select_state: Selecione um Estado
+      city: Cidade
+      select_city: Selecione uma Cidade
       submit: Procurar
     users:
       jobs:
