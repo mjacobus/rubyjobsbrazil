@@ -222,6 +222,12 @@ pt-BR:
         how_to_apply: Como se candidatar
         city: Cidade
         state_id: Estado
+      recruiter/article:
+        title: Título
+        published_at: Publicação
+        description: Descrição
+        body: Conteúdo
+        published: Publicado
   views:
     pagination:
       first: "&laquo; Primeira"
