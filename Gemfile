@@ -16,7 +16,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
-gem 'recruiter', '0.0.7'
+gem 'recruiter', '0.1.1'
 
 # Rails non default
 
@@ -38,6 +38,8 @@ gem 'capistrano'
 gem 'capistrano-rails'
 gem 'capistrano-bundler'
 gem 'figaro'
+
+gem 'escape_utils', '~>1.0.1' # fixes compiling error
 
 group :development, :test do
   gem 'awesome_print'
