@@ -1,10 +1,16 @@
 "pt-BR":
+  "true" : Sim
+  "false" : Não
   recruiter:
     url: http://rubyjobsbrazil.com.br
+    site_title: Ruby Jobs Brazil
     layout:
       header:
         meta_description: Vagas para programadores Ruby e Ruby on Rails no Brasil.
         site_name: rubyjobsbrazil
+    articles:
+      index:
+        title: Artigos Publicados
     jobs:
       index:
         title: Vagas em aberto
@@ -18,6 +24,18 @@
       select_city: Selecione uma Cidade
       submit: Procurar
     users:
+      articles:
+        new:
+          title: Novo Artigo
+        edit:
+          title: Edição de Artigo
+        show:
+          title: Visualização de Artigo
+        index:
+          title: Artigos
+        form:
+          tags: Tags
+          markdown_hint: Você pode usar <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#html">markdown</a> para formatar sua mensagem.
       jobs:
         new:
           title: Nova Vaga
@@ -50,9 +68,15 @@
         facebook: Facebook
       jobs:
         new: Publicar Vaga
+      articles:
+        index: Artigos
+        mine: Meus artigos
+        articles: Artigos
       forms:
         save: Publicar
     messages:
+      published_at: Publicado há %{time}
+      updated_at: Atualizado há %{time}
       logged_as: "%{username}"
       login_with:
         google_oauth2: Entre com com sua conta do Google
