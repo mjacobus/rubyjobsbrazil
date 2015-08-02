@@ -23,6 +23,8 @@ module RubyJobsBrazil
 
     config.active_record.default_timezone = :utc
 
+    config.active_support.test_order = :sorted
+
     config.generators do |generate|
       generate.decorator false
       generate.helper false
