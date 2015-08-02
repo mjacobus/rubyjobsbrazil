@@ -4,6 +4,7 @@
   recruiter:
     url: http://rubyjobsbrazil.com.br
     site_title: Ruby Jobs Brazil
+    logo_image: ruby_worker.png
     layout:
       header:
         meta_description: Vagas para programadores Ruby e Ruby on Rails no Brasil.
