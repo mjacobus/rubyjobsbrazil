@@ -18,6 +18,9 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'recruiter', '~>1.1'
 
+# avoid build error
+gem 'net-ssh', '~> 2.9.2'
+
 # Rails non default
 
 gem 'email_validator'
