@@ -221,7 +221,7 @@ GEM
       json (~> 1.4)
     recipient_interceptor (0.1.2)
       mail
-    recruiter (1.1.0)
+    recruiter (1.1.3)
       devise
       draper
       foundation-icons-sass-rails
@@ -364,7 +364,7 @@ DEPENDENCIES
   rack-timeout
   rails (~> 4.2)
   recipient_interceptor
-  recruiter (~> 1.1)
+  recruiter (~> 1.1.3)
   rspec-rails (= 3.0.0.beta2)
   sass-rails
   sdoc (~> 0.4.0)
