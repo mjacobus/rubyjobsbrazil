@@ -18,3 +18,5 @@ script:
 before_script:
   - mysql -e 'create database RubyJobsBrazil_test'
   - psql -c 'create database  RubyJobsBrazil_test' -U postgres
+
+sudo: false
