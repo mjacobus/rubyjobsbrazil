@@ -1,15 +1,14 @@
 language: ruby
 rvm:
   - 1.9.3
-  - 2.0.0
-  - 2.1.0
-  - 2.1.1
-  - 2.2
+  #- 2.0
+  #- 2.1
+  #- 2.2
 
 env:
-  - DB=sqlite
+  #- DB=sqlite
   - DB=mysql
-  - DB=postgresql
+  #- DB=postgresql
 
 script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
@@ -17,6 +16,6 @@ script:
 
 before_script:
   - mysql -e 'create database RubyJobsBrazil_test'
-  - psql -c 'create database  RubyJobsBrazil_test' -U postgres
+  #- psql -c 'create database  RubyJobsBrazil_test' -U postgres
 
 sudo: false
