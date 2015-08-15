@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # ruby '2.0.0'
-gem 'recruiter', '~>1.1.8'
+gem 'recruiter', '~>1.1.12'
 gem 'rails', '~> 4.2'
 gem 'therubyracer',  platforms: :ruby
 gem 'sass-rails', '~> 5.0'

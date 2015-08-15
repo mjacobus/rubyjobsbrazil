@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141213143651) do
+ActiveRecord::Schema.define(version: 20150815205251) do
 
   create_table "recruiter_articles", force: :cascade do |t|
     t.string   "title",      limit: 255
@@ -20,9 +20,9 @@ ActiveRecord::Schema.define(version: 20141213143651) do
     t.boolean  "published",                default: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "admin"
   end
 
-  add_index "recruiter_articles", ["published"], name: "index_recruiter_articles_on_published", using: :btree
   add_index "recruiter_articles", ["user_id"], name: "index_recruiter_articles_on_user_id", using: :btree
 
   create_table "recruiter_cities", force: :cascade do |t|
@@ -80,7 +80,7 @@ ActiveRecord::Schema.define(version: 20141213143651) do
   create_table "recruiter_users", force: :cascade do |t|
     t.string   "email",               limit: 255
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",       limit: 4,     default: 0, null: false
+    t.integer  "sign_in_count",       limit: 4,     default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip",  limit: 255
@@ -91,6 +91,7 @@ ActiveRecord::Schema.define(version: 20141213143651) do
     t.string   "uid",                 limit: 255
     t.text     "provider_data",       limit: 65535
     t.string   "name",                limit: 255
+    t.boolean  "admin",                             default: false
   end
 
   add_index "recruiter_users", ["provider", "uid"], name: "index_recruiter_users_on_provider_and_uid", unique: true, using: :btree
