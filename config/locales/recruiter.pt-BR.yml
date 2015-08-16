@@ -17,6 +17,12 @@
         title: Vagas em aberto
       job:
         view: Visualizar
+    home:
+      index:
+        title_articles: Últimos artigos publicados
+        title_jobs: Últimas vagas publicadas
+        see_all_jobs: Ver todas
+        see_all_articles: Ver todos
     filters:
       title: Filtros
       state: Estado

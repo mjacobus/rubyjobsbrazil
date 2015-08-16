@@ -206,7 +206,7 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
       json (~> 1.4)
-    recruiter (1.1.12)
+    recruiter (1.1.17)
       devise
       draper
       foundation-icons-sass-rails
@@ -335,7 +335,7 @@ DEPENDENCIES
   net-ssh (~> 2.9.2)
   rack-timeout
   rails (~> 4.2)
-  recruiter (~> 1.1.12)
+  recruiter (~> 1.1.17)
   rspec-rails (= 3.0.0.beta2)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
