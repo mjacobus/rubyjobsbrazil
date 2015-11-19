@@ -1,8 +1,6 @@
 Ruby Jobs Brazil
 ==============
 
-Testing continuous deployment
-
 Código fonte do site [RubyJobsBrazil.com.br](http://rubyjobsbrazil.com.br)
 
 [![Build Status](https://travis-ci.org/mjacobus/rubyjobsbrazil.png?branch=master)](https://travis-ci.org/mjacobus/rubyjobsbrazil)
