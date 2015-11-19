@@ -3,6 +3,8 @@ Ruby Jobs Brazil
 
 Código fonte do site [RubyJobsBrazil.com.br](http://rubyjobsbrazil.com.br)
 
+[ ![Codeship Status for mjacobus/rubyjobsbrazil](https://codeship.com/projects/a1fdf780-70d2-0133-30e6-4254a0d12432/status?branch=master)](https://codeship.com/projects/116638)
+
 [![Build Status](https://travis-ci.org/mjacobus/rubyjobsbrazil.png?branch=master)](https://travis-ci.org/mjacobus/rubyjobsbrazil)
 [![Coverage Status](https://coveralls.io/repos/mjacobus/rubyjobsbrazil/badge.png)](https://coveralls.io/r/mjacobus/rubyjobsbrazil)
 [![Code Climate](https://codeclimate.com/github/mjacobus/rubyjobsbrazil.png)](https://codeclimate.com/github/mjacobus/rubyjobsbrazil)
