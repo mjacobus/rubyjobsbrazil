@@ -10,7 +10,6 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jbuilder', '~> 2.0'
 gem 'kaminari'
 gem 'mysql2'
-gem 'rack-timeout'
 gem 'figaro'
 gem 'capistrano', '3.2.1'
 gem 'capistrano-rails'
@@ -50,4 +49,9 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
+
+
+group :staging, :production do
+  gem 'rack-timeout'
 end
