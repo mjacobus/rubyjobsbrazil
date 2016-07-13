@@ -19,3 +19,4 @@ before_script:
   #- psql -c 'create database  RubyJobsBrazil_test' -U postgres
 
 sudo: false
+teste: true
