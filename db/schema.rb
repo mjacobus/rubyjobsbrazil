@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20150815205251) do
     t.boolean  "admin"
   end
 
+  add_index "recruiter_articles", ["published"], name: "index_recruiter_articles_on_published", using: :btree
   add_index "recruiter_articles", ["user_id"], name: "index_recruiter_articles_on_user_id", using: :btree
 
   create_table "recruiter_cities", force: :cascade do |t|
