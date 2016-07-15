@@ -1,12 +1,14 @@
 sudo: required
 
+# attempt to get rid of the bundle install
+language: php
+
 services:
   - docker
 
 env:
   # DOCKER_COMPOSE_VERSION: 1.7
   - DOCKER_COMPOSE_VERSION: 1.4.2
-  RAILS_ENV=test
 
 before_script:
   - docker/install_docker-compose.sh
