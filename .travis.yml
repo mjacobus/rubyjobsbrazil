@@ -5,7 +5,8 @@ services:
 
 env:
   # DOCKER_COMPOSE_VERSION: 1.7
-  DOCKER_COMPOSE_VERSION: 1.4.2
+  - DOCKER_COMPOSE_VERSION: 1.4.2
+  RAILS_ENV=test
 
 before_script:
   - docker/install_docker-compose.sh
@@ -13,5 +14,5 @@ before_script:
 script:
   # - docker build .
   - docker-compose up
-  - docker-compose run web RAILS_ENV=test rake db:create db:migrate
-  - docker-compose run web bundle exec rspec
+  - RAILS_ENV=test docker-compose run -e "RAILS_ENV=test" web rake db:create db:migrate
+  - docker-compose run -e "RAILS_ENV=test" web bundle exec rspec
