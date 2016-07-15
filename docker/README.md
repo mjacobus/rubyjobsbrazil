@@ -33,3 +33,7 @@ boot2docker ip
 - [rails example](https://docs.docker.com/compose/rails/)
 - [compose](https://docs.docker.com/compose/compose-file/)
 - [cli](https://docs.docker.com/compose/reference/)
+
+Or
+
+[Docker beta](https://beta.docker.com/)
