@@ -1,21 +1,17 @@
-language: ruby
-rvm:
-  - 1.9.3
-  #- 2.0
-  #- 2.1
-  #- 2.2
+sudo: required
+
+services:
+  - docker
 
 env:
-  #- DB=sqlite
-  - DB=mysql
-  #- DB=postgresql
-
-script:
-  - RAILS_ENV=test bundle exec rake db:migrate --trace
-  - bundle exec rspec spec/
+  # DOCKER_COMPOSE_VERSION: 1.7
+  DOCKER_COMPOSE_VERSION: 1.4.2
 
 before_script:
-  - mysql -e 'create database RubyJobsBrazil_test'
-  #- psql -c 'create database  RubyJobsBrazil_test' -U postgres
+  - docker/install_docker-compose.sh
 
-sudo: false
+script:
+  - docker build .
+  - docker-compose up
+  - docker-compose run web RAILS_ENV=test rake db:create db:migrate
+  - docker-compose run web bundle exec rspec
