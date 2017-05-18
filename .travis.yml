@@ -1,4 +1,7 @@
 language: ruby
+sudo: false
+cache: bundler
+
 rvm:
   - 2.4.0
 
@@ -11,5 +14,3 @@ script:
 
 before_script:
   - mysql -e 'create database RubyJobsBrazil_test'
-
-sudo: false
