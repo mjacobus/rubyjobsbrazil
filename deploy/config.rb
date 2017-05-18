@@ -3,7 +3,7 @@ lock '3.8.1'
 
 set :application, 'rubyjobsbrazil.com.br'
 set :repo_url, 'git@github.com:mjacobus/rubyjobsbrazil.git'
-ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+ask :branch, :master
 set :deploy_to, "/var/www/apps/#{fetch(:application)}"
 set :chruby_ruby, 'ruby-2.4.0'
 set :pty, true
