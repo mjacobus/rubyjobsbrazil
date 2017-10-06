@@ -1,0 +1,151 @@
+$soft-gray: #eeeeee
+$dark-gray: #333333
+$dark-red: #980905
+$red: #C52F24
+$soft-blue: #D5E9F6
+$soft-yellow: #FFF9D8
+@import 'foundation_and_overrides'
+body
+  // background: $soft-gray
+
+.list.no-buttons
+  list-style: none
+
+table.wide
+  width: 100%
+
+  button, .button
+    margin: 0
+  .actions
+    max-width: 80px
+
+.wrapper
+  margin: 10px 0
+
+#middle
+  padding: 20px 0
+  background: white
+
+// #main_content
+#after_menu
+  background: $red
+  h1
+    color: white
+  img
+    width: 10%
+
+#job
+  .how-to-apply
+    background: $soft-yellow
+    margin: 20px 0
+    padding: 20px
+  .main, footer
+    background: $soft-blue
+    margin: 20px 0
+    padding: 20px
+
+  footer
+    background: $soft-gray
+#articles, #jobs
+  article
+    background: #F2F2F2
+  .job
+    margin: 20px 0px
+    // border-bottom: 1px solid #ccc
+    .wrapper
+      margin: 10px 0 15px 0
+    h3
+      font-size: 18pt
+      font-weight: 300
+  .published_date
+    font-size: 0.75em
+  h2
+    color: $dark-gray
+    font-size: 48pt
+    font-weight: 100
+    ext-transform: uppercase
+    padding: 50px 0px 20px 0px
+
+.black
+  color: black
+
+.fi-social-github
+  &.medium
+    font-size: 30px
+  &.large
+    font-size: 50px
+
+body > footer
+  background: white
+  padding-top: 20px
+  position: relative
+  min-height: 70px
+
+.line
+  padding: 5px 0
+  font-size: 0.8em
+
+  @media #{$medium-up}
+    font-size: 1em
+
+.tags
+  margin-bottom: 5px
+
+  i
+    margin-right: 5px
+
+  .tag
+    background: $red
+    width: none
+    padding: 5px
+    color: white
+    font-size: 0.75em
+
+    @media #{$medium-up}
+      font-size: 0.8em
+
+.github-fork-ribbon-wrapper.right-bottom
+  position: absolute
+.github-fork-ribbon
+  background: $dark-gray
+
+form
+  .hint
+    margin: -10px 0 10px 0
+    font-size: 0.7em
+    display: block
+    color: $red
+
+    @media #{$medium-up}
+      font-size: 0.8em
+  a
+    text-decoration: underline
+
+.prettyprint
+  background: #eee
+  padding: 0.5em
+
+.top-bar
+  padding: 20px 0px
+  height: 85px
+  font-size: 18pt
+
+  h1 > a
+    font-weight: 100 !important
+  
+  &-section
+    font-size: 18pt
+
+    
+
+header#cover
+  padding: 100px 0px
+  background-color: #f4584c
+  background-image: radial-gradient(circle at 80% 25%, #f56e64, #bf7e81)
+  height: 500px
+
+.page-cover-title
+  font-size: 48pt
+  color: #eaeaea
+  font-weight: 100
+  margin-top: -70px
