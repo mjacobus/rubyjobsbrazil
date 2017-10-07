@@ -23,6 +23,7 @@
         title_jobs: Últimas vagas publicadas
         see_all_jobs: Ver todas
         see_all_articles: Ver todos
+        see_job: Ver Vaga
     filters:
       title: Filtros
       state: Estado
