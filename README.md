@@ -10,6 +10,9 @@ Código fonte do site [RubyJobsBrazil.com.br](http://rubyjobsbrazil.com.br)
 [![Code Climate](https://codeclimate.com/github/mjacobus/rubyjobsbrazil.png)](https://codeclimate.com/github/mjacobus/rubyjobsbrazil)
 [![Dependency Status](https://gemnasium.com/mjacobus/rubyjobsbrazil.png)](https://gemnasium.com/mjacobus/rubyjobsbrazil)
 
+![Plataforma RubyJobsBrazil](https://raw.githubusercontent.com/dvinciguerra/rubyjobsbrazil/master/screenshot.png)
+
+
 ## Motor do Site
 
 Usa a gem [Recruiter](https://github.com/mjacobus/recruiter), escrita especialmente para sites como este.
