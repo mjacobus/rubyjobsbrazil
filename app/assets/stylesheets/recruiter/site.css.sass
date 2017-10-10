@@ -8,6 +8,14 @@ $soft-yellow: #FFF9D8
 body
   // background: $soft-gray
 
+#main_content
+  h1:first-child, h2:first-child
+    color: $dark-gray
+    font-size: 28pt
+    font-weight: 100
+    text-transform: uppercase
+    padding: 50px 0px 20px 0px
+
 .list.no-buttons
   list-style: none
 
@@ -39,13 +47,25 @@ table.wide
     background: $soft-yellow
     margin: 20px 0
     padding: 20px
+    h2
+      font-size: 16pt
+      font-weight: 100
+      text-transform: uppercase
+      padding: 0px 0px 0px 0px
+      
   .main, footer
-    background: $soft-blue
-    margin: 20px 0
-    padding: 20px
+    //background: $soft-blue
+    //margin: 20px 0
+    //padding: 20px
 
-  footer
-    background: $soft-gray
+    .description
+      padding: 20px 20px
+      background: $soft-blue
+
+    .publication
+      padding: 20px 20px
+      background: $soft-gray
+
 #articles, #jobs
   article
     background: #F2F2F2
@@ -61,9 +81,9 @@ table.wide
     font-size: 0.75em
   h2
     color: $dark-gray
-    font-size: 48pt
+    font-size: 38pt
     font-weight: 100
-    ext-transform: uppercase
+    text-transform: uppercase
     padding: 50px 0px 20px 0px
 
 .black
@@ -95,7 +115,7 @@ body > footer
     margin-right: 5px
 
   .tag
-    background: #5D5D5D
+    background: #DD6060 //#5D5D5D
     width: none
     padding: 5px
     color: white

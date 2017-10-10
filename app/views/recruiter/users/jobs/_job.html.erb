@@ -1,0 +1,38 @@
+<% title job.decorate.title %>
+
+<article id="job">
+  <header>
+    <h1><%= job.decorate.title %></h1>
+  </header>
+
+  <div class="row">
+    <span class="small-12 columns">
+      <i class="fi-marker"></i>&nbsp;<%= job.decorate.location %>
+    </span>
+  </div>
+
+
+  <div class="main">
+		<div class="row">
+			<span class="small-9 columns">
+				<div class="description"><%= to_markdown(job.description) %></div>
+
+
+				<div class="how-to-apply">
+					<h2><%= Recruiter::Job.human_attribute_name(:how_to_apply) %></h2>
+					<%= to_markdown(job.how_to_apply) %>
+				</div>
+
+				<div class="publication">
+					<p><i class="fi-calendar"></i>&nbsp;<%= job.decorate.publication %></p>
+				</div>
+			</span>
+			<span class="small-3 columns">
+				<div class="">
+					<%= render 'tags', tags: job.tags %>
+				</div>
+			</span>
+		</div>
+  </div>
+
+</article>
