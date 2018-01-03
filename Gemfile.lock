@@ -275,6 +275,8 @@ GEM
     sdoc (0.4.2)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    sentry-raven (2.7.1)
+      faraday (>= 0.7.6, < 1.0)
     shoulda-matchers (3.1.1)
       activesupport (>= 4.0.0)
     simple_form (3.5.0)
@@ -358,6 +360,7 @@ DEPENDENCIES
   rspec-rails (= 3.0.0.beta2)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  sentry-raven
   shoulda-matchers
   simplecov
   spring
