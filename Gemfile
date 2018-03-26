@@ -27,6 +27,7 @@ gem 'yajl-ruby', '~> 1.2.3'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'loofah', '~> 2.2.2' # security update
 
 # gem 'unicorn' # causing timeouts
 
