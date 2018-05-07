@@ -2,13 +2,13 @@
 
 class RemoveUkFromUsersEmail < ActiveRecord::Migration[5.2]
   def up
-    remove_index :users, :email
+    remove_index :recruiter_users, :email
   rescue StandardError
     puts 'table users does not exist'
   end
 
   def down
-    add_index :users, :email, unique: true
+    add_index :recruiter_users, :email, unique: true
   rescue StandardError
     puts 'table users does not exist'
   end
