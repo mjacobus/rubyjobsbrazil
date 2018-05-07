@@ -16,6 +16,7 @@ set :keep_releases, 10
 set :bundle_flags, '--deployment'
 
 append :linked_files,
+       'config/master.key',
        'config/database.yml',
        '.env'
 
