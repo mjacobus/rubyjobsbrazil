@@ -17,8 +17,6 @@ set :bundle_flags, '--deployment'
 
 append :linked_files,
        'config/database.yml',
-       'config/credentials.yml.enc',
-       'config/secrets.yml',
        '.env'
 
 append :linked_dirs,
