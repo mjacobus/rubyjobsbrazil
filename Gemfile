@@ -25,6 +25,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
+  gem 'capistrano-rails'
 end
 
 group :test do
@@ -35,6 +36,5 @@ group :test do
 end
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
