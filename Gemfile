@@ -22,14 +22,14 @@ group :development, :test do
 end
 
 group :development do
+  gem 'capistrano-bundler'
+  gem 'capistrano-chruby'
+  gem 'capistrano-rails'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'rubocop'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
-  gem 'capistrano-bundler'
-  gem 'capistrano-chruby'
-  gem 'capistrano-rails'
 end
 
 group :test do
