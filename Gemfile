@@ -39,6 +39,5 @@ group :test do
   gem 'spring-commands-rspec'
 end
 
-# Use Capistrano for deployment
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
