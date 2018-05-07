@@ -38,6 +38,8 @@ group :test do
   gem 'chromedriver-helper'
   gem 'selenium-webdriver'
   gem 'spring-commands-rspec'
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'rails-controller-testing'
 end
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
