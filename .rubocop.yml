@@ -51,7 +51,7 @@ Documentation:
 
 AllCops:
   Exclude:
-    # - bin/**/*
+    - bin/**/*
   TargetRubyVersion: 2.4
 
 Layout/ExtraSpacing:
