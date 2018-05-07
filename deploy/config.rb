@@ -10,8 +10,7 @@ else
   ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 end
 
-set :deploy_to, "/var/www/apps/#{fetch(:application)}"
-set :chruby_ruby, 'ruby-2.4.0'
+set :chruby_ruby, 'ruby-2.5.1'
 set :pty, true
 set :keep_releases, 10
 set :bundle_flags, '--deployment'
