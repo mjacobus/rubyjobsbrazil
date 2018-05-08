@@ -1,0 +1,6 @@
+<div class="list no-buttons tags">
+  <% tags.each do |tag| %>
+    <span class="tag <%= tag.name.parameterize %>"><i class="fi-check"></i><span class="content"><%= tag.name %></span></span>
+  <% end %>
+</div>
+

@@ -1,0 +1,26 @@
+<h1><%= t('.title') %></h1>
+
+<table class="wide">
+  <thead>
+    <tr>
+      <th><%= Recruiter::Article.human_attribute_name(:title) %></th>
+      <th><%= Recruiter::Article.human_attribute_name(:published) %></th>
+      <th><%= Recruiter::Article.human_attribute_name(:published_at) %></th>
+      <th class="actions"><%= new_link({ action: :new }, class: 'expand') %></th>
+    </tr>
+  </thead>
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.decorate.title %></td>
+      <td><%= article.decorate.published? %></td>
+      <td><%= article.decorate.published_at %></td>
+      <td class="actions">
+        <%= show_link([:user, article]) %>
+        <%= edit_link(action: :edit, id: article.id) %>
+        <%= destroy_link(action: :destroy, id: article.id) %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<%= paginate @articles %>

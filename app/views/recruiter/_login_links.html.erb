@@ -1,0 +1,7 @@
+<li class="has-dropdown"><a href="#">Login</a>
+  <ul class="dropdown">
+    <% available_oauth_providers.each do |name, provider| %>
+      <li><%= render 'recruiter/login_button', provider: provider %></li>
+    <% end %>
+  </ul>
+</li>

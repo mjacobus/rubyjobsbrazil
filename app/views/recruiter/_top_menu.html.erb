@@ -1,0 +1,30 @@
+<div class="sticky">
+  <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name"><h1><a href="/"><%= t('recruiter.site_title') %></a></h1> </li>
+      <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+    </ul>
+
+
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li> <%= link_to(t('recruiter.links.articles.index'), recruiter.articles_path) %> </li>
+        <li> <%= link_to(t('recruiter.links.articles.mine'), recruiter.user_articles_path) if current_user %> </li>
+        <li> <%= link_to(t('recruiter.links.jobs.new'), recruiter.new_user_job_path) %> </li>
+        <%= render 'recruiter/login_links' unless current_user -%>
+        <%= render 'recruiter/login_status' if current_user -%>
+      </ul>
+    </section>
+  </nav>
+</div>
+
+<div id="after_menu">
+  <div class="row">
+    <div class="small-12 columns">
+      <div class="wrapper">
+        <%= render 'recruiter/title_header' %>
+      </div>
+    </div>
+  </div>
+</div>

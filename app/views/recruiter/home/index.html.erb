@@ -1,0 +1,23 @@
+<div class="row">
+  <div id="jobs" class="small-12 medium-12 large-12 columns">
+    <h2><%= t('.title_jobs') %></h2>
+    <%= render @jobs, header_tag: :h3 %>
+  </div>
+
+  <%= button_link [:jobs], 'secondary expand' do %>
+    <%= t('.see_all_jobs') %>
+  <% end %>
+</div>
+
+<div class="row">
+  <div id="articles" class="small-12 medium-12 large-12 columns">
+    <h2><%= t('.title_articles') %></h2>
+    <%= render @articles, header_tag: :h3 %>
+  </div>
+
+  <%= button_link [:articles], 'secondary expand' do %>
+    <%= t('.see_all_articles') %>
+  <% end %>
+</div>
+
+<%= render 'recruiter/share', object: {} %>
