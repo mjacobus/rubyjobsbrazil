@@ -17,6 +17,22 @@ gem 'sass-rails', '~> 5.0'
 gem 'sentry-raven'
 gem 'uglifier', '>= 1.3.0'
 
+
+# recruiter dependencies
+gem 'devise'
+gem 'draper'
+gem 'foundation-icons-sass-rails'
+gem 'foundation-rails'
+gem 'jquery-rails'
+gem 'kaminari'
+gem 'makeup', '~>0.3.0'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-github'
+gem 'omniauth-google_oauth2'
+gem 'redcarpet', '~> 3.2.0'
+gem 'simple_form'
+
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails', '~> 3.7'
