@@ -14,4 +14,4 @@ script:
   - ./bin/rspec spec/
 
 before_script:
-  - mysql -e 'create database RubyJobsBrazil_test'
+  - mysql -e 'create database RubyJobs_test'
