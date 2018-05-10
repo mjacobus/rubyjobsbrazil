@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:mjacobus/machinist.git
+  remote: https://github.com/mjacobus/machinist.git
   revision: e9d8414fb7091f52f6d5399465f0895bbe58835d
   branch: fix-warning
   specs:
