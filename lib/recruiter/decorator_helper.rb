@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Recruiter
   module DecoratorHelper
     def decorate_boolean(value)

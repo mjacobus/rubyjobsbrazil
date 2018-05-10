@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # TODO: autoload class
 require_dependency 'recruiter/publicable_decorator_helper'
 

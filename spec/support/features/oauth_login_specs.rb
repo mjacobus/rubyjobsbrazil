@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Features
   module Login
     extend ActiveSupport::Concern
@@ -18,7 +20,6 @@ module Features
 
     module ClassMethods
       def user_logs_in_and_out_with(strategy_class)
-
         scenario "user logs in and out with #{strategy_class.provider_key}" do
           visit root_path
 
@@ -31,9 +32,7 @@ module Features
           login_with_strategy(strategy_class)
           expect(page).to have_text(t('recruiter.messages.login_succeed'))
         end
-
       end
     end
   end
 end
-

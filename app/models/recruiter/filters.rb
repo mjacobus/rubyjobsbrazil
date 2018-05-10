@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Recruiter
   module Filters
     def self.filter(type, params = {})
@@ -27,14 +29,13 @@ module Recruiter
         end
       end
 
-      def init_query
-      end
+      def init_query; end
 
       def filter
         query
       end
 
-      def merge(scope = nil, &block)
+      def merge(scope = nil)
         @query = query.merge(yield) if block_given?
         @query = query.merge(scope) if scope
         self

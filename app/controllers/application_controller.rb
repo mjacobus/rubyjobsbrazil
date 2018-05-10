@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
     elsif model.is_a?(Recruiter::Article)
       canonical_url = article_url(model)
     else
-      raise "Unknown canonical url"
+      raise 'Unknown canonical url'
     end
 
     if canonical_url.to_s == request.original_url.to_s
@@ -34,7 +34,7 @@ class ApplicationController < ActionController::Base
 
   # workaround until Recruiter namespace is removed
   def method_missing(method, *args)
-    if method.to_s.match(/recruiter_.*(path|url)/)
+    if /recruiter_.*(path|url)/.match?(method.to_s)
       return send(method.to_s.sub('recruiter_', ''), *args)
     end
 

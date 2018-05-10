@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Recruiter
   module OgDataHelper
     def og_data(key, value = nil)

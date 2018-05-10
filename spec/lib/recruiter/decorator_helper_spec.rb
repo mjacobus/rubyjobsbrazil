@@ -1,9 +1,8 @@
-# encoding: UTF-8
+# frozen_string_literal: true
 
 require 'spec_helper'
 
 describe Recruiter::DecoratorHelper do
-
   subject do
     Class.new do
       include Recruiter::DecoratorHelper
@@ -15,11 +14,10 @@ describe Recruiter::DecoratorHelper do
       def decorated_false
         decorate_boolean(false)
       end
-
     end.new
   end
 
-  it "decorates boolean" do
+  it 'decorates boolean' do
     expect(subject.decorated_true).to eq('Sim')
     expect(subject.decorated_false).to eq('Não')
   end

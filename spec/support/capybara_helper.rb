@@ -1,5 +1,6 @@
-module CapybaraHelper
+# frozen_string_literal: true
 
+module CapybaraHelper
   def manage_store(provider = :facebook)
     create_dependencies
     login_with(provider)
@@ -69,5 +70,4 @@ module CapybaraHelper
 
     expect(page).to have_text(I18n.t('managers.stores.create.success'))
   end
-
 end

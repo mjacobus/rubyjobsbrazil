@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ArticlesController < ApplicationController
   respond_to :html, :json
 
@@ -18,5 +20,4 @@ class ArticlesController < ApplicationController
   def scope
     Recruiter::Article.published
   end
-
 end

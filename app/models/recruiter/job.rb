@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Recruiter
   class Job < ApplicationRecord
     belongs_to :user
@@ -10,17 +12,15 @@ module Recruiter
     validates :description, presence: true
     validates :how_to_apply, presence: true
 
-    default_scope ->{ order('recruiter_jobs.created_at DESC') }
-    scope :open, ->{ where(open: true) }
+    default_scope -> { order('recruiter_jobs.created_at DESC') }
+    scope :open, -> { where(open: true) }
 
     def to_param
       "#{id}-#{title.parameterize}"
     end
 
     # form helper
-    def state_id=(value)
-      @state_id = value
-    end
+    attr_writer :state_id
 
     # form helper
     def state_id

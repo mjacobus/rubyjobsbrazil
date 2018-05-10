@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 module Recruiter
   module ShowHelper
-    def show_for(model, &block)
+    def show_for(model)
       if block_given?
         yield AttributeShower.new(model, self)
       end

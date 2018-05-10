@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Recruiter
   class UserDecorator < Draper::Decorator
     delegate_all

@@ -1,16 +1,18 @@
+# frozen_string_literal: true
+
 module ControllersSpecHelpers
   extend ActiveSupport::Concern
 
   module ClassMethods
     def it_requires_authentication(&block)
-      it "requires authentication" do
+      it 'requires authentication' do
         instance_eval(&block)
         expect(response).to redirect_to(new_user_session_path)
       end
     end
 
     def it_responds_with_success(&block)
-      it "responds with success" do
+      it 'responds with success' do
         instance_eval(&block)
         expect(response).to be_success
       end
@@ -40,14 +42,14 @@ module ControllersSpecHelpers
     end
 
     def with_valid_user(&block)
-      context "when user is logged in" do
+      context 'when user is logged in' do
         before { sign_in(user) }
         class_eval(&block)
       end
     end
 
     def with_admin_user(&block)
-      context "when admin is logged in" do
+      context 'when admin is logged in' do
         before { sign_in(admin) }
         class_eval(&block)
       end

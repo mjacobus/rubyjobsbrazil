@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'machinist/active_record'
 require 'faker'
 
@@ -11,19 +13,19 @@ end
 Recruiter::Job.blueprint do
   user
   title { "ruby job #{sn}" }
-  description { "the requirements" }
-  how_to_apply { "how to apply" }
+  description { 'the requirements' }
+  how_to_apply { 'how to apply' }
   city
 end
 
 Recruiter::State.blueprint do
   name  { Faker::Address.city }
-  short { "#{sn}" }
+  short { sn.to_s }
 end
 
 Recruiter::City.blueprint do
   name  { Faker::Address.city }
-  short { "#{sn}" }
+  short { sn.to_s }
   state
 end
 
@@ -34,6 +36,6 @@ end
 Recruiter::Article.blueprint do
   user
   title { "ruby article #{sn}" }
-  body { "article body" }
+  body { 'article body' }
   published { true }
 end

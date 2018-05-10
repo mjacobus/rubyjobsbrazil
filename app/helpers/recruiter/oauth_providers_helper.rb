@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Recruiter
   module OauthProvidersHelper
     def available_oauth_providers
@@ -5,7 +7,7 @@ module Recruiter
         github: :github,
         google: :google_oauth2,
         facebook: :facebook,
-      }.select do |key, provider|
+      }.select do |key, _provider|
         ENV["#{key.to_s.upcase}_KEY"]
       end
     end

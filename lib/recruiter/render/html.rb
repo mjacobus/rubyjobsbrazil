@@ -1,4 +1,6 @@
-require "pygments"
+# frozen_string_literal: true
+
+require 'pygments'
 
 module Recruiter
   module Render
@@ -10,11 +12,9 @@ module Recruiter
       # end
 
       def block_code(text, language)
-        begin
-          Pygments.highlight(text, lexer: language)
-        rescue
-          Pygments.highlight(text)
-        end
+        Pygments.highlight(text, lexer: language)
+      rescue StandardError
+        Pygments.highlight(text)
       end
     end
   end

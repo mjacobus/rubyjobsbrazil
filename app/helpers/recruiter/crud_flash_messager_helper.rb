@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 module Recruiter
   module CrudFlashMessagerHelper
-    def crud_flash(result, &block)
+    def crud_flash(result)
       unless request.xhr?
         result ? set_crud_success_flash : set_crud_error_flash
         yield if result && block_given?

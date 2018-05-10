@@ -1,10 +1,12 @@
-require "rails_helper"
+# frozen_string_literal: true
 
-feature "Jobs Management" do
+require 'rails_helper'
+
+feature 'Jobs Management' do
   include Features::Login
 
-  context "when user is logged in" do
-    scenario "he is able to publishe a job" do
+  context 'when user is logged in' do
+    scenario 'he is able to publishe a job' do
       city
       visit root_path
       login_with_strategy(Recruiter::Oauth::Github)
@@ -13,12 +15,12 @@ feature "Jobs Management" do
     end
   end
 
-  context "when user is not logged in" do
-    scenario "he is able to publishe a job" do
+  context 'when user is not logged in' do
+    scenario 'he is able to publishe a job' do
       city
       visit root_path
       click_link t('recruiter.links.jobs.new')
-      within("#main_content") do
+      within('#main_content') do
         login_with_strategy(Recruiter::Oauth::Github)
       end
       expect(page).not_to have_text(t('devise.failure.already_authenticated'))

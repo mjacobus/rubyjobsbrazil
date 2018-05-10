@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Recruiter
   module PublicableDecoratorHelper
     def created_at_ago
@@ -13,11 +15,11 @@ module Recruiter
     end
 
     def published_at
-      h.t("recruiter.messages.published_at", time: created_at_ago)
+      h.t('recruiter.messages.published_at', time: created_at_ago)
     end
 
     def updated_at
-      h.t("recruiter.messages.updated_at", time: updated_at_ago)
+      h.t('recruiter.messages.updated_at', time: updated_at_ago)
     end
 
     def publication

@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class OmniauthCallbacksController < ::Devise::OmniauthCallbacksController
   # For handling errors
-  def new_session_path(scope)
+  def new_session_path(_scope)
     new_user_session_path
   end
 
@@ -17,8 +19,8 @@ class OmniauthCallbacksController < ::Devise::OmniauthCallbacksController
   end
 
   def login_with(klass)
-    env          = request.env["omniauth.auth"]
-    origin       = request.env["omniauth.origin"]
+    env          = request.env['omniauth.auth']
+    origin       = request.env['omniauth.origin']
     user         = klass.find_or_build_user(env)
     redirect_url = redirect_url_for(user, origin)
     message      = login_message(user)
@@ -32,7 +34,7 @@ class OmniauthCallbacksController < ::Devise::OmniauthCallbacksController
     I18n.t("recruiter.messages.#{key}")
   end
 
-  def redirect_url_for(user, origin = nil)
+  def redirect_url_for(_user, origin = nil)
     origin || root_url
   end
 

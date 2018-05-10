@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Recruiter
   module Filters
     class JobFilter < Base
@@ -5,7 +7,7 @@ module Recruiter
         @query = Job.joins(city: :state).includes(city: :state)
       end
 
-      def with_open_status(*args)
+      def with_open_status(*_args)
         merge(Job.open)
       end
 

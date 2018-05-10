@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # http://zurb.com/playground/foundation-icon-fonts-3
 
 module Recruiter

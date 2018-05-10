@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 module Users
   class JobsController < UserController
-    before_action :set_job, only: [:show, :edit, :update, :destroy]
+    before_action :set_job, only: %i[show edit update destroy]
 
     def index
       @jobs = jobs.page(page).per(per_page)
@@ -62,7 +64,7 @@ module Users
       ).to_hash.reverse_merge(tag_ids: [])
     end
 
-    def respond_with_job(job)
+    def respond_with_job(_job)
       respond_with(:user, @job)
     end
   end

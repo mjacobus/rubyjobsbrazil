@@ -1,9 +1,11 @@
-require "makeup"
+# frozen_string_literal: true
+
+require 'makeup'
 
 module Recruiter
   module MarkdownHelper
     def to_markdown(text)
-      sanitize(renderer.render("file.md", text).html_safe)
+      sanitize(renderer.render('file.md', text).html_safe)
     end
 
     def renderer

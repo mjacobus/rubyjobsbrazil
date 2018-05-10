@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 module Users
   class ArticlesController < UserController
-    before_action :set_article, only: [:show, :edit, :update, :destroy]
+    before_action :set_article, only: %i[show edit update destroy]
 
     def index
       @articles = articles.page(page).per(per_page)

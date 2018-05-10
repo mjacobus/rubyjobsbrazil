@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Recruiter
   module FormHelper
     def options_for_states

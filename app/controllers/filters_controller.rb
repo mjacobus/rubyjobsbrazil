@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class FiltersController < ApplicationController
   def index
     @records = Recruiter::Filters.filter(type, params).map do |record|
