@@ -5,9 +5,8 @@ cache: bundler
 rvm:
   - 2.5.1
 
-# env:
-#   - DB=mysql
-#   - RAILS_ENV=test
+env:
+  - DB=mysql
 
 script:
   - RAILS_ENV=test ./bin/rake db:migrate --trace
@@ -15,11 +14,3 @@ script:
 
 before_script:
   - mysql -e 'create database RubyJobsBrazil_test'
-
-# addons:
-#   apt:
-#     sources:
-#       - mysql-5.7-trusty
-#     packages:
-#       - mysql-server
-#       - mysql-client
