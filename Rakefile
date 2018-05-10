@@ -30,8 +30,7 @@ task :travis_ci do
 end
 
 task :specs do
-  # ENV.delete('SKIP_COVERAGE')
-  ENV['SKIP_COVERAGE'] = 'true'
+  ENV.delete('SKIP_COVERAGE')
   sh 'bundle exec rspec --exclude-pattern "spec/{features}/**/*_spec.rb"'
 end
 
