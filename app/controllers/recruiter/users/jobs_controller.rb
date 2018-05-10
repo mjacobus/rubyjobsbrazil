@@ -20,23 +20,23 @@ module Recruiter
         # TODO: This fixes issue #10. Not a beautiful thing to do here
         flash.delete(:alert)
         @job = user_jobs.new
-        respond_with(:user, @job)
+        respond_with_job(@job)
       end
 
       def create
         @job = user_jobs.build(job_params)
         crud_flash @job.save
-        respond_with(:user, @job)
+        respond_with_job(@job)
       end
 
       def update
         crud_flash @job.update(job_params)
-        respond_with(:user, @job)
+        respond_with_job(@job)
       end
 
       def destroy
         crud_flash @job.destroy
-        respond_with(:user, @job)
+        respond_with_job(@job)
       end
 
       private
@@ -61,6 +61,10 @@ module Recruiter
         params.require(:job).permit(
           :title, :description, :how_to_apply, :city_id, :state_id, tag_ids: []
         ).to_hash.reverse_merge(tag_ids: [])
+      end
+
+      def respond_with_job(job)
+        respond_with(:user, @job)
       end
     end
   end

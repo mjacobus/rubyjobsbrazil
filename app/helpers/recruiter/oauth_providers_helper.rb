@@ -19,5 +19,10 @@ module Recruiter
         google_oauth2: 'social-google-plus',
       }.fetch(provider.to_sym) { "social-#{provider}" }
     end
+
+    def user_omniauth_authorize_path(provider)
+      method = "user_#{provider}_omniauth_authorize_path"
+      send(method)
+    end
   end
 end

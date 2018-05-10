@@ -6,9 +6,6 @@ module ApplicationHelper
     self
   end
 
-  def current_user
-  end
-
   def recruiter_job_path(job)
     job_path(job)
   end
@@ -17,11 +14,11 @@ module ApplicationHelper
     job_url(job)
   end
 
-  def recruiter_article_path(article)
-    article_path(article)
+  def user_recruiter_jobs_path
+    '/profile/jobs'
   end
 
-  def new_user_job_path(*args)
-    new_recruiter_user_job_path(*args)
+  def recruiter_article_path(article)
+    article_path(article)
   end
 end
