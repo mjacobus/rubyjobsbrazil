@@ -1,0 +1,13 @@
+<%= render '/users/articles/article', article: @article  %>
+
+<div class="row">
+  <div class="small-12 columns">
+    <%= render '/share', object: @article %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-12 columns">
+    <%= render '/comments', object: @article %>
+  </div>
+</div>

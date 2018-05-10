@@ -1,18 +1,25 @@
+# frozen_string_literal: true
+
 # config valid only for current version of Capistrano
-lock '3.8.1'
+lock '3.10.2'
 
 set :application, 'rubyjobsbrazil.com.br'
 set :repo_url, 'git@github.com:mjacobus/rubyjobsbrazil.git'
-ask :branch, :master
-set :deploy_to, "/var/www/apps/#{fetch(:application)}"
-set :chruby_ruby, 'ruby-2.4.0'
+
+if ENV['BRANCH']
+  set :branch, ENV['BRANCH']
+else
+  ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+end
+
+set :chruby_ruby, 'ruby-2.5.1'
 set :pty, true
 set :keep_releases, 10
 set :bundle_flags, '--deployment'
 
 append :linked_files,
+       'config/master.key',
        'config/database.yml',
-       'config/secrets.yml',
        '.env'
 
 append :linked_dirs,

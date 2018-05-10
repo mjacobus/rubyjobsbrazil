@@ -1,32 +1,32 @@
-# MySQL.  Versions 5.0+ are recommended.
+# MySQL. Versions 5.1.10 and up are supported.
 #
-# Install the MYSQL driver
+# Install the MySQL driver
 #   gem install mysql2
 #
 # Ensure the MySQL gem is defined in your Gemfile
 #   gem 'mysql2'
 #
 # And be sure to use new-style password hashing:
-#   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
+#   https://dev.mysql.com/doc/refman/5.7/en/password-hashing.html
 #
 default: &default
   adapter: mysql2
   encoding: utf8
-  pool: 5
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password:
-  host: localhost
+  host: 127.0.0.1
 
 development:
   <<: *default
-  database: RubyJobsBrazil_development
+  database: RubyJobs_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: RubyJobsBrazil_test
+  database: RubyJobs_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: RubyJobsBrazil_production
-  username: RubyJobsBrazil
-  password: <%= ENV['RUBYJOBSBRAZIL_DATABASE_PASSWORD'] %>
+  database: RubyJobs_production
+  username: RubyJobs
+  password: <%= ENV['RUBYJOBS_DATABASE_PASSWORD'] %>

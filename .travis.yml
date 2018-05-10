@@ -1,16 +1,6 @@
 language: ruby
 sudo: false
-cache: bundler
-
-rvm:
-  - 2.4.0
-
-env:
-  - DB=mysql
-
+# cache: bundler
 script:
-  - RAILS_ENV=test bundle exec rake db:migrate --trace
-  - bundle exec rspec spec/
-
-before_script:
-  - mysql -e 'create database RubyJobsBrazil_test'
+  - gem install bundler '1.16.1'
+  - RAILS_ENV=test ./bin/rake travis_ci

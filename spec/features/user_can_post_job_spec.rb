@@ -1,9 +1,11 @@
-require 'spec_helper'
+# frozen_string_literal: true
 
-feature "Jobs management" do
+require 'rails_helper'
+
+feature 'Jobs management' do
   include Features::Login
 
-  scenario "user can post a new job", pending: true do
+  scenario 'user can post a new job', pending: true do
     user_logs_in_and_out_with(Recruiter::Oauth::Github)
     click_button(t('recruiter.links.new_job'))
 
@@ -16,5 +18,4 @@ feature "Jobs management" do
 
     expect(page).to have_text(t('recruiter.messages.job_posted'))
   end
-
 end

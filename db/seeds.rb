@@ -1,36 +1,9 @@
-# encoding: UTF-8
-require_relative 'seeds/brazilian_states_and_cities'
+# frozen_string_literal: true
 
-Recruiter::Tag.find_or_create_by!({
-  name: 'Home Office'
-})
-
-Recruiter::Tag.find_or_create_by!({
-  name: 'Full Time'
-})
-
-Recruiter::Tag.find_or_create_by!({
-  name: 'Part Time'
-})
-
-Recruiter::Tag.find_or_create_by!({
-  name: 'Presencial'
-})
-
-Recruiter::Tag.find_or_create_by!({
-  name: 'PJ'
-})
-
-Recruiter::Tag.find_or_create_by!({
-  name: 'CLT'
-})
-
-Recruiter::Tag.find_or_create_by!({
-  name: 'Freela'
-})
-
-Recruiter::Tag.find_or_create_by!({
-  name: 'Estágio'
-})
-
-require_relative "seeds/development" if Rails.env.development?
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+#
+# Examples:
+#
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)

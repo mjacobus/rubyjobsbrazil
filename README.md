@@ -10,16 +10,6 @@ Código fonte do site [RubyJobsBrazil.com.br](http://rubyjobsbrazil.com.br)
 [![Code Climate](https://codeclimate.com/github/mjacobus/rubyjobsbrazil.png)](https://codeclimate.com/github/mjacobus/rubyjobsbrazil)
 [![Dependency Status](https://gemnasium.com/mjacobus/rubyjobsbrazil.png)](https://gemnasium.com/mjacobus/rubyjobsbrazil)
 
-## Motor do Site
-
-Usa a gem [Recruiter](https://github.com/mjacobus/recruiter), escrita especialmente para sites como este.
-
-[![Build Status](https://travis-ci.org/mjacobus/recruiter.png?branch=master)](https://travis-ci.org/mjacobus/recruiter)
-[![Coverage Status](https://coveralls.io/repos/mjacobus/recruiter/badge.png)](https://coveralls.io/r/mjacobus/recruiter)
-[![Code Climate](https://codeclimate.com/github/mjacobus/recruiter.png)](https://codeclimate.com/github/mjacobus/recruiter)
-[![Dependency Status](https://gemnasium.com/mjacobus/recruiter.png)](https://gemnasium.com/mjacobus/recruiter)
-[![Gem Version](https://badge.fury.io/rb/recruiter.png)](http://badge.fury.io/rb/recruiter)
-
 
 O que é?
 ----------------

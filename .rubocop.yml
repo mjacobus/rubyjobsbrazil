@@ -1,0 +1,58 @@
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 100
+
+Metrics/ClassLength:
+  CountComments: false
+  Max: 250
+
+Metrics/MethodLength:
+  CountComments: false
+  Max: 30
+
+Metrics/CyclomaticComplexity:
+  Max: 7
+
+Style/GuardClause:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/TrailingCommaInArrayLiteral:
+  Enabled: false
+
+Style/TrailingCommaInHashLiteral:
+  Enabled: false
+
+Style/RedundantReturn:
+  Enabled: false
+
+Style/SafeNavigation:
+  Enabled: false
+
+Style/PredicateName:
+  NamePrefix:
+    - is_
+
+Metrics/AbcSize:
+  Max: 45
+
+Metrics/PerceivedComplexity:
+  Max: 10
+
+Documentation:
+  Enabled: false
+
+AllCops:
+  Exclude:
+    - bin/**/*
+  TargetRubyVersion: 2.4
+
+Layout/ExtraSpacing:
+  AllowForAlignment: true
