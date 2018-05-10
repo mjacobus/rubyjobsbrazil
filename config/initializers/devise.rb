@@ -270,3 +270,5 @@ Devise.setup do |config|
     manager.failure_app = Recruiter::CustomDeviseFailure
   end
 end
+
+OmniAuth.config.logger = Rails.logger
