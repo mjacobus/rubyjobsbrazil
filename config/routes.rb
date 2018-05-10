@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   # namespace :recruiter do
     resources :jobs, only: [:index, :show], controller: 'recruiter/jobs'
-    resources :articles, only: [:index, :show]
+    resources :articles, only: [:index, :show], controller: 'recruiter/articles'
 
     # devise_for :users,
     #   class_name: 'Recruiter::User',
@@ -22,6 +22,6 @@ Rails.application.routes.draw do
       resources :articles
     end
 
-    get 'filters' => 'filters#index', as: :filters
+    get 'filters' => 'recruiter/filters#index', as: :filters
   # end
 end

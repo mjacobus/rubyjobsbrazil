@@ -16,4 +16,8 @@ module ApplicationHelper
   def recruiter_job_url(job)
     job_url(job)
   end
+
+  def recruiter_article_path(article)
+    article_path(article)
+  end
 end
