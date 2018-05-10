@@ -17,7 +17,6 @@ gem 'sass-rails', '~> 5.0'
 gem 'sentry-raven'
 gem 'uglifier', '>= 1.3.0'
 
-
 # recruiter dependencies
 gem 'devise'
 gem 'draper'
@@ -52,12 +51,13 @@ end
 group :test do
   gem 'capybara', '>= 2.15', '< 4.0'
   gem 'chromedriver-helper'
-  gem 'machinist', github: 'mjacobus/machinist', branch: 'fix-warning'
   gem 'faker'
+  gem 'machinist', github: 'mjacobus/machinist', branch: 'fix-warning'
   gem 'rails-controller-testing'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers', '~> 3.1'
   gem 'spring-commands-rspec'
+  gem 'coveralls', require: false
 end
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
