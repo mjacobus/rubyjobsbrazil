@@ -16,9 +16,9 @@ class ApplicationController < ActionController::Base
   end
 
   def ensure_canonical_url(model, &block)
-    if model.is_a?(Recruiter::Job)
+    if model.is_a?(Job)
       canonical_url = job_url(model)
-    elsif model.is_a?(Recruiter::Article)
+    elsif model.is_a?(Article)
       canonical_url = article_url(model)
     else
       raise 'Unknown canonical url'

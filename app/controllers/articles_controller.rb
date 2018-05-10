@@ -18,6 +18,6 @@ class ArticlesController < ApplicationController
   private
 
   def scope
-    Recruiter::Article.published
+    Article.published
   end
 end

@@ -21,7 +21,7 @@
   </div>
 
   <div class="how-to-apply">
-    <h2><%= Recruiter::Job.human_attribute_name(:how_to_apply) %></h2>
+    <h2><%= Job.human_attribute_name(:how_to_apply) %></h2>
     <%= to_markdown(job.how_to_apply) %>
   </div>
 

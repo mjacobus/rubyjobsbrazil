@@ -15,7 +15,7 @@ module OmniauthControllerSpecs
 
       describe provider_key.to_s do
         let(:env) { OauthHelper.providers[provider_key] }
-        let(:user) { Recruiter::User.make }
+        let(:user) { User.make }
 
         before do
           expect(strategy_class).to receive(:find_or_build_user).with(env).and_return(user)
@@ -30,7 +30,7 @@ module OmniauthControllerSpecs
 
         it 'logs user in' do
           get provider_key
-          expect(controller.current_user).to eq(Recruiter::User.last)
+          expect(controller.current_user).to eq(User.last)
         end
 
         it "redirects to the 'redirect_url'" do

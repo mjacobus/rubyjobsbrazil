@@ -11,7 +11,7 @@ class JobsController < ApplicationController
   end
 
   def show
-    @job = Recruiter::Job.find(params[:id])
+    @job = Job.find(params[:id])
     ensure_canonical_url(@job) do
       respond_with(@job)
     end

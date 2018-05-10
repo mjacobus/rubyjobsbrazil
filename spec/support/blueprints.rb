@@ -3,14 +3,14 @@
 require 'machinist/active_record'
 require 'faker'
 
-Recruiter::User.blueprint do
+User.blueprint do
   name     { "The Name #{sn}" }
   email    { "email#{sn}@example.com" }
   provider { 'github' }
   uid      { sn }
 end
 
-Recruiter::Job.blueprint do
+Job.blueprint do
   user
   title { "ruby job #{sn}" }
   description { 'the requirements' }
@@ -18,22 +18,22 @@ Recruiter::Job.blueprint do
   city
 end
 
-Recruiter::State.blueprint do
+State.blueprint do
   name  { Faker::Address.city }
   short { sn.to_s }
 end
 
-Recruiter::City.blueprint do
+City.blueprint do
   name  { Faker::Address.city }
   short { sn.to_s }
   state
 end
 
-Recruiter::Tag.blueprint do
+Tag.blueprint do
   name { "tag #{sn}" }
 end
 
-Recruiter::Article.blueprint do
+Article.blueprint do
   user
   title { "ruby article #{sn}" }
   body { 'article body' }
