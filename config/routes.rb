@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   devise_for :users,
     class_name: 'Recruiter::User',
-    controllers: { omniauth_callbacks: "recruiter/omniauth_callbacks" }
+    controllers: { omniauth_callbacks: "omniauth_callbacks" }
 
   devise_scope :user do
     get 'sign_in',  to: 'devise/sessions#new',     as: :new_user_session
@@ -20,5 +20,5 @@ Rails.application.routes.draw do
     resources :articles
   end
 
-  get 'filters' => 'recruiter/filters#index', as: :filters
+  get 'filters' => 'filters#index', as: :filters
 end

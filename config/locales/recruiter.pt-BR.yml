@@ -9,13 +9,6 @@
       header:
         meta_description: Vagas para programadores Ruby e Ruby on Rails no Brasil.
         site_name: rubyjobsbrazil
-    filters:
-      title: Filtros
-      state: Estado
-      select_state: Selecione um Estado
-      city: Cidade
-      select_city: Selecione uma Cidade
-      submit: Procurar
     submit:
       new: Adicionar
       edit: Atualizar
@@ -110,3 +103,11 @@
       title_jobs: Últimas vagas publicadas
       see_all_jobs: Ver todas
       see_all_articles: Ver todos
+
+  _filters:
+    title: Filtros
+    state: Estado
+    select_state: Selecione um Estado
+    city: Cidade
+    select_city: Selecione uma Cidade
+    submit: Procurar
