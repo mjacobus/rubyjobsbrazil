@@ -52,10 +52,12 @@ end
 group :test do
   gem 'capybara', '>= 2.15', '< 4.0'
   gem 'chromedriver-helper'
-  gem 'selenium-webdriver'
-  gem 'spring-commands-rspec'
-  gem 'shoulda-matchers', '~> 3.1'
+  gem 'machinist', github: 'mjacobus/machinist', branch: 'fix-warning'
+  gem 'faker'
   gem 'rails-controller-testing'
+  gem 'selenium-webdriver'
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'spring-commands-rspec'
 end
 
 # See https://github.com/rails/execjs#readme for more supported runtimes

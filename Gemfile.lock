@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/mjacobus/machinist.git
+  revision: e9d8414fb7091f52f6d5399465f0895bbe58835d
+  branch: fix-warning
+  specs:
+    machinist (2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -114,6 +121,8 @@ GEM
       request_store (~> 1.0)
     erubi (1.7.1)
     execjs (2.7.0)
+    faker (1.8.7)
+      i18n (>= 0.7)
     faraday (0.15.0)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.23)
@@ -354,12 +363,14 @@ DEPENDENCIES
   devise
   dotenv-rails
   draper
+  faker
   foundation-icons-sass-rails
   foundation-rails
   jbuilder (~> 2.5)
   jquery-rails
   kaminari
   listen (>= 3.0.5, < 3.2)
+  machinist!
   makeup (~> 0.3.0)
   mysql2 (>= 0.4.4, < 0.6.0)
   omniauth
