@@ -9,7 +9,7 @@ env:
   - DB=mysql
 
 script:
-  - RAILS_ENV=test ./bin/rake db:migrate --trace
+  - RAILS_ENV=test ./bin/rake db:migrate
   - ./bin/rspec spec/
 
 before_script:
