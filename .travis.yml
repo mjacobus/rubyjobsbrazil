@@ -7,10 +7,19 @@ rvm:
 
 env:
   - DB=mysql
+  - RAILS_ENV=test
 
 script:
-  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:migrate --trace
   - bundle exec rspec spec/
 
 before_script:
   - mysql -e 'create database RubyJobsBrazil_test'
+
+addons:
+  apt:
+    sources:
+      - mysql-5.7-trusty
+    packages:
+      - mysql-server
+      - mysql-client
