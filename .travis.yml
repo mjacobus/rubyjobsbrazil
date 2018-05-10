@@ -10,7 +10,7 @@ rvm:
 #   - RAILS_ENV=test
 
 script:
-  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - RAILS_ENV=test ./bin/rake db:migrate --trace
   - ./bin/rspec spec/
 
 before_script:
