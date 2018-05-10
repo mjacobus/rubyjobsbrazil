@@ -20,4 +20,8 @@ module ApplicationHelper
   def recruiter_article_path(article)
     article_path(article)
   end
+
+  def new_user_job_path(*args)
+    new_recruiter_user_job_path(*args)
+  end
 end
