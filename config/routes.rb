@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  root to: 'recruiter/home#index'
+  root to: 'home#index'
 
   resources :jobs, only: [:index, :show], controller: 'recruiter/jobs'
   resources :articles, only: [:index, :show], controller: 'recruiter/articles'
