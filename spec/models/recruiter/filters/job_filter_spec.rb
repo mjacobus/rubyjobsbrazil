@@ -4,7 +4,6 @@ require 'rails_helper'
 
 module Recruiter
   describe Filters::JobFilter do
-    let(:city) { City.make }
     let(:klass) { described_class }
 
     describe '#with_open_status' do

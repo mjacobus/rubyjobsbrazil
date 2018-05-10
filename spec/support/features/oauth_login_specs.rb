@@ -20,7 +20,7 @@ module Features
       def user_logs_in_and_out_with(strategy_class)
 
         scenario "user logs in and out with #{strategy_class.provider_key}" do
-          visit recruiter.root_path
+          visit root_path
 
           login_with_strategy(strategy_class)
           expect(page).to have_text(t('recruiter.messages.account_created'))

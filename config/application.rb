@@ -24,6 +24,7 @@ module RubyJobs
 
     config.autoload_paths += %W[
       #{config.root}/app/decorators
+      #{config.root}/lib
     ]
   end
 end
