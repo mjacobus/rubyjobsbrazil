@@ -271,4 +271,5 @@ Devise.setup do |config|
   end
 end
 
-OmniAuth.config.logger = Rails.logger
+# For debugging
+# OmniAuth.config.logger = Rails.logger
