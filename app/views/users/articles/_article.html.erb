@@ -1,0 +1,17 @@
+<% title article.decorate.title  %>
+
+<article>
+  <header>
+    <h1><%= article.decorate.title %></h1>
+  </header>
+
+  <div class="row">
+    <div class="small-12 columns">
+      <%= to_markdown(article.body) %>
+    </div>
+  </div>
+
+  <footer>
+    <p><%= article.decorate.publication %></p>
+  </footer>
+</article>

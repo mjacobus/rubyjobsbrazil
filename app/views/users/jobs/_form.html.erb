@@ -1,0 +1,30 @@
+<%= simple_form_for([:user, job], as: :job) do |f| %>
+
+  <div class="row">
+    <div class="small-12 medium-8 large-8 columns">
+      <%= f.input :title %>
+      <%= f.input :state_id, as: :select, collection: options_for_states,
+        input_html: {
+          'data-filter-select' => '{"target": "#job_city_id", "filterParam":"state_id", "filter": "city"}'
+        }
+      %>
+      <%= f.association :city, collection: options_for_cities(job.state_id) %>
+      <%= f.input :description, as: :text, input_html: { rows: 5 }, hint: t('.markdown_hint').html_safe %>
+      <%= f.input :how_to_apply, as: :text, input_html: { rows: 5 }, hint: t('.markdown_hint').html_safe %>
+    </div>
+
+    <div class="small-12 medium-4 large-4 columns">
+      <h2><%= t('.tags') %></h2>
+      <% tags.each do |tag| %>
+        <div>
+          <%= check_box_tag 'job[tag_ids][]', tag.id, job.tag_ids.include?(tag.id), id: "tag_#{tag.id}" %>
+          <%= label_tag("tag_#{tag.id}", tag.name) %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+
+
+  <%= render '/form_actions' %>
+<% end %>

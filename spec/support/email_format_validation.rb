@@ -1,17 +1,19 @@
+# frozen_string_literal: true
+
 module EmailExamples
   def invalid_email_addresses
-    %w(
+    %w[
       marcelo.jacobusgmail.com
       example@email
-    )
+    ]
   end
 
   def valid_email_addresses
-    %w(
+    %w[
       marcelo.jacobus@gmail.com
       example@email.com
       a-bc@email.com
-    )
+    ]
   end
 end
 

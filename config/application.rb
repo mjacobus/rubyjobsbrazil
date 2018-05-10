@@ -1,52 +1,30 @@
-require File.expand_path('../boot', __FILE__)
+# frozen_string_literal: true
 
-# Pick the frameworks you want:
-require "active_model/railtie"
-require "active_record/railtie"
-require "action_controller/railtie"
-require "action_mailer/railtie"
-require "action_view/railtie"
-require "sprockets/railtie"
-# require "rails/test_unit/railtie"
+require_relative 'boot'
+
+require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+Dotenv::Railtie.load
 
-module RubyJobsBrazil
+module RubyJobs
   class Application < Rails::Application
-    # TODO: Change to true once the following issue has been fixed
-    # https://github.com/rails/rails/issues/13164
-    config.i18n.enforce_available_locales = !true
+    # Initialize configuration defaults for originally generated Rails version.
+    config.load_defaults 5.2
+
+    # Settings in config/environments/* take precedence over those specified here.
+    # Application configuration can go into files in config/initializers
+    # -- all .rb files in that directory are automatically loaded after loading
+    # the framework and any gems in your application.
+    #
 
     config.i18n.default_locale = 'pt-BR'
 
-    config.active_record.default_timezone = :utc
-
-    config.active_support.test_order = :sorted
-
-    config.generators do |generate|
-      generate.decorator false
-      generate.helper false
-      generate.javascript_engine false
-      generate.request_specs false
-      generate.routing_specs true
-      generate.stylesheets false
-      generate.test_framework :rspec
-      generate.view_specs false
-      generate.fixture_replacement :machinist
-    end
-
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
-
-    # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
-    # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
-    # config.time_zone = 'Central Time (US & Canada)'
-
-    # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
-    # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
+    config.autoload_paths += %W[
+      #{config.root}/app/decorators
+      #{config.root}/lib
+    ]
   end
 end
