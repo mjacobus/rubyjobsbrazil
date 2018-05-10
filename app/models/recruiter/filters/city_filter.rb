@@ -6,7 +6,8 @@ module Recruiter
       end
 
       def with_jobs(*args)
-        merge(query.where(id: Job.select(:city_id).uniq))
+        # merge(query.where(id: Job.select(:city_id).uniq))
+        merge(query.where(id: Job.select(:city_id)))
       end
 
       def with_open_jobs(*args)
