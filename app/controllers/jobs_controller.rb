@@ -1,4 +1,4 @@
-class JobsController < ::RecruiterController
+class JobsController < ApplicationController
   respond_to :html, :json
 
   def index

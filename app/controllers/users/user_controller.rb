@@ -1,5 +1,5 @@
 module Users
-  class UserController < ::RecruiterController
+  class UserController < ApplicationController
     before_action :authenticate_user!
     respond_to :html, :json
   end
