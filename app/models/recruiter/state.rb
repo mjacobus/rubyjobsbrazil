@@ -1,5 +1,5 @@
 module Recruiter
-  class State < ActiveRecord::Base
+  class State < ApplicationRecord
     delegate  :to_s, to: :name
     validates :name, presence: true, uniqueness: { case_sensitive: false }
     validates :short, presence: true, uniqueness: { case_sensitive: false }

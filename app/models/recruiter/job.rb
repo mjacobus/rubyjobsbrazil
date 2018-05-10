@@ -1,5 +1,5 @@
 module Recruiter
-  class Job < ActiveRecord::Base
+  class Job < ApplicationRecord
     belongs_to :user
     belongs_to :city
     has_and_belongs_to_many :tags, class_name: 'Recruiter::Tag'
