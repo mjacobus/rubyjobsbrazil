@@ -3,8 +3,8 @@
 Rails.application.routes.draw do
   root to: 'home#index'
 
-  resources :jobs, only: [:index, :show], controller: 'recruiter/jobs'
-  resources :articles, only: [:index, :show], controller: 'recruiter/articles'
+  resources :jobs, only: [:index, :show]
+  resources :articles, only: [:index, :show]
 
   devise_for :users,
     class_name: 'Recruiter::User',
@@ -15,9 +15,9 @@ Rails.application.routes.draw do
     get 'sign_out', to: 'devise/sessions#destroy', as: :destroy_user_session
   end
 
-  scope :profile, as: :user do
-    resources :jobs, controller: 'recruiter/users/jobs'
-    resources :articles, controller: 'recruiter/users/articles'
+  scope :profile, as: :user, module: :users do
+    resources :jobs
+    resources :articles
   end
 
   get 'filters' => 'recruiter/filters#index', as: :filters

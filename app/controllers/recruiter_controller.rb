@@ -29,4 +29,13 @@ class RecruiterController  < ApplicationController
 
     redirect_to canonical_url
   end
+
+  # workaround until Recruiter namespace is removed
+  def method_missing(method, *args)
+    if method.to_s.match(/recruiter_.*(path|url)/)
+      return send(method.to_s.sub('recruiter_', ''), *args)
+    end
+
+    super(method, *args)
+  end
 end

@@ -1,16 +1,1 @@
-<% header_tag ||= :h2 %>
-
-<div class="job">
-  <%= link_to job do %>
-    <article class="row">
-      <div class="small-12 columns">
-        <div class="wrapper">
-          <%= content_tag(header_tag, job.decorate.title) %>
-          <div class="line"><%= render 'tags', tags: job.tags %></div>
-          <div class="location line"><%= job.decorate.location %></div>
-          <div class="published_date line"><%= job.decorate.published_at %></div>
-        </div>
-      </div>
-    </article>
-  <% end %>
-</div>
+<%= render partial: 'jobs/job', locals: { job: job } %>

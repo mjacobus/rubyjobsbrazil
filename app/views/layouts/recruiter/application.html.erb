@@ -7,18 +7,18 @@
 
     <meta name="ROBOTS" content="NOODP" />
     <title><%= title %></title>
-    <%= render 'recruiter/meta_og' %>
+    <%= render '/meta_og' %>
     <%= stylesheet_link_tag 'recruiter/application', :media => 'all' %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
-    <%= render 'recruiter/analytics' %>
+    <%= render '/analytics' %>
     <style type="text/css"><%= Pygments.css %> </style>
     <%= yield :before_head_closes %>
   </head>
   <body>
     <%= yield :after_body_opens %>
-    <%= render 'recruiter/top_menu' -%>
-    <%= render 'recruiter/flashes' -%>
+    <%= render '/top_menu' -%>
+    <%= render '/flashes' -%>
     <div id="middle">
       <div id="main_content" class="row">
         <div class="small-12 columns">
@@ -26,8 +26,8 @@
         </div>
       </div>
     </div>
-    <%= render 'recruiter/footer' %>
-    <%= render 'recruiter/javascript' %>
+    <%= render '/footer' %>
+    <%= render '/javascript' %>
     <%= yield :before_body_closes %>
   </body>
 </html>

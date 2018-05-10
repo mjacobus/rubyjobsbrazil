@@ -6,19 +6,12 @@ module ApplicationHelper
     self
   end
 
-  def recruiter_job_path(job)
-    job_path(job)
-  end
+  # quick fix to some recruiter references
+  def method_missing(method, *args)
+    if method.to_s.match(/recruiter_.*(path|url)/)
+      return send(method.sub('recruiter_'), *args)
+    end
 
-  def recruiter_job_url(job)
-    job_url(job)
-  end
-
-  def user_recruiter_jobs_path
-    '/profile/jobs'
-  end
-
-  def recruiter_article_path(article)
-    article_path(article)
+    super
   end
 end

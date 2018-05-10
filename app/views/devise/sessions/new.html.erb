@@ -3,6 +3,6 @@
 <p class="alert-box"><%= t('.message') %></p>
 
 <% available_oauth_providers.each do |name, provider| %>
-  <%= render 'recruiter/login_button', provider: provider, options: { class: "#{provider} button large secondary" } %>
+  <%= render '/login_button', provider: provider, options: { class: "#{provider} button large secondary" } %>
 <% end %>
 
