@@ -1,3 +1,6 @@
+# TODO: autoload class
+require_dependency 'recruiter/publicable_decorator_helper'
+
 module Recruiter
   class JobDecorator < Draper::Decorator
     delegate_all

@@ -21,5 +21,9 @@ module RubyJobs
     #
 
     config.i18n.default_locale = 'pt-BR'
+
+    config.autoload_paths += %W[
+      #{config.root}/app/decorators
+    ]
   end
 end

@@ -13,7 +13,7 @@ require "jquery-rails"
 
 require "recruiter/decorator_helper"
 require "recruiter/publicable_decorator_helper"
-require "recruiter/engine"
+# require "recruiter/engine"
 require "recruiter/render/html"
 
 module Recruiter

@@ -8,4 +8,12 @@ module ApplicationHelper
 
   def current_user
   end
+
+  def recruiter_job_path(job)
+    job_path(job)
+  end
+
+  def recruiter_job_url(job)
+    job_url(job)
+  end
 end
