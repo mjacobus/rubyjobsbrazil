@@ -1,4 +1,6 @@
-require 'spec_helper'
+# frozen_string_literal: true
+
+require 'rails_helper'
 
 module Recruiter
   describe State, '#short' do
@@ -12,7 +14,7 @@ module Recruiter
   end
 
   describe State, '.open_jobs' do
-    it "returns only states with open_jobs" do
+    it 'returns only states with open_jobs' do
       expected   = City.make!
       unexpected = City.make!
       Job.make!(city: expected, open: true)

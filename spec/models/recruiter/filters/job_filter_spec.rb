@@ -1,11 +1,14 @@
-require "spec_helper"
+# frozen_string_literal: true
+
+require 'rails_helper'
 
 module Recruiter
   describe Filters::JobFilter do
+    let(:city) { City.make }
     let(:klass) { described_class }
 
-    describe "#with_open_status" do
-      it "returns only the enabled records" do
+    describe '#with_open_status' do
+      it 'returns only the enabled records' do
         open   = Job.make! open: true
         closed = Job.make! open: false
 
@@ -13,8 +16,8 @@ module Recruiter
       end
     end
 
-    describe "#with_city_id" do
-      it "returns jobs with the city id" do
+    describe '#with_city_id' do
+      it 'returns jobs with the city id' do
         expected = Job.make!(city: city)
         Job.make!
 
@@ -22,8 +25,8 @@ module Recruiter
       end
     end
 
-    describe "#with_state_id" do
-      it "returns jobs with the city id" do
+    describe '#with_state_id' do
+      it 'returns jobs with the city id' do
         expected = Job.make!(city: city)
         Job.make!
 

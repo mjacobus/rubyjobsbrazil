@@ -1,8 +1,9 @@
-require 'spec_helper'
+# frozen_string_literal: true
+
+require 'rails_helper'
 
 module Recruiter
   describe City do
-
     describe '#state' do
       it { should belong_to(:state) }
     end
@@ -17,7 +18,7 @@ module Recruiter
     end
 
     describe '.with_open_jobs' do
-      it "returns only cities with open jobs" do
+      it 'returns only cities with open jobs' do
         expected   = City.make!
         unexpected = City.make!
         Job.make!(city: expected, open: true)

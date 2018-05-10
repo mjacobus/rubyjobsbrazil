@@ -1,4 +1,6 @@
-require 'spec_helper'
+# frozen_string_literal: true
+
+require 'rails_helper'
 
 describe Recruiter::Job do
   it { should belong_to(:user) }
@@ -10,15 +12,15 @@ describe Recruiter::Job do
   it { should validate_presence_of(:user) }
   it { should validate_presence_of(:city) }
 
-  describe "#to_param" do
-    it "returns the parameterized title" do
-      job = described_class.make({ id: 12, title: 'Some Title' })
+  describe '#to_param' do
+    it 'returns the parameterized title' do
+      job = described_class.make(id: 12, title: 'Some Title')
       expect(job.to_param).to eq('12-some-title')
     end
   end
 
-  describe ".open" do
-    it "returns only the enabled records" do
+  describe '.open' do
+    it 'returns only the enabled records' do
       open   = described_class.make! open: true
       closed = described_class.make! open: false
 
@@ -26,8 +28,8 @@ describe Recruiter::Job do
     end
   end
 
-  describe "#state_id" do
-    it "returns the state id" do
+  describe '#state_id' do
+    it 'returns the state id' do
       city = Recruiter::City.new state_id: 1
 
       expect do
