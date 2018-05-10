@@ -2,5 +2,5 @@
 
 require 'rails_helper'
 
-describe Recruiter::JobDecorator do
+RSpec.describe ArticleDecorator do
 end
