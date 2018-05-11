@@ -2,10 +2,10 @@
 
 require 'spec_helper'
 
-describe Recruiter::DecoratorHelper do
+describe DecoratorHelper do
   subject do
     Class.new do
-      include Recruiter::DecoratorHelper
+      include DecoratorHelper
 
       def decorated_true
         decorate_boolean(true)

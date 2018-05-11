@@ -1,14 +1,10 @@
 # frozen_string_literal: true
 
-# TODO: autoload
-require_dependency 'recruiter/decorator_helper'
-require_dependency 'recruiter/publicable_decorator_helper'
-
 class ArticleDecorator < Draper::Decorator
   delegate_all
 
-  include Recruiter::DecoratorHelper
-  include Recruiter::PublicableDecoratorHelper
+  include DecoratorHelper
+  include PublicableDecoratorHelper
 
   def published?
     decorate_boolean(object.published?)
