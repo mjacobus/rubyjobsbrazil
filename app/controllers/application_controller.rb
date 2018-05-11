@@ -3,8 +3,6 @@
 class ApplicationController < ActionController::Base
   include CrudFlashMessagerHelper
 
-  layout 'recruiter/application'
-
   protected
 
   def page
