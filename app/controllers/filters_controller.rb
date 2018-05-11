@@ -2,7 +2,7 @@
 
 class FiltersController < ApplicationController
   def index
-    @records = Recruiter::Filters.filter(type, params).map do |record|
+    @records = ::Filters.filter(type, params).map do |record|
       { id: record.id, name: record.name }
     end
     render json: @records

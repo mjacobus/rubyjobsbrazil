@@ -14,7 +14,7 @@ module ControllersSpecHelpers
     def it_responds_with_success(&block)
       it 'responds with success' do
         instance_eval(&block)
-        expect(response).to be_success
+        expect(response).to be_successful
       end
     end
 

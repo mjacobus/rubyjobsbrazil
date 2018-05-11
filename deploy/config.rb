@@ -5,6 +5,8 @@ lock '3.10.2'
 
 set :application, 'rubyjobsbrazil.com.br'
 set :repo_url, 'git@github.com:mjacobus/rubyjobsbrazil.git'
+set :migration_role, :app
+set :conditionally_migrate, true
 
 if ENV['BRANCH']
   set :branch, ENV['BRANCH']

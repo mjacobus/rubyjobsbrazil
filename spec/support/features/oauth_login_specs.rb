@@ -5,7 +5,7 @@ module Features
     extend ActiveSupport::Concern
 
     def login_with_strategy(strategy_class)
-      click_link t("recruiter.links.login.#{strategy_class.provider_key}")
+      click_link t("app.links.login.#{strategy_class.provider_key}")
       # click_href user_omniauth_authorize_path(strategy_class.provider_key)
       # click_href "/users/auth/#{strategy_class.provider_key}"
     end
@@ -15,7 +15,7 @@ module Features
     end
 
     def logout
-      click_link(t('recruiter.links.logout'))
+      click_link(t('app.links.logout'))
     end
 
     module ClassMethods
@@ -24,13 +24,13 @@ module Features
           visit root_path
 
           login_with_strategy(strategy_class)
-          expect(page).to have_text(t('recruiter.messages.account_created'))
+          expect(page).to have_text(t('app.messages.account_created'))
 
           logout
           expect(page).to have_text(t('devise.sessions.signed_out'))
 
           login_with_strategy(strategy_class)
-          expect(page).to have_text(t('recruiter.messages.login_succeed'))
+          expect(page).to have_text(t('app.messages.login_succeed'))
         end
       end
     end

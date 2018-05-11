@@ -1,24 +1,3 @@
-unless ENV['SKIP_COVERAGE']
-  require 'simplecov'
-  require 'coveralls'
-
-  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new(
-    [
-      SimpleCov::Formatter::HTMLFormatter,
-      Coveralls::SimpleCov::Formatter
-    ]
-  )
-
-  SimpleCov.start 'rails' do
-    add_filter 'app/channels/application_cable/channel.rb'
-    add_filter 'app/channels/application_cable/connection.rb'
-    add_filter 'app/jobs/application_job.rb'
-    add_filter 'app/mailers/application_mailer.rb'
-    add_group 'Decorators', 'app/decorators'
-    add_group 'Lib', 'lib'
-  end
-end
-
 # frozen_string_literal: true
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
@@ -82,6 +61,6 @@ RSpec.configure do |config|
   config.include(Shoulda::Matchers::ActiveRecord, type: :model)
 
   config.include Records
-  config.include Devise::TestHelpers, type: :controller
+  config.include Devise::Test::ControllerHelpers, type: :controller
   config.include CapybaraHelper, type: :feature
 end

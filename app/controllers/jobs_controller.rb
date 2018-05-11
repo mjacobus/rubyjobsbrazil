@@ -4,14 +4,14 @@ class JobsController < ApplicationController
   respond_to :html, :json
 
   def index
-    @jobs = ::Recruiter::Filters::JobFilter.filter(filter_params)
+    @jobs = ::Filters::JobFilter.filter(filter_params)
                                            .open.page(page).per(per_page)
 
     respond_with(@jobs)
   end
 
   def show
-    @job = Recruiter::Job.find(params[:id])
+    @job = Job.find(params[:id])
     ensure_canonical_url(@job) do
       respond_with(@job)
     end

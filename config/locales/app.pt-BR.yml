@@ -1,0 +1,113 @@
+"pt-BR":
+  "true" : Sim
+  "false" : Não
+  app:
+    url: http://rubyjobsbrazil.com.br
+    site_title: Ruby Jobs Brazil
+    logo_image: ruby_worker.png
+    layout:
+      header:
+        meta_description: Vagas para programadores Ruby e Ruby on Rails no Brasil.
+        site_name: rubyjobsbrazil
+    submit:
+      new: Adicionar
+      edit: Atualizar
+      create: Adicionar
+      cancel: Cancelar
+    links:
+      published_jobs: Vagas que eu publiquei
+      back: Voltar
+      new: Adicionar
+      destroy: Excluir
+      cancel: Cancelar
+      edit: Editar
+      logout: Sair
+      show: Visualizar
+      login:
+        google_oauth2: Google
+        github: Github
+        facebook: Facebook
+      jobs:
+        new: Publicar Vaga
+      articles:
+        index: Artigos
+        mine: Meus artigos
+        articles: Artigos
+      forms:
+        save: Publicar
+    messages:
+      published_at: Publicado há %{time}
+      updated_at: Atualizado há %{time}
+      logged_as: "%{username}"
+      login_with:
+        google_oauth2: Entre com com sua conta do Google
+        github: Entre com sua conta do Github
+        facebook: Entre com sua conta do Facebook
+      welcome: Bem vindo!
+      logout_succeed: Login efetuado com sucesso.
+      login_succeed: Login efetuado com sucesso.
+      account_created: Sua conta foi criada com sucesso!
+      confirm_destroy: Tem certeza de que deseja excluir?
+      crud:
+        create:
+          success: Registro criado com sucesso
+          error: Um ou mais errors ocorreram ao criar o registro
+        update:
+          success: Registro atualizado com sucesso
+          error: Um ou mais errors ocorreram ao atualizar o registro
+        destroy:
+          success: Registro excluído com sucesso
+          error: O Registro não pode ser excluído
+          confirm: Tem certeza de que deseja excluir este registro?
+      posts:
+        published_at: Publicado há %{time}
+        updated_at: Atualizado há %{time}
+
+  users:
+    articles:
+      new:
+        title: Novo Artigo
+      edit:
+        title: Edição de Artigo
+      show:
+        title: Visualização de Artigo
+      index:
+        title: Artigos
+      form:
+        tags: Tags
+        markdown_hint: Você pode usar <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#html">markdown</a> para formatar sua mensagem.
+    jobs:
+      new:
+        title: Nova Vaga
+      index:
+        title: Vagas
+      show:
+        title: Visualização de Vaga
+      edit:
+        title: Edição de Vaga
+      form:
+        tags: Tags
+        markdown_hint: Você pode usar <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#html">markdown</a> para formatar sua mensagem.
+
+  articles:
+    index:
+      title: Artigos Publicados
+  jobs:
+    index:
+      title: Vagas em aberto
+    job:
+      view: Visualizar
+  home:
+    index:
+      title_articles: Últimos artigos publicados
+      title_jobs: Últimas vagas publicadas
+      see_all_jobs: Ver todas
+      see_all_articles: Ver todos
+
+  _filters:
+    title: Filtros
+    state: Estado
+    select_state: Selecione um Estado
+    city: Cidade
+    select_city: Selecione uma Cidade
+    submit: Procurar

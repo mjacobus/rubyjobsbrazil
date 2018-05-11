@@ -44,7 +44,7 @@ module Users
 
     def jobs
       if current_user.admin?
-        return Recruiter::Job.all
+        return Job.all
       end
 
       user_jobs

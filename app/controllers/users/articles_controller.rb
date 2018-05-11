@@ -41,7 +41,7 @@ module Users
     private
 
     def articles
-      return Recruiter::Article.all if current_user.admin?
+      return Article.all if current_user.admin?
       current_user.articles
     end
 

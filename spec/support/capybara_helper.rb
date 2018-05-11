@@ -10,7 +10,7 @@ module CapybaraHelper
 
   def login_with(provider = :facebook)
     visit root_url
-    first(:link, I18n.t("recruiter.links.login.#{provider}")).click
+    first(:link, I18n.t("app.links.login.#{provider}")).click
   end
 
   def t(*args)
@@ -22,7 +22,7 @@ module CapybaraHelper
   end
 
   def logout
-    click_link I18n.t('recruiter.links.logout')
+    click_link I18n.t('app.links.logout')
     expect(page).not_to have_text(last_user.name)
   end
 
@@ -47,7 +47,7 @@ module CapybaraHelper
   end
 
   def click_submit_button
-    click_button I18n.t('recruiter.links.save')
+    click_button I18n.t('app.links.save')
   end
 
   def create_store
