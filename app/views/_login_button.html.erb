@@ -9,7 +9,7 @@ default_options  = {
 options.reverse_merge!(default_options)
 %>
 
-<%= link_to recruiter.user_omniauth_authorize_path(provider), options do %>
+<%= link_to user_omniauth_authorize_path(provider), options do %>
   <%= provider_icon(provider) %>
   <%= t("recruiter.links.login.#{provider}") %>
 <% end %>
