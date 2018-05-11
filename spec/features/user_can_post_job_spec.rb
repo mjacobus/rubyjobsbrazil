@@ -6,7 +6,7 @@ feature 'Jobs management' do
   include Features::Login
 
   scenario 'user can post a new job', pending: true do
-    user_logs_in_and_out_with(Recruiter::Oauth::Github)
+    user_logs_in_and_out_with(Oauth::Github)
     click_button(t('recruiter.links.new_job'))
 
     within('#new_job') do

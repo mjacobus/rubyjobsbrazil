@@ -4,7 +4,7 @@ class JobsController < ApplicationController
   respond_to :html, :json
 
   def index
-    @jobs = ::Recruiter::Filters::JobFilter.filter(filter_params)
+    @jobs = ::Filters::JobFilter.filter(filter_params)
                                            .open.page(page).per(per_page)
 
     respond_with(@jobs)

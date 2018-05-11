@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Recruiter
-  module Oauth
+module Oauth
+  class Facebook < Base
   end
 end

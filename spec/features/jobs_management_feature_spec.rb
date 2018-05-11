@@ -9,7 +9,7 @@ feature 'Jobs Management' do
     scenario 'he is able to publishe a job' do
       city
       visit root_path
-      login_with_strategy(Recruiter::Oauth::Github)
+      login_with_strategy(Oauth::Github)
       click_link t('recruiter.links.jobs.new')
       post_job
     end
@@ -21,7 +21,7 @@ feature 'Jobs Management' do
       visit root_path
       click_link t('recruiter.links.jobs.new')
       within('#main_content') do
-        login_with_strategy(Recruiter::Oauth::Github)
+        login_with_strategy(Oauth::Github)
       end
       expect(page).not_to have_text(t('devise.failure.already_authenticated'))
       post_job

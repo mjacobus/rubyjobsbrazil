@@ -19,7 +19,6 @@ describe Users::ArticlesController, type: :controller do
     {
       title: Article.make.title,
       body: Article.make.body,
-      body: Article.make.body,
       published: '1'
     }
   end

@@ -7,15 +7,15 @@ class OmniauthCallbacksController < ::Devise::OmniauthCallbacksController
   end
 
   def facebook
-    login_with(Recruiter::Oauth::Facebook)
+    login_with(Oauth::Facebook)
   end
 
   def google_oauth2
-    login_with(Recruiter::Oauth::Google)
+    login_with(Oauth::Google)
   end
 
   def github
-    login_with(Recruiter::Oauth::Github)
+    login_with(Oauth::Github)
   end
 
   def login_with(klass)
