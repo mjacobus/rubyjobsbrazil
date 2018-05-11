@@ -10,7 +10,7 @@ feature 'Jobs Management' do
       city
       visit root_path
       login_with_strategy(Oauth::Github)
-      click_link t('recruiter.links.jobs.new')
+      click_link t('app.links.jobs.new')
       post_job
     end
   end
@@ -19,7 +19,7 @@ feature 'Jobs Management' do
     scenario 'he is able to publishe a job' do
       city
       visit root_path
-      click_link t('recruiter.links.jobs.new')
+      click_link t('app.links.jobs.new')
       within('#main_content') do
         login_with_strategy(Oauth::Github)
       end
@@ -34,15 +34,15 @@ feature 'Jobs Management' do
       fill_in 'job[description]', with: 'Job Description'
       fill_in 'job[how_to_apply]', with: 'How to Apply'
       select state.name, from: 'job[state_id]'
-      click_button t('recruiter.submit.new')
+      click_button t('app.submit.new')
     end
 
     within('#new_job') do
       select city.name, from: 'job[city_id]'
-      click_button t('recruiter.submit.new')
+      click_button t('app.submit.new')
     end
 
-    expect(page).to have_text(t('recruiter.messages.crud.create.success'))
+    expect(page).to have_text(t('app.messages.crud.create.success'))
     expect(page).to have_text('Job Position')
     expect(page).to have_text('Job Description')
     expect(page).to have_text('How to Apply')

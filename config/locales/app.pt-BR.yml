@@ -1,7 +1,7 @@
 "pt-BR":
   "true" : Sim
   "false" : Não
-  recruiter:
+  app:
     url: http://rubyjobsbrazil.com.br
     site_title: Ruby Jobs Brazil
     logo_image: ruby_worker.png

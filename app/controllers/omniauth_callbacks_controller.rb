@@ -31,7 +31,7 @@ class OmniauthCallbacksController < ::Devise::OmniauthCallbacksController
 
   def login_message(user)
     key = user.new_record? ? 'account_created' : 'login_succeed'
-    I18n.t("recruiter.messages.#{key}")
+    I18n.t("app.messages.#{key}")
   end
 
   def redirect_url_for(_user, origin = nil)

@@ -14,11 +14,11 @@ module PublicableDecoratorHelper
   end
 
   def published_at
-    h.t('recruiter.messages.published_at', time: created_at_ago)
+    h.t('app.messages.published_at', time: created_at_ago)
   end
 
   def updated_at
-    h.t('recruiter.messages.updated_at', time: updated_at_ago)
+    h.t('app.messages.updated_at', time: updated_at_ago)
   end
 
   def publication

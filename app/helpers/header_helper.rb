@@ -6,7 +6,7 @@ module HeaderHelper
       content_for(:title) { title }
     else
       parts = [content_for(:title)]
-      parts << t('recruiter.site_title')
+      parts << t('app.site_title')
       parts.compact.uniq.join(' :: ')
     end
   end
