@@ -29,7 +29,7 @@ gem 'omniauth'
 gem 'omniauth-facebook', '~> 4.0.0'
 gem 'omniauth-github'
 gem 'omniauth-google_oauth2'
-gem 'redcarpet', '~> 3.2.0'
+gem 'redcarpet', '~> 3.4.0'
 gem 'simple_form'
 
 group :development, :test do
