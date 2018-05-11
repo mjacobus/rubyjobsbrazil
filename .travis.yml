@@ -1,6 +1,11 @@
 language: ruby
 sudo: false
+dist: trusty
 # cache: bundler
+
+before_install:
+  - gem update --system
+  - gem --version
 script:
   # - gem install bundler '1.16.1'
   - RAILS_ENV=test ./bin/rake db:create
