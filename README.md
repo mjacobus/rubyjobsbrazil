@@ -6,7 +6,7 @@ Código fonte do site [RubyJobsBrazil.com.br](http://rubyjobsbrazil.com.br)
 [ ![Codeship Status for mjacobus/rubyjobsbrazil](https://codeship.com/projects/a1fdf780-70d2-0133-30e6-4254a0d12432/status?branch=master)](https://codeship.com/projects/116638)
 
 [![Build Status](https://travis-ci.org/mjacobus/rubyjobsbrazil.png?branch=master)](https://travis-ci.org/mjacobus/rubyjobsbrazil)
-[![Coverage Status](https://coveralls.io/repos/mjacobus/rubyjobsbrazil/badge.png)](https://coveralls.io/r/mjacobus/rubyjobsbrazil)
+[![Coverage Status](https://coveralls.io/repos/github/mjacobus/rubyjobsbrazil/badge.svg?branch=master)](https://coveralls.io/github/mjacobus/rubyjobsbrazil?branch=master)
 [![Code Climate](https://codeclimate.com/github/mjacobus/rubyjobsbrazil.png)](https://codeclimate.com/github/mjacobus/rubyjobsbrazil)
 [![Dependency Status](https://gemnasium.com/mjacobus/rubyjobsbrazil.png)](https://gemnasium.com/mjacobus/rubyjobsbrazil)
 
@@ -101,7 +101,7 @@ Licença
 Contribuidores
 --------------
 
-- [Marcelo Jacobus](https://github.com/mjacobus) [![Programe em Par Comigo!](http://pairprogramwith.me/badge.png "Programe em Par Comigo!")](mailto:marcelo.jacobus@gmail.com?subject=Pair%20program%20with%20me)
+- [Marcelo Jacobus](https://github.com/mjacobus)
 
 ## Contribuindo
 
