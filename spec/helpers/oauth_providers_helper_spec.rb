@@ -2,5 +2,5 @@
 
 require 'spec_helper'
 
-describe Recruiter::LinksHelper, type: :helper do
+describe OauthProvidersHelper, type: :helper do
 end

@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Recruiter::MarkdownHelper, type: :helper do
+describe MarkdownHelper, type: :helper do
   def render(text)
     helper.to_markdown(text)
   end

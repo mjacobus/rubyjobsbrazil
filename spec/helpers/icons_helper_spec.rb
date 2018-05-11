@@ -2,5 +2,5 @@
 
 require 'spec_helper'
 
-describe Recruiter::IconsHelper, type: :helper do
+describe IconsHelper, type: :helper do
 end

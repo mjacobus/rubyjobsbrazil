@@ -1,7 +1,6 @@
 require 'rails_helper'
 
-describe Recruiter::OmniauthCallbacksController, type: :controller do
-
+describe OmniauthCallbacksController, type: :controller do
   include OmniauthControllerSpecs
 
   it_logs_in_with(Oauth::Facebook)
