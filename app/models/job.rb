@@ -11,7 +11,7 @@ class Job < ApplicationRecord
   validates :description, presence: true
   validates :how_to_apply, presence: true
 
-  default_scope -> { order('recruiter_jobs.created_at DESC') }
+  default_scope -> { order(created_at: :desc) }
   scope :open, -> { where(open: true) }
 
   def to_param
