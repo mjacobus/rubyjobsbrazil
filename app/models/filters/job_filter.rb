@@ -15,7 +15,7 @@ module Filters
     end
 
     def with_state_id(id)
-      merge { query.where(recruiter_cities: { state_id: id }) }
+      merge { query.where(cities: { state_id: id }) }
     end
   end
 end
