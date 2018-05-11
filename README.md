@@ -8,7 +8,7 @@ Código fonte do site [RubyJobsBrazil.com.br](http://rubyjobsbrazil.com.br)
 [![Build Status](https://travis-ci.org/mjacobus/rubyjobsbrazil.svg?branch=master)](https://travis-ci.org/mjacobus/rubyjobsbrazil)
 [![Coverage Status](https://coveralls.io/repos/github/mjacobus/rubyjobsbrazil/badge.svg?branch=master)](https://coveralls.io/github/mjacobus/rubyjobsbrazil?branch=master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/9c1c4c4e2c8fb72abffa/maintainability)](https://codeclimate.com/github/mjacobus/rubyjobsbrazil/maintainability)
-[![Dependency Status](https://gemnasium.com/mjacobus/rubyjobsbrazil.png)](https://gemnasium.com/mjacobus/rubyjobsbrazil)
+[![Dependency Status](https://gemnasium.com/badges/github.com/mjacobus/rubyjobsbrazil.svg)](https://gemnasium.com/mjacobus/rubyjobsbrazil)
 
 
 O que é?
