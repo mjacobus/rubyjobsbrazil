@@ -3,9 +3,9 @@
 <table class="wide">
   <thead>
     <tr>
-      <th><%= Recruiter::Article.human_attribute_name(:title) %></th>
-      <th><%= Recruiter::Article.human_attribute_name(:published) %></th>
-      <th><%= Recruiter::Article.human_attribute_name(:published_at) %></th>
+      <th><%= Article.human_attribute_name(:title) %></th>
+      <th><%= Article.human_attribute_name(:published) %></th>
+      <th><%= Article.human_attribute_name(:published_at) %></th>
       <th class="actions"><%= new_link({ action: :new }, class: 'expand') %></th>
     </tr>
   </thead>

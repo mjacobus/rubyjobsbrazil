@@ -1,8 +1,8 @@
-<li> <%= link_to t('recruiter.links.published_jobs'), :user_jobs %> </li>
+<li> <%= link_to t('app.links.published_jobs'), :user_jobs %> </li>
 <li>
   <%= link_to "#" do %>
     <%= current_user.decorate.avatar(30, 30) %>
-    <%= t('recruiter.messages.logged_as', username: current_user.name) %>
+    <%= t('app.messages.logged_as', username: current_user.name) %>
   <% end %>
 </li>
-<li> <%= link_to t('recruiter.links.logout'), :destroy_user_session %> </li>
+<li> <%= link_to t('app.links.logout'), :destroy_user_session %> </li>

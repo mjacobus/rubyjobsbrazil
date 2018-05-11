@@ -7,15 +7,15 @@ class OmniauthCallbacksController < ::Devise::OmniauthCallbacksController
   end
 
   def facebook
-    login_with(Recruiter::Oauth::Facebook)
+    login_with(Oauth::Facebook)
   end
 
   def google_oauth2
-    login_with(Recruiter::Oauth::Google)
+    login_with(Oauth::Google)
   end
 
   def github
-    login_with(Recruiter::Oauth::Github)
+    login_with(Oauth::Github)
   end
 
   def login_with(klass)
@@ -31,7 +31,7 @@ class OmniauthCallbacksController < ::Devise::OmniauthCallbacksController
 
   def login_message(user)
     key = user.new_record? ? 'account_created' : 'login_succeed'
-    I18n.t("recruiter.messages.#{key}")
+    I18n.t("app.messages.#{key}")
   end
 
   def redirect_url_for(_user, origin = nil)

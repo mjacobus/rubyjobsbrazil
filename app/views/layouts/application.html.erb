@@ -1,15 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
   <head>
-    <title>RubyJobs</title>
+    <%= yield :after_head_opens %>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="ROBOTS" content="NOODP" />
+    <title><%= title %></title>
+    <%= render '/meta_og' %>
+    <%= stylesheet_link_tag 'application', :media => 'all' %>
+    <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
+    <%= render '/analytics' %>
+    <style type="text/css"><%= Pygments.css %> </style>
+    <%= yield :before_head_closes %>
   </head>
-
   <body>
-    <%= yield %>
+    <%= yield :after_body_opens %>
+    <%= render '/top_menu' -%>
+    <%= render '/flashes' -%>
+    <div id="middle">
+      <div id="main_content" class="row">
+        <div class="small-12 columns">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+    <%= render '/footer' %>
+    <%= render '/javascript' %>
+    <%= yield :before_body_closes %>
   </body>
 </html>

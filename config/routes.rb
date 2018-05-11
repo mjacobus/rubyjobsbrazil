@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :articles, only: [:index, :show]
 
   devise_for :users,
-    class_name: 'Recruiter::User',
+    class_name: 'User',
     controllers: { omniauth_callbacks: "omniauth_callbacks" }
 
   devise_scope :user do

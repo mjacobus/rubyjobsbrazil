@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
-  include Recruiter::CrudFlashMessagerHelper
-
-  layout 'recruiter/application'
+  include CrudFlashMessagerHelper
 
   protected
 
@@ -16,13 +14,7 @@ class ApplicationController < ActionController::Base
   end
 
   def ensure_canonical_url(model, &block)
-    if model.is_a?(Recruiter::Job)
-      canonical_url = job_url(model)
-    elsif model.is_a?(Recruiter::Article)
-      canonical_url = article_url(model)
-    else
-      raise 'Unknown canonical url'
-    end
+    canonical_url = url_for(model)
 
     if canonical_url.to_s == request.original_url.to_s
       instance_eval(&block)
@@ -30,14 +22,5 @@ class ApplicationController < ActionController::Base
     end
 
     redirect_to canonical_url
-  end
-
-  # workaround until Recruiter namespace is removed
-  def method_missing(method, *args)
-    if /recruiter_.*(path|url)/.match?(method.to_s)
-      return send(method.to_s.sub('recruiter_', ''), *args)
-    end
-
-    super(method, *args)
   end
 end
