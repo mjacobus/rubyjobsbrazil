@@ -31,8 +31,8 @@ gem 'redcarpet', '~> 3.4.0'
 gem 'simple_form', '~> 4.0.0'
 
 group :development, :test do
-  gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'rspec-rails', '~> 3.7'
+  gem 'byebug', '~> 10.0.2', platforms: %i[mri mingw x64_mingw]
+  gem 'rspec-rails', '~> 3.7.2'
 end
 
 group :development do
