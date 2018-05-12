@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
-module PublicableDecoratorHelper
+class ApplicationDecorator < Draper::Decorator
+  delegate_all
+
   def created_at_ago
     h.time_ago_in_words(object.created_at)
   end
@@ -27,5 +29,11 @@ module PublicableDecoratorHelper
         string << ' | ' << updated_at
       end
     end
+  end
+
+  private
+
+  def decorate_boolean(value)
+    I18n.t(value.to_s)
   end
 end
