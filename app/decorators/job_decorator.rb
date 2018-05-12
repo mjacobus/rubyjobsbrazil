@@ -1,10 +1,6 @@
 # frozen_string_literal: true
 
-class JobDecorator < Draper::Decorator
-  delegate_all
-
-  include PublicableDecoratorHelper
-
+class JobDecorator < ApplicationDecorator
   def title
     object.title.titleize
   end
