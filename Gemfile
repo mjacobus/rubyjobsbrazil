@@ -43,17 +43,18 @@ group :development do
   gem 'rubocop', '~> 0.55.0'
   gem 'spring', '~> 2.0.2'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'web-console', '>= 3.3.0'
+  gem 'web-console', '~> 3.6.2'
 end
 
 group :test do
   gem 'capybara', '~> 3.1.0'
   gem 'chromedriver-helper', '~> 1.2.0'
+  gem 'coveralls', '~> 0.8.21', require: false
   gem 'faker', '~> 1.8.7'
   gem 'machinist', github: 'mjacobus/machinist', branch: 'fix-warning'
   gem 'rails-controller-testing', '~> 1.0.2'
-  gem 'selenium-webdriver', '~> 3.11.0'
+  gem 'selenium-webdriver', '~> 3.12.0'
   gem 'shoulda-matchers', '~> 3.1'
+  gem 'simplecov', '~> 0.14.1', require: false
   gem 'spring-commands-rspec', '~> 1.0.4'
-  gem 'coveralls', '~> 0.7.1', require: false
 end
