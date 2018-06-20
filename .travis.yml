@@ -1,12 +1,11 @@
 language: ruby
 sudo: false
 dist: trusty
-# cache: bundler
-# addons:
-#   apt:
-#     update: true
+services:
+  - mysql
+cache: bundler
 rvm:
-  - "2.4.0"
+  - "2.5.1"
 
 before_install:
   - gem update --system
@@ -20,3 +19,12 @@ script:
 notifications:
   on_success: change
   on_failure: change
+
+# https://docs.travis-ci.com/user/database-setup/#MySQL-5.7
+addons:
+  apt:
+    sources:
+      - mysql-5.7-trusty
+    packages:
+      - mysql-server
+      - mysql-client
