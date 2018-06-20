@@ -20,6 +20,7 @@ notifications:
   on_success: change
   on_failure: change
 
+# https://docs.travis-ci.com/user/database-setup/#MySQL-5.7
 addons:
   apt:
     sources:
