@@ -100,6 +100,7 @@ pt-BR:
     messages:
       accepted: deve ser aceito
       blank: não pode ficar em branco
+      required: não pode ficar em branco
       present: deve ficar em branco
       confirmation: não está de acordo com a confirmação
       empty: não pode ficar vazio
