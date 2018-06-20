@@ -23,6 +23,7 @@ class ConvertToUtf8mb4UnicodeCi < ActiveRecord::Migration[5.2]
   def apply
     apply_to_database
     apply_to_table(:jobs, fields: %i[title description how_to_apply])
+    apply_to_table(:articles, fields: %i[title body])
   end
 
   def apply_to_database

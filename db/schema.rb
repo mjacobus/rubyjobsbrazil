@@ -12,8 +12,8 @@
 
 ActiveRecord::Schema.define(version: 2018_06_20_135512) do
 
-  create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "title"
+  create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+    t.text "title"
     t.text "body"
     t.bigint "user_id"
     t.boolean "published", default: false
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2018_06_20_135512) do
     t.index ["state_id"], name: "index_cities_on_state_id"
   end
 
-  create_table "jobs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
+  create_table "jobs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.text "title"
     t.text "description"
     t.text "how_to_apply"
