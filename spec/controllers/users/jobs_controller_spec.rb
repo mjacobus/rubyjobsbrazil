@@ -70,18 +70,38 @@ describe Users::JobsController, type: :controller do
   end
 
   describe '#show' do
-    it_requires_authentication { get :show, params: { id: 1 } }
-
     with_valid_user_or_admin do
       let(:job) { Job.make!(user: user) }
 
       it 'assigns job to @job' do
-        get :show, params: { id: job.id }
+        get :show, params: { id: job.to_param }
         expect(assigns(:job)).to eq(job)
       end
 
-      it_responds_with_success { get :show, params: { id: job.id } }
-      it_renders_template(:show) { get :show, params: { id: job.id } }
+      it_responds_with_success { get :show, params: { id: job.to_param } }
+      it_renders_template(:show) { get :show, params: { id: job.to_param } }
+    end
+
+    context 'when user is not logged in' do
+      it 'redirects to the public job page' do
+        job = Job.make!(user: user)
+
+        get :show, params: { id: job.to_param }
+
+        expect(response).to redirect_to(job_url(job))
+      end
+    end
+
+    context 'when user is logged in but does not own the job' do
+      it 'redirects to the public job page' do
+        sign_in(User.make!)
+
+        job = Job.make!(user: user)
+
+        get :show, params: { id: job.to_param }
+
+        expect(response).to redirect_to(job_url(job))
+      end
     end
   end
 

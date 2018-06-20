@@ -18,6 +18,10 @@ class Job < ApplicationRecord
     "#{id}-#{title.parameterize}"
   end
 
+  def belongs_to?(user)
+    user_id == user.id
+  end
+
   # form helper
   attr_writer :state_id
 
