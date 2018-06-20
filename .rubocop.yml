@@ -52,6 +52,7 @@ Documentation:
 AllCops:
   Exclude:
     - bin/**/*
+    - db/schema.rb
   TargetRubyVersion: 2.4
 
 Layout/ExtraSpacing:
