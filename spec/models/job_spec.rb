@@ -21,8 +21,8 @@ RSpec.describe Job do
 
   describe '.open' do
     it 'returns only the enabled records' do
-      open   = described_class.make! open: true
-      closed = described_class.make! open: false
+      open = described_class.make! open: true
+      described_class.make! open: false
 
       expect(described_class.open).to eq([open])
     end
@@ -39,6 +39,20 @@ RSpec.describe Job do
       expect do
         subject.state_id = '2'
       end.to change { subject.state_id }.to(2)
+    end
+  end
+
+  describe '#belongs_to?' do
+    let(:owner) { User.new(id: 1) }
+    let(:other_user) { User.new(id: 2) }
+    let(:job) { Job.new(user: owner) }
+
+    it 'returns true when user owns job' do
+      expect(job.belongs_to?(owner)).to be(true)
+    end
+
+    it 'returns true when user owns job' do
+      expect(job.belongs_to?(other_user)).to be(false)
     end
   end
 end

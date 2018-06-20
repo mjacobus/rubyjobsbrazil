@@ -2,7 +2,8 @@
 
 module Users
   class JobsController < UserController
-    before_action :set_job, only: %i[show edit update destroy]
+    before_action :set_job, only: %i[edit update destroy]
+    skip_before_action :authenticate_user!, only: [:show]
 
     def index
       @jobs = jobs.page(page).per(per_page)
@@ -10,6 +11,16 @@ module Users
     end
 
     def show
+      @job = Job.find(params[:id])
+
+      unless current_user
+        return redirect_to(job_url(@job))
+      end
+
+      unless current_user.admin? || @job.belongs_to?(current_user)
+        return redirect_to(job_url(@job))
+      end
+
       respond_with(:user, @job)
     end
 
