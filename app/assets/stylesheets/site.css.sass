@@ -1,4 +1,5 @@
-// @import 'variables'
+@import url('https://fonts.googleapis.com/css?family=Open+Sans')
+
 $soft-gray: #eeeeee
 $dark-gray: #333333
 $dark-red: #980905
@@ -7,7 +8,18 @@ $soft-blue: #D5E9F6
 $soft-yellow: #FFF9D8
 @import 'foundation_and_overrides'
 body
+  font-weight: 100
+  font-family: 'Open Sans', Arial, sans-serif
   // background: $soft-gray
+
+#main_content
+  h1:first-child, h2:first-child
+    color: $dark-gray
+    font-size: 28pt
+    font-weight: 100
+    font-family: 'Open Sans', Arial, sans-serif
+    text-transform: uppercase
+    padding: 50px 0px 20px 0px
 
 .list.no-buttons
   list-style: none
@@ -40,28 +52,44 @@ table.wide
     background: $soft-yellow
     margin: 20px 0
     padding: 20px
+    h2
+      font-size: 16pt
+      font-weight: 100
+      text-transform: uppercase
+      padding: 0px 0px 0px 0px
+
   .main, footer
-    background: $soft-blue
-    margin: 20px 0
-    padding: 20px
+    //background: $soft-blue
+    //margin: 20px 0
+    //padding: 20px
 
-  a, a:hover
-    color: $dark-red
+    .description
+      padding: 20px 20px
+      background: $soft-blue
 
-  footer
-    background: $soft-gray
+    .publication
+      padding: 20px 20px
+      background: $soft-gray
+
 #articles, #jobs
   article
-    background: $soft-blue
+    background: #F2F2F2
   .job
-    margin: 5px
+    margin: 20px 0px
     // border-bottom: 1px solid #ccc
     .wrapper
       margin: 10px 0 15px 0
+    h3
+      font-size: 18pt
+      font-weight: 300
   .published_date
     font-size: 0.75em
   h2
     color: $dark-gray
+    font-size: 38pt
+    font-weight: 100
+    text-transform: uppercase
+    padding: 50px 0px 20px 0px
 
 .black
   color: black
@@ -92,7 +120,7 @@ body > footer
     margin-right: 5px
 
   .tag
-    background: $red
+    background: #DD6060 //#5D5D5D
     width: none
     padding: 5px
     color: white
@@ -121,3 +149,39 @@ form
 .prettyprint
   background: #eee
   padding: 0.5em
+
+.top-bar
+  padding: 20px 0px
+  height: 85px
+  font-size: 18pt
+
+  h1 > a
+    font-weight: 100 !important
+
+  &-section
+    font-size: 18pt
+
+.float-right
+  float: right
+
+.float-left
+  float: left
+
+.small
+  padding: 5px 10px
+
+.button-job
+  margin-top: -9px
+  margin-right: -15px
+
+header#cover
+  padding: 100px 0px
+  background-color: #f4584c
+  background-image: radial-gradient(circle at 80% 25%, #f56e64, #bf7e81)
+  height: 500px
+
+.page-cover-title
+  font-size: 48pt
+  color: #eaeaea
+  font-weight: 100
+  margin-top: -70px

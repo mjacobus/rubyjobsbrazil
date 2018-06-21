@@ -5,10 +5,14 @@
     <article class="row">
       <div class="small-12 columns">
         <div class="wrapper">
+          <%= link_to job, class: 'button primary button-job float-right' do %> 
+            <i class="fi-target"></i>
+            <%= t('home.index.see_job') %> 
+          <% end %>
           <%= content_tag(header_tag, job.decorate.title) %>
           <div class="line"><%= render '/tags', tags: job.tags %></div>
-          <div class="location line"><%= job.decorate.location %></div>
-          <div class="published_date line"><%= job.decorate.published_at %></div>
+          <div class="location line"><i class="fi-marker">&nbsp;</i><%= job.decorate.location %></div>
+          <div class="published_date line"><i class="fi-calendar"></i>&nbsp;<%= job.decorate.published_at %></div>
         </div>
       </div>
     </article>
