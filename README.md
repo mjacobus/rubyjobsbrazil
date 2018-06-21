@@ -7,6 +7,8 @@ Código fonte do site [RubyJobsBrazil.com.br](http://rubyjobsbrazil.com.br)
 [![Coverage Status](https://coveralls.io/repos/github/mjacobus/rubyjobsbrazil/badge.svg?branch=master)](https://coveralls.io/github/mjacobus/rubyjobsbrazil?branch=master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/9c1c4c4e2c8fb72abffa/maintainability)](https://codeclimate.com/github/mjacobus/rubyjobsbrazil/maintainability)
 
+![Plataforma RubyJobsBrazil](https://raw.githubusercontent.com/mjacobus/rubyjobsbrazil/master/doc/screenshot.png)
+
 
 O que é?
 ----------------
