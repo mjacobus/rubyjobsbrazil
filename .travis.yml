@@ -14,7 +14,7 @@ script:
   - RAILS_ENV=test ./bin/rake db:create
   - RAILS_ENV=test ./bin/rake db:migrate
   - ./bin/rake routes
-  - ./bin/rspec --exclude-pattern "spec/{features}/**/*_spec.rb,spec/controllers/omniauth_callbacks_controller_spec.rb"
+  - ./bin/rspec --exclude-pattern "spec/{features}/**/*_spec.rb"
 
 notifications:
   on_success: change
