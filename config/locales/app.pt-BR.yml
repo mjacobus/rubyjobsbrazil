@@ -75,7 +75,7 @@
         title: Artigos
       form:
         tags: Tags
-        markdown_hint: Você pode usar <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#html">markdown</a> para formatar sua mensagem.
+        markdown_hint: Você pode usar <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#html">markdown</a> para formatar sua mensagem. Veja dicas neste <a href="http://rubyjobsbrazil.com.br/articles/2-como-formatar-o-seu-anuncio">link</a>.
     jobs:
       new:
         title: Nova Vaga
@@ -87,7 +87,7 @@
         title: Edição de Vaga
       form:
         tags: Tags
-        markdown_hint: Você pode usar <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#html">markdown</a> para formatar sua mensagem.
+        markdown_hint: Você pode usar <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#html">markdown</a> para formatar sua mensagem. Veja dicas neste <a href="http://rubyjobsbrazil.com.br/articles/2-como-formatar-o-seu-anuncio">link</a>.
 
   articles:
     index:
