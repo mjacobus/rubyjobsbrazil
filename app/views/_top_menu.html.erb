@@ -1,10 +1,9 @@
 <div class="sticky">
   <nav class="top-bar" data-topbar>
     <ul class="title-area">
-      <li class="name"><h1><a href="/"><%= t('app.site_title') %></a></h1> </li>
+      <li class="name"><h1><a href="/"> <strong>Ruby</strong> Jobs Brazil </a></h1> </li>
       <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
     </ul>
-
 
     <section class="top-bar-section">
       <!-- Right Nav Section -->
@@ -19,12 +18,27 @@
   </nav>
 </div>
 
-<div id="after_menu">
-  <div class="row">
-    <div class="small-12 columns">
-      <div class="wrapper">
-        <%= render '/title_header' %>
-      </div>
-    </div>
-  </div>
-</div>
+<style>
+</style>
+
+<% if display_header? %>
+  <header id="cover">
+    <p class="text-center">
+      <svg width="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 299.429 299.429">
+        <g font-family="sans-serif">
+          <path d="M91.997 44.586a7.656 7.656 0 0 0-7.656 7.655v24.392H66.77a6.137 6.137 0 0 0-5.743-3.996H32.18a6.137 6.137 0 0 0-5.753 3.996H12.384c-4.053 0-7.34 3.286-7.34 7.338v160.266c.002 4.052 3.288 7.338 7.34 7.34h275.74c4.053 0 7.338-3.287 7.34-7.34V83.97c0-4.053-3.286-7.34-7.34-7.338h-13.122a6.137 6.137 0 0 0-5.742-3.996h-28.846a6.137 6.137 0 0 0-5.754 3.996h-18.493v-24.39a7.656 7.656 0 0 0-7.655-7.656zm7.655 15.31h101.204v16.736H99.652z" style="line-height:normal;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;text-orientation:mixed;shape-padding:0;isolation:auto;mix-blend-mode:normal" color="#000" white-space="normal" overflow="visible" solid-color="#000000" fill="#ffffff"/>
+          <g fill="#F26A61">
+            <path d="M64.242 133.028c-.242 0-.467.122-.598.326l-10.584 16.54c-.174.272-.143.627.076.864l29.213 31.718c.28.305.762.305 1.043 0l29.213-31.717c.218-.238.25-.592.076-.864l-10.585-16.542c-.13-.204-.356-.327-.598-.326zm4.01 4.148h10.27l-7.703 9.03zm18.968 0h11l-3.104 9.256zm-4.35.948l8.46 9.914H74.41zm-18.096.645l2.638 9.27h-8.57zm36.665.736l5.458 8.532h-8.32zm-41.632 12.68h8.963l7.855 18.26zm13.115 0h19.994l-10.04 23.14zm24.156 0h8.854l-16.746 18.18z" style="line-height:normal;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;text-orientation:mixed;shape-padding:0;isolation:auto;mix-blend-mode:normal" color="#000" white-space="normal" overflow="visible" solid-color="#000000"/>
+            <text transform="matrix(.9315 0 0 .9315 -294.54 30.765)" y="150.998" x="440.117" style="line-height:1.25" font-size="52.733" letter-spacing="0" word-spacing="0" stroke-width="1.318">
+              <tspan y="150.998" x="440.117">Ruby</tspan>
+            </text>
+            <text style="line-height:1.25" x="459.509" y="175.335" font-size="17.33" letter-spacing="0" word-spacing="0" stroke-width=".433" transform="matrix(.9315 0 0 .9315 -274.69 33.326)">
+              <tspan x="459.509" y="175.335" style="-inkscape-font-specification:'sans-serif Bold'" font-weight="bold">Jobs Brazil</tspan>
+            </text>
+          </g>
+        </g>
+      </svg>
+    </p>
+    <h1 class="page-cover-title text-center">Ruby Jobs Brazil</h1>
+  </header>
+<% end %>
