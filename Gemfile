@@ -16,7 +16,7 @@ gem 'sentry-raven', '~> 2.7.3'
 gem 'uglifier', '>= 1.3.0'
 
 # recruiter dependencies
-gem 'devise', '~> 4.4.3'
+gem 'devise', '~> 4.7.1'
 gem 'draper', '~> 3.0.1'
 gem 'foundation-icons-sass-rails', '~> 3.0.0'
 gem 'foundation-rails', '~> 5.4.5'
