@@ -220,7 +220,7 @@ GEM
     pygments.rb (0.6.3)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.2.0)
-    rack (2.0.7)
+    rack (2.0.8)
     rack-test (1.0.0)
       rack (>= 1.0, < 3)
     rails (5.2.0)
