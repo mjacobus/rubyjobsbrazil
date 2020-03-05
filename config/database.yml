@@ -51,4 +51,4 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV['JAWSDB'] %>
+  url: <%= ENV['JAWSDB_URL'] %>
