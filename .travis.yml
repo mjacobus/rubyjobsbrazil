@@ -17,31 +17,3 @@ script:
 notifications:
   on_success: change
   on_failure: change
-
-# # https://docs.travis-ci.com/user/database-setup/#MySQL-5.7
-# addons:
-#   apt:
-#     sources:
-#       - mysql-5.7-trusty
-#     packages:
-#       - mysql-server
-#       - mysql-client
-
-
-# language: ruby
-# sudo: false
-# cache: bundler
-# dist: xenial
-#
-# rvm:
-#   - 2.4.4
-#
-# env:
-#   - DB=mysql DATABASE_URL="mysql2://root@127.0.0.1:3306/field_service_test"
-#
-# script:
-#   - RAILS_ENV=test bundle exec rake travis_ci
-#   - cd client && yarn install && yarn run test
-#
-# services:
-#   - mysql
