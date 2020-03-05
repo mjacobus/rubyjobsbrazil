@@ -26,3 +26,4 @@
 /config/master.key
 .env
 /coverage
+/.env.development.local
