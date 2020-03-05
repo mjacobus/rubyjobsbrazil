@@ -9,7 +9,7 @@ ruby '>= 2.4'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'dotenv-rails', '~> 2.4.0'
 gem 'mysql2', '>= 0.4.4', '< 0.6.0'
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 3.12'
 gem 'rails', '~> 5.2.0'
 gem 'sass-rails', '~> 5.0'
 gem 'sentry-raven', '~> 2.7.3'
