@@ -51,6 +51,4 @@ test:
 #
 production:
   <<: *default
-  database: RubyJobs_production
-  username: RubyJobs
-  password: <%= ENV['RUBYJOBS_DATABASE_PASSWORD'] %>
+  url: <%= ENV['JAWSDB'] %>
