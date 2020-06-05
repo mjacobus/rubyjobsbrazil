@@ -216,7 +216,7 @@ GEM
     posix-spawn (0.3.13)
     powerpack (0.1.1)
     public_suffix (3.0.2)
-    puma (3.12.4)
+    puma (3.12.6)
     pygments.rb (0.6.3)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.2.0)
