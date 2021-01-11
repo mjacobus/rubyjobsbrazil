@@ -27,7 +27,7 @@ gem 'omniauth', '~> 1.8.1'
 gem 'omniauth-facebook', '~> 5.0.0'
 gem 'omniauth-github', '~> 1.3.0'
 gem 'omniauth-google_oauth2', '~> 0.1.5'
-gem 'redcarpet', '~> 3.4.0'
+gem 'redcarpet', '~> 3.5.1'
 gem 'simple_form', '~> 5.0.0'
 
 group :development, :test do
